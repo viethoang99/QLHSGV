@@ -1,0 +1,5 @@
+C:\Users\vietm\Desktop\QLHSGV\app\app\obj\Debug\app.csprojAssemblyReference.cache
+C:\Users\vietm\Desktop\QLHSGV\app\app\obj\Debug\QLHocSinhTHPT.frmMain.resources
+C:\Users\vietm\Desktop\QLHSGV\app\app\obj\Debug\app.Properties.Resources.resources
+C:\Users\vietm\Desktop\QLHSGV\app\app\obj\Debug\app.csproj.GenerateResource.cache
+C:\Users\vietm\Desktop\QLHSGV\app\app\obj\Debug\app.csproj.CoreCompileInputs.cache
