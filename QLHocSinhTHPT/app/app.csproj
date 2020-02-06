@@ -495,7 +495,6 @@
     <None Include="Properties\DataSources\app.Bussiness.LopInfo.datasource" />
     <None Include="Properties\DataSources\app.Bussiness.GiaoVienInfo.datasource" />
     <None Include="Properties\DataSources\app.Bussiness.HocSinhInfo.datasource" />
-    <None Include="Database\app_Database.SQL" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="BusinessObjects.CrystalReports.NET.2.0">

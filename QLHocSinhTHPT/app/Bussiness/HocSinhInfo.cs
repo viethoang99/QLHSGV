@@ -26,8 +26,8 @@ namespace app.Bussiness
             set { m_HoTen = value; }
         }
 
-        private bool m_GioiTinh;
-        public bool GioiTinh
+        private String m_GioiTinh;
+        public String GioiTinh
         {
             get { return m_GioiTinh; }
             set { m_GioiTinh = value; }

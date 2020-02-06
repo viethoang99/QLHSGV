@@ -30,10 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHocSinh));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxDanhSach = new System.Windows.Forms.GroupBox();
+            this.dGVHocSinh = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.ctxMenu = new DevComponents.DotNetBar.ContextMenuBar();
             this.btnMenu = new DevComponents.DotNetBar.ButtonItem();
             this.btnAdd = new DevComponents.DotNetBar.ButtonItem();
@@ -41,12 +42,6 @@
             this.btnDelete = new DevComponents.DotNetBar.ButtonItem();
             this.btnSave = new DevComponents.DotNetBar.ButtonItem();
             this.btnClose = new DevComponents.DotNetBar.ButtonItem();
-            this.dGVHocSinh = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.colMaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.colNgaySinh = new app.Component.CalendarColumn();
-            this.colNoiSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigatorHocSinh = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -97,9 +92,14 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNgaySinh = new app.Component.CalendarColumn();
+            this.colNoiSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxDanhSach.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ctxMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVHocSinh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctxMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorHocSinh)).BeginInit();
             this.bindingNavigatorHocSinh.SuspendLayout();
             this.navPaneLeft.SuspendLayout();
@@ -121,6 +121,37 @@
             this.groupBoxDanhSach.TabIndex = 3;
             this.groupBoxDanhSach.TabStop = false;
             this.groupBoxDanhSach.Text = "Danh sách học sinh";
+            // 
+            // dGVHocSinh
+            // 
+            this.dGVHocSinh.AllowUserToAddRows = false;
+            this.dGVHocSinh.AllowUserToResizeRows = false;
+            this.dGVHocSinh.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.dGVHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dGVHocSinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colMaHocSinh,
+            this.colHoTen,
+            this.colGioiTinh,
+            this.colNgaySinh,
+            this.colNoiSinh});
+            this.ctxMenu.SetContextMenuEx(this.dGVHocSinh, this.btnMenu);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVHocSinh.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dGVHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dGVHocSinh.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dGVHocSinh.Location = new System.Drawing.Point(3, 51);
+            this.dGVHocSinh.Name = "dGVHocSinh";
+            this.dGVHocSinh.Size = new System.Drawing.Size(543, 414);
+            this.dGVHocSinh.TabIndex = 5;
+            this.dGVHocSinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVHocSinh_CellClick);
+            this.dGVHocSinh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVHocSinh_CellContentClick);
+            this.dGVHocSinh.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dGVHocSinh_DataError);
             // 
             // ctxMenu
             // 
@@ -194,77 +225,6 @@
             this.btnClose.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.AltF4);
             this.btnClose.Text = "Đóng cửa sổ này";
             this.btnClose.Click += new System.EventHandler(this.bindingNavigatorExitItem_Click);
-            // 
-            // dGVHocSinh
-            // 
-            this.dGVHocSinh.AllowUserToAddRows = false;
-            this.dGVHocSinh.AllowUserToResizeRows = false;
-            this.dGVHocSinh.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.dGVHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dGVHocSinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colMaHocSinh,
-            this.colHoTen,
-            this.colGioiTinh,
-            this.colNgaySinh,
-            this.colNoiSinh});
-            this.ctxMenu.SetContextMenuEx(this.dGVHocSinh, this.btnMenu);
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGVHocSinh.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dGVHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dGVHocSinh.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dGVHocSinh.Location = new System.Drawing.Point(3, 51);
-            this.dGVHocSinh.Name = "dGVHocSinh";
-            this.dGVHocSinh.Size = new System.Drawing.Size(543, 414);
-            this.dGVHocSinh.TabIndex = 5;
-            this.dGVHocSinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVHocSinh_CellClick);
-            this.dGVHocSinh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVHocSinh_CellContentClick);
-            this.dGVHocSinh.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dGVHocSinh_DataError);
-            // 
-            // colMaHocSinh
-            // 
-            this.colMaHocSinh.DataPropertyName = "MaHocSinh";
-            this.colMaHocSinh.HeaderText = "Mã học sinh";
-            this.colMaHocSinh.MaxInputLength = 6;
-            this.colMaHocSinh.Name = "colMaHocSinh";
-            this.colMaHocSinh.Width = 80;
-            // 
-            // colHoTen
-            // 
-            this.colHoTen.DataPropertyName = "HoTen";
-            this.colHoTen.HeaderText = "Họ và tên";
-            this.colHoTen.MaxInputLength = 30;
-            this.colHoTen.Name = "colHoTen";
-            this.colHoTen.Width = 150;
-            // 
-            // colGioiTinh
-            // 
-            this.colGioiTinh.DataPropertyName = "GioiTinh";
-            this.colGioiTinh.HeaderText = "Giới tính";
-            this.colGioiTinh.Name = "colGioiTinh";
-            this.colGioiTinh.Width = 70;
-            // 
-            // colNgaySinh
-            // 
-            this.colNgaySinh.DataPropertyName = "NgaySinh";
-            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
-            this.colNgaySinh.DefaultCellStyle = dataGridViewCellStyle1;
-            this.colNgaySinh.HeaderText = "Ngày sinh";
-            this.colNgaySinh.Name = "colNgaySinh";
-            this.colNgaySinh.Width = 85;
-            // 
-            // colNoiSinh
-            // 
-            this.colNoiSinh.DataPropertyName = "NoiSinh";
-            this.colNoiSinh.HeaderText = "Nơi sinh";
-            this.colNoiSinh.MaxInputLength = 50;
-            this.colNoiSinh.Name = "colNoiSinh";
-            this.colNoiSinh.Width = 150;
             // 
             // bindingNavigatorHocSinh
             // 
@@ -453,7 +413,7 @@
             this.navPaneLeft.TitlePanel.Style.GradientAngle = 90;
             this.navPaneLeft.TitlePanel.Style.MarginLeft = 4;
             this.navPaneLeft.TitlePanel.TabIndex = 0;
-            this.navPaneLeft.TitlePanel.Text = "Nhập liệu thông tin";
+            this.navPaneLeft.TitlePanel.Text = "Thêm mới";
             // 
             // navPanelNhapDuLieu
             // 
@@ -734,7 +694,7 @@
             this.buttonItemNhapDuLieu.ImagePaddingHorizontal = 8;
             this.buttonItemNhapDuLieu.Name = "buttonItemNhapDuLieu";
             this.buttonItemNhapDuLieu.OptionGroup = "navBar";
-            this.buttonItemNhapDuLieu.Text = "Nhập liệu thông tin";
+            this.buttonItemNhapDuLieu.Text = "Thêm mới";
             // 
             // navPanelTimKiem
             // 
@@ -819,7 +779,7 @@
             this.buttonItemTimKiem.ImagePaddingHorizontal = 8;
             this.buttonItemTimKiem.Name = "buttonItemTimKiem";
             this.buttonItemTimKiem.OptionGroup = "navBar";
-            this.buttonItemTimKiem.Text = "Tìm kiếm thông tin";
+            this.buttonItemTimKiem.Text = "Tìm kiếm ";
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -870,6 +830,48 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Width = 150;
             // 
+            // colMaHocSinh
+            // 
+            this.colMaHocSinh.DataPropertyName = "MaHocSinh";
+            this.colMaHocSinh.HeaderText = "Mã học sinh";
+            this.colMaHocSinh.MaxInputLength = 6;
+            this.colMaHocSinh.Name = "colMaHocSinh";
+            this.colMaHocSinh.Width = 80;
+            // 
+            // colHoTen
+            // 
+            this.colHoTen.DataPropertyName = "HoTen";
+            this.colHoTen.HeaderText = "Họ và tên";
+            this.colHoTen.MaxInputLength = 30;
+            this.colHoTen.Name = "colHoTen";
+            this.colHoTen.Width = 150;
+            // 
+            // colGioiTinh
+            // 
+            this.colGioiTinh.DataPropertyName = "GioiTinh";
+            this.colGioiTinh.HeaderText = "Giới tính";
+            this.colGioiTinh.Name = "colGioiTinh";
+            this.colGioiTinh.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colGioiTinh.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colGioiTinh.Width = 70;
+            // 
+            // colNgaySinh
+            // 
+            this.colNgaySinh.DataPropertyName = "NgaySinh";
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            this.colNgaySinh.DefaultCellStyle = dataGridViewCellStyle1;
+            this.colNgaySinh.HeaderText = "Ngày sinh";
+            this.colNgaySinh.Name = "colNgaySinh";
+            this.colNgaySinh.Width = 85;
+            // 
+            // colNoiSinh
+            // 
+            this.colNoiSinh.DataPropertyName = "NoiSinh";
+            this.colNoiSinh.HeaderText = "Nơi sinh";
+            this.colNoiSinh.MaxInputLength = 50;
+            this.colNoiSinh.Name = "colNoiSinh";
+            this.colNoiSinh.Width = 150;
+            // 
             // frmHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -887,8 +889,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmHocSinh_Load);
             this.groupBoxDanhSach.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ctxMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVHocSinh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctxMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorHocSinh)).EndInit();
             this.bindingNavigatorHocSinh.ResumeLayout(false);
             this.bindingNavigatorHocSinh.PerformLayout();
@@ -960,17 +962,16 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorExitItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorRefreshItem;
         #endregion
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaHocSinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colHoTen;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn colGioiTinh;
-        private Component.CalendarColumn colNgaySinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNoiSinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private Component.CalendarColumn calendarColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaHocSinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colHoTen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colGioiTinh;
+        private Component.CalendarColumn colNgaySinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNoiSinh;
     }
 }

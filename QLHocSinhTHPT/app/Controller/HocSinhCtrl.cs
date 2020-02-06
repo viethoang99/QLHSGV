@@ -58,8 +58,6 @@ namespace app.Controller
                             TextBoxX txtMaHocSinh,
                             TextBoxX txtTenHocSinh,
                             TextBoxX txtGioiTinh,
-                            CheckBoxX ckbGTinhNam,
-                            CheckBoxX ckbGTinhNu,
                             DateTimeInput dtpNgaySinh,
                             TextBoxX txtNoiSinh
                            )
@@ -67,28 +65,28 @@ namespace app.Controller
             BindingSource bS = new BindingSource();
             bS.DataSource = m_HocSinhData.LayDsHocSinh();
 
-            DataTable dT = m_HocSinhData.LayDsHocSinh();
-            bool gioiTinh = Convert.ToBoolean(dT.Rows[0]["GioiTinh"]);
+            //DataTable dT = m_HocSinhData.LayDsHocSinh();
+            //bool gioiTinh = Convert.ToBoolean(dT.Rows[0]["GioiTinh"]);
 
-            if (gioiTinh)
-                ckbGTinhNu.Checked = true;
-            else
-                ckbGTinhNam.Checked = true;
+            //if (gioiTinh)
+            //    ckbGTinhNu.Checked = true;
+            //else
+            //    ckbGTinhNam.Checked = true;
 
             txtMaHocSinh.DataBindings.Clear();
-            txtMaHocSinh.DataBindings.Add("Text", bS, "MaHocSinh");
+            //txtMaHocSinh.DataBindings.Add("Text", bS, "MaHocSinh");
 
             txtTenHocSinh.DataBindings.Clear();
-            txtTenHocSinh.DataBindings.Add("Text", bS, "HoTen");
+           // txtTenHocSinh.DataBindings.Add("Text", bS, "HoTen");
 
             txtGioiTinh.DataBindings.Clear();
-            txtGioiTinh.DataBindings.Add("Text", bS, "GioiTinh");
+           // txtGioiTinh.DataBindings.Add("Text", bS, "GioiTinh");
 
             dtpNgaySinh.DataBindings.Clear();
-            dtpNgaySinh.DataBindings.Add("Value", bS, "NgaySinh");
+            //dtpNgaySinh.DataBindings.Add("Value", bS, "NgaySinh");
 
             txtNoiSinh.DataBindings.Clear();
-            txtNoiSinh.DataBindings.Add("Text", bS, "NoiSinh");
+            //txtNoiSinh.DataBindings.Add("Text", bS, "NoiSinh");
 
             bN.BindingSource = bS;
             dGV.DataSource = bS;
@@ -153,7 +151,7 @@ namespace app.Controller
                 HocSinhInfo hs = new HocSinhInfo();
                 hs.MaHocSinh        = Convert.ToString(Row["MaHocSinh"]);
                 hs.HoTen            = Convert.ToString(Row["HoTen"]);
-                hs.GioiTinh         = Convert.ToBoolean(Row["GioiTinh"]);
+                hs.GioiTinh         = Convert.ToString(Row["GioiTinh"]);
                 hs.NgaySinh         = Convert.ToDateTime(Row["NgaySinh"]);
                 hs.NoiSinh          = Convert.ToString(Row["NoiSinh"]);
 
