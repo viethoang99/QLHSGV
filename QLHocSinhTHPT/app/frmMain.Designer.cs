@@ -50,10 +50,6 @@
             this.ribbonBarLop = new DevComponents.DotNetBar.RibbonBar();
             this.btnLopHoc = new DevComponents.DotNetBar.ButtonItem();
             this.btnKhoiLop = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanelGiupDo = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBarHuongDan = new DevComponents.DotNetBar.RibbonBar();
-            this.btnHuongDan = new DevComponents.DotNetBar.ButtonItem();
-            this.btnThongTin = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanelQuyDinh = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBarQuyDinh = new DevComponents.DotNetBar.RibbonBar();
             this.btnDoTuoi = new DevComponents.DotNetBar.ButtonItem();
@@ -75,6 +71,10 @@
             this.ribbonBarKQHocKy = new DevComponents.DotNetBar.RibbonBar();
             this.btnKQHKTheoLop = new DevComponents.DotNetBar.ButtonItem();
             this.btnKQHKTheoMon = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanelGiupDo = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBarHuongDan = new DevComponents.DotNetBar.RibbonBar();
+            this.btnHuongDan = new DevComponents.DotNetBar.ButtonItem();
+            this.btnThongTin = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonTabQuanLy = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabThongKe = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabTraCuu = new DevComponents.DotNetBar.RibbonTabItem();
@@ -105,10 +105,10 @@
             this.superTooltip = new DevComponents.DotNetBar.SuperTooltip();
             this.ribbonControl.SuspendLayout();
             this.ribbonPanelQuanLy.SuspendLayout();
-            this.ribbonPanelGiupDo.SuspendLayout();
             this.ribbonPanelQuyDinh.SuspendLayout();
             this.ribbonPanelTraCuu.SuspendLayout();
             this.ribbonPanelThongKe.SuspendLayout();
+            this.ribbonPanelGiupDo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bottomBar)).BeginInit();
             this.bottomBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ctxMenuMain)).BeginInit();
@@ -119,9 +119,9 @@
             this.ribbonControl.BackColor = System.Drawing.SystemColors.Control;
             this.ribbonControl.CaptionVisible = true;
             this.ribbonControl.Controls.Add(this.ribbonPanelQuanLy);
+            this.ribbonControl.Controls.Add(this.ribbonPanelThongKe);
             this.ribbonControl.Controls.Add(this.ribbonPanelQuyDinh);
             this.ribbonControl.Controls.Add(this.ribbonPanelTraCuu);
-            this.ribbonControl.Controls.Add(this.ribbonPanelThongKe);
             this.ribbonControl.Controls.Add(this.ribbonPanelGiupDo);
             this.ribbonControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -410,56 +410,6 @@
             this.btnKhoiLop.Tooltip = "Khối lớp";
             this.btnKhoiLop.Click += new System.EventHandler(this.btnKhoiLop_Click);
             // 
-            // ribbonPanelGiupDo
-            // 
-            this.ribbonPanelGiupDo.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.ctxMenuMain.SetContextMenuEx(this.ribbonPanelGiupDo, this.btnMenuMain);
-            this.ribbonPanelGiupDo.Controls.Add(this.ribbonBarHuongDan);
-            this.ribbonPanelGiupDo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanelGiupDo.Location = new System.Drawing.Point(0, 56);
-            this.ribbonPanelGiupDo.Name = "ribbonPanelGiupDo";
-            this.ribbonPanelGiupDo.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanelGiupDo.Size = new System.Drawing.Size(590, 91);
-            this.ribbonPanelGiupDo.TabIndex = 3;
-            this.ribbonPanelGiupDo.Visible = false;
-            // 
-            // ribbonBarHuongDan
-            // 
-            this.ribbonBarHuongDan.AutoOverflowEnabled = true;
-            this.ribbonBarHuongDan.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBarHuongDan.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnHuongDan,
-            this.btnThongTin});
-            this.ribbonBarHuongDan.Location = new System.Drawing.Point(3, 0);
-            this.ribbonBarHuongDan.Name = "ribbonBarHuongDan";
-            this.ribbonBarHuongDan.Size = new System.Drawing.Size(134, 88);
-            this.ribbonBarHuongDan.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.ribbonBarHuongDan.TabIndex = 1;
-            this.ribbonBarHuongDan.Text = "Hướng Dẫn";
-            // 
-            // btnHuongDan
-            // 
-            this.btnHuongDan.Image = global::app.Properties.Resources.huongdan;
-            this.btnHuongDan.ImagePaddingHorizontal = 8;
-            this.btnHuongDan.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnHuongDan.Name = "btnHuongDan";
-            this.btnHuongDan.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F1);
-            this.btnHuongDan.SplitButton = true;
-            this.btnHuongDan.Text = "<div align=\"center\">Hướng dẫn<br/>sử dụng</div>";
-            this.btnHuongDan.Tooltip = "Hướng dẫn sử dụng (F1)";
-            this.btnHuongDan.Click += new System.EventHandler(this.btnHuongDan_Click);
-            // 
-            // btnThongTin
-            // 
-            this.btnThongTin.Image = global::app.Properties.Resources.thongtinphanmem;
-            this.btnThongTin.ImagePaddingHorizontal = 8;
-            this.btnThongTin.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnThongTin.Name = "btnThongTin";
-            this.btnThongTin.SplitButton = true;
-            this.btnThongTin.Text = "<div align=\"center\">Thông tin<br/>phần mềm</div>";
-            this.btnThongTin.Tooltip = "Thông tin phần mềm";
-            this.btnThongTin.Click += new System.EventHandler(this.btnThongTin_Click);
-            // 
             // ribbonPanelQuyDinh
             // 
             this.ribbonPanelQuyDinh.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
@@ -716,6 +666,56 @@
             this.btnKQHKTheoMon.Text = "<div align=\"center\">Kết quả học kỳ<br/>theo môn học</div>";
             this.btnKQHKTheoMon.Tooltip = "Kết quả học kỳ theo môn học";
             this.btnKQHKTheoMon.Click += new System.EventHandler(this.btnKQHKTheoMon_Click);
+            // 
+            // ribbonPanelGiupDo
+            // 
+            this.ribbonPanelGiupDo.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.ctxMenuMain.SetContextMenuEx(this.ribbonPanelGiupDo, this.btnMenuMain);
+            this.ribbonPanelGiupDo.Controls.Add(this.ribbonBarHuongDan);
+            this.ribbonPanelGiupDo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanelGiupDo.Location = new System.Drawing.Point(0, 56);
+            this.ribbonPanelGiupDo.Name = "ribbonPanelGiupDo";
+            this.ribbonPanelGiupDo.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanelGiupDo.Size = new System.Drawing.Size(590, 91);
+            this.ribbonPanelGiupDo.TabIndex = 3;
+            this.ribbonPanelGiupDo.Visible = false;
+            // 
+            // ribbonBarHuongDan
+            // 
+            this.ribbonBarHuongDan.AutoOverflowEnabled = true;
+            this.ribbonBarHuongDan.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBarHuongDan.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnHuongDan,
+            this.btnThongTin});
+            this.ribbonBarHuongDan.Location = new System.Drawing.Point(3, 0);
+            this.ribbonBarHuongDan.Name = "ribbonBarHuongDan";
+            this.ribbonBarHuongDan.Size = new System.Drawing.Size(134, 88);
+            this.ribbonBarHuongDan.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.ribbonBarHuongDan.TabIndex = 1;
+            this.ribbonBarHuongDan.Text = "Hướng Dẫn";
+            // 
+            // btnHuongDan
+            // 
+            this.btnHuongDan.Image = global::app.Properties.Resources.huongdan;
+            this.btnHuongDan.ImagePaddingHorizontal = 8;
+            this.btnHuongDan.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnHuongDan.Name = "btnHuongDan";
+            this.btnHuongDan.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F1);
+            this.btnHuongDan.SplitButton = true;
+            this.btnHuongDan.Text = "<div align=\"center\">Hướng dẫn<br/>sử dụng</div>";
+            this.btnHuongDan.Tooltip = "Hướng dẫn sử dụng (F1)";
+            this.btnHuongDan.Click += new System.EventHandler(this.btnHuongDan_Click);
+            // 
+            // btnThongTin
+            // 
+            this.btnThongTin.Image = global::app.Properties.Resources.thongtinphanmem;
+            this.btnThongTin.ImagePaddingHorizontal = 8;
+            this.btnThongTin.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnThongTin.Name = "btnThongTin";
+            this.btnThongTin.SplitButton = true;
+            this.btnThongTin.Text = "<div align=\"center\">Thông tin<br/>phần mềm</div>";
+            this.btnThongTin.Tooltip = "Thông tin phần mềm";
+            this.btnThongTin.Click += new System.EventHandler(this.btnThongTin_Click);
             // 
             // ribbonTabQuanLy
             // 
@@ -1038,10 +1038,10 @@
             this.ribbonControl.ResumeLayout(false);
             this.ribbonControl.PerformLayout();
             this.ribbonPanelQuanLy.ResumeLayout(false);
-            this.ribbonPanelGiupDo.ResumeLayout(false);
             this.ribbonPanelQuyDinh.ResumeLayout(false);
             this.ribbonPanelTraCuu.ResumeLayout(false);
             this.ribbonPanelThongKe.ResumeLayout(false);
+            this.ribbonPanelGiupDo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bottomBar)).EndInit();
             this.bottomBar.ResumeLayout(false);
             this.bottomBar.PerformLayout();

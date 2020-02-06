@@ -28,7 +28,7 @@ namespace app
         private void frmHocSinh_Load(object sender, EventArgs e)
         { 
 
-            m_HocSinhCtrl.HienThi(dGVHocSinh, bindingNavigatorHocSinh, txtMaHocSinh, txtTenHocSinh, txtGioiTinh, ckbGTinhNam, ckbGTinhNu, dtpNgaySinh, txtNoiSinh);
+            m_HocSinhCtrl.HienThi(dGVHocSinh, bindingNavigatorHocSinh, txtMaHocSinh, txtTenHocSinh, txtGioiTinh, dtpNgaySinh, txtNoiSinh);
         }
         #endregion
 
@@ -66,7 +66,7 @@ namespace app
 
         private void bindingNavigatorRefreshItem_Click(object sender, EventArgs e)
         {
-            m_HocSinhCtrl.HienThi(dGVHocSinh, bindingNavigatorHocSinh, txtMaHocSinh, txtTenHocSinh, txtGioiTinh, ckbGTinhNam, ckbGTinhNu, dtpNgaySinh, txtNoiSinh);
+            m_HocSinhCtrl.HienThi(dGVHocSinh, bindingNavigatorHocSinh, txtMaHocSinh, txtTenHocSinh, txtGioiTinh, dtpNgaySinh, txtNoiSinh);
         }
 
         public Boolean KiemTraTruocKhiLuu(String cellString)
@@ -184,7 +184,7 @@ namespace app
                 if (quyDinh.KiemTraDoTuoi(dtpNgaySinh.Value) == true)
                 {
                     m_HocSinhCtrl.LuuHocSinh(txtMaHocSinh.Text, txtTenHocSinh.Text, gioiTinh, dtpNgaySinh.Value, txtNoiSinh.Text);
-                    m_HocSinhCtrl.HienThi(dGVHocSinh, bindingNavigatorHocSinh, txtMaHocSinh, txtTenHocSinh, txtGioiTinh, ckbGTinhNam, ckbGTinhNu, dtpNgaySinh, txtNoiSinh);
+                    m_HocSinhCtrl.HienThi(dGVHocSinh, bindingNavigatorHocSinh, txtMaHocSinh, txtTenHocSinh, txtGioiTinh, dtpNgaySinh, txtNoiSinh);
 
                     bindingNavigatorHocSinh.BindingSource.MoveLast();
                 }
