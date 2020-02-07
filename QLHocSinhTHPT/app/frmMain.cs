@@ -570,6 +570,22 @@ namespace app
             btnTruong.Enabled           = false;
         }
         #endregion
+
         #endregion
+
+        private void RibbonBarXuatDanhSach_ItemClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RibbonBarKQHocKy_ItemClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RibbonBarNamHoc_ItemClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
