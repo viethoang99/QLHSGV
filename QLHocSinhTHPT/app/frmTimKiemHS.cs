@@ -10,8 +10,9 @@ namespace app
 {
     public partial class frmTimKiemHS : Office2007Form
     {
+        public static string rs;
         #region Fields 
-        HocSinhCtrl     m_HocSinhCtrl   = new HocSinhCtrl();
+        HocSinhCtrl m_HocSinhCtrl = new HocSinhCtrl();
         #endregion
 
         #region Constructor
@@ -38,6 +39,7 @@ namespace app
         #region Tìm kiếm học sinh
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
+            rs = cmbTheoNSinh.Text;
             m_HocSinhCtrl.TimKiemHocSinh(txtHoTen, cmbTheoNSinh, txtNoiSinh, dGVKetQuaTimKiem, bindingNavigatorKetQuaTimKiem);
             
             if (dGVKetQuaTimKiem.RowCount == 0)
