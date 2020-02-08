@@ -27,7 +27,7 @@ namespace app.DataLayer
 
         public DataTable LayDsHocSinhTheoNamHoc(String namHoc)
         {
-            
+
             return m_HocSinhData;
         }
 
@@ -40,7 +40,7 @@ namespace app.DataLayer
         {
 
         }
-        
+
         public DataTable LayDsHocSinhForReport()
         {
             return m_HocSinhData;
@@ -78,6 +78,27 @@ namespace app.DataLayer
 
         public DataTable TimKiemHocSinh(String hoTen, String theoNSinh, String noiSinh)
         {
+            string condition = frmTimKiemHS.rs;
+            if (condition.Equals("AND"))
+            {
+                string query = "SELECT * FROM dbo.HOCSINH WHERE HoTen = '" + hoTen + "'" +
+                    "AND NoiSinh = N'" + noiSinh + "'";
+                SqlCommand cmd = new SqlCommand(query);
+                m_HocSinhData.Load(cmd);
+            }
+            else if (condition.Equals("OR"))
+            {
+                string query = "SELECT * FROM dbo.HOCSINH WHERE HoTen = '" + hoTen + "'" +
+                    "OR NoiSinh = N'" + noiSinh + "'";
+                SqlCommand cmd = new SqlCommand(query);
+                m_HocSinhData.Load(cmd);
+            }
+            else if (condition.Equals("NONE"))
+            {
+                string query = "SELECT * FROM dbo.HOCSINH WHERE HoTen = '" + hoTen + "'";
+                SqlCommand cmd = new SqlCommand(query);
+                m_HocSinhData.Load(cmd);
+            }
             return m_HocSinhData;
         }
     }
