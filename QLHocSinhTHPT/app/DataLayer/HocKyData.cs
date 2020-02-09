@@ -10,6 +10,9 @@ namespace app.DataLayer
 
         public DataTable LayDsHocKy()
         {
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM HOCKY");
+            m_HocKyData.Load(cmd);
             return m_HocKyData;
         }
 

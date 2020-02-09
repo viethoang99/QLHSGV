@@ -17,6 +17,12 @@ namespace app.DataLayer
 
         public DataTable LayDsHocSinhTheoLop(String namHoc, String lop)
         {
+            SqlCommand cmd = new SqlCommand("SELECT * FROM HOCSINH hs ,LOP l ,NAMHOC nh,PHANLOP pl"
+            + " where pl.MaHocSinh = hs.MaHocSinh and pl.MaLop = l.MaLop and l.MaNamHoc = nh.MaNamHoc" +
+            " and l.MaLop = @lop and nh.MaNamHoc = @namHoc");
+            cmd.Parameters.Add("lop", SqlDbType.VarChar).Value = lop;
+            cmd.Parameters.Add("namHoc", SqlDbType.VarChar).Value = namHoc;
+            m_HocSinhData.Load(cmd);
             return m_HocSinhData;
         }
 
