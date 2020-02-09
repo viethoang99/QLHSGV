@@ -11,8 +11,8 @@ Thong so co ban:
 -->
 <config>
   <costatus>true</costatus>
-  <servname>DESKTOP-68EPTJR\SQLEXPRESS</servname>
+  <servname>DESKTOP-DKGETIS</servname>
   <username />
   <password />
-  <database>QuanLyHS_GV</database>
+  <database>QLHocSinhTHPT</database>
 </config>
