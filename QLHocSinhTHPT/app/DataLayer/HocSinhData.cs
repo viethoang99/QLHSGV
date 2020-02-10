@@ -7,6 +7,7 @@ namespace app.DataLayer
     public class HocSinhData
     {
         DataService m_HocSinhData = new DataService();
+        SqlConnection connection = new SqlConnection();
 
         public DataTable LayDsHocSinh()
         {
@@ -69,7 +70,13 @@ namespace app.DataLayer
 
         public void LuuHocSinh(String maHocSinh, String hoTen, bool gioiTinh, DateTime ngaySinh, String noiSinh)
         {
+            DataService.OpenConnection();
 
+            String query = "insert HOCSINH values('" + maHocSinh + "', '" + hoTen + "'," +
+                " '" + gioiTinh + "', '" + ngaySinh + "', '" + noiSinh + "')";
+            SqlCommand command = new SqlCommand();
+            command.Connection = connection;
+            command.CommandType = CommandType.Text;
         }
 
         public DataTable TimTheoMa(String id)
