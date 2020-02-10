@@ -74,11 +74,17 @@ namespace app.DataLayer
 
         public DataTable TimTheoMa(String id)
         {
+            string query = "select * from HOCSINH where MaHocSinh like '%" + id + "%'";
+            SqlCommand cmd = new SqlCommand(query);
+            m_HocSinhData.Load(cmd);
             return m_HocSinhData;
         }
 
         public DataTable TimTheoTen(String ten)
         {
+            string query = "select * from HOCSINH where HoTen like '%" + ten + "%'";
+            SqlCommand cmd = new SqlCommand(query);
+            m_HocSinhData.Load(cmd);
             return m_HocSinhData;
         }
 
@@ -87,21 +93,21 @@ namespace app.DataLayer
             string condition = frmTimKiemHS.rs;
             if (condition.Equals("AND"))
             {
-                string query = "SELECT * FROM dbo.HOCSINH WHERE HoTen = '" + hoTen + "'" +
-                    "AND NoiSinh = N'" + noiSinh + "'";
+                string query = "SELECT * FROM dbo.HOCSINH WHERE HoTen like '%" + hoTen + "%'" +
+                    "AND NoiSinh like N'%" + noiSinh + "%'";
                 SqlCommand cmd = new SqlCommand(query);
                 m_HocSinhData.Load(cmd);
             }
             else if (condition.Equals("OR"))
             {
-                string query = "SELECT * FROM dbo.HOCSINH WHERE HoTen = '" + hoTen + "'" +
-                    "OR NoiSinh = N'" + noiSinh + "'";
+                string query = "SELECT * FROM dbo.HOCSINH WHERE HoTen like '%" + hoTen + "%'" +
+                    "OR NoiSinh like N'%" + noiSinh + "%'";
                 SqlCommand cmd = new SqlCommand(query);
                 m_HocSinhData.Load(cmd);
             }
             else if (condition.Equals("NONE"))
             {
-                string query = "SELECT * FROM dbo.HOCSINH WHERE HoTen = '" + hoTen + "'";
+                string query = "SELECT * FROM dbo.HOCSINH WHERE HoTen like '%" + hoTen + "%'";
                 SqlCommand cmd = new SqlCommand(query);
                 m_HocSinhData.Load(cmd);
             }

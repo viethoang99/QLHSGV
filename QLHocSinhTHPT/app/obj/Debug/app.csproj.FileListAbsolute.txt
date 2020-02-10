@@ -131,3 +131,90 @@ C:\Users\thg60\OneDrive\Desktop\QLHS\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.cspr
 C:\Users\thg60\OneDrive\Desktop\QLHS\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csproj.CopyComplete
 C:\Users\thg60\OneDrive\Desktop\QLHS\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.exe
 C:\Users\thg60\OneDrive\Desktop\QLHS\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.pdb
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\bin\Debug\app.exe
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\bin\Debug\app.pdb
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\bin\Debug\System.Web.Services.dll
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\bin\Debug\DevComponents.DotNetBar2.xml
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csprojAssemblyReference.cache
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Component.frmConnection.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Component.frmQuyDinh.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Component.frmDangNhap.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmXemDiem.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmNhapDiemRieng.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmNhapDiemChung.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmTimKiemHS.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmTimKiemGV.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmPhanLop.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmPhanCong.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmLop.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmHocSinh.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmGiaoVien.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmLoaiNguoiDung.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmNguoiDung.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmLoaiDiem.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmKetQua.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmHanhKiem.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmHocLuc.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmKhoiLop.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmHocKy.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmNamHoc.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmMonHoc.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptKetQuaHocKy_MonHoc.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptKetQuaHocKy_Lop.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptKetQuaCaNam_MonHoc.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptKetQuaCaNam_Lop.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptDanhSachLopHoc.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptDanhSachHocSinh.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptDanhSachGiaoVien.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmAbout.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmMain.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Properties.Resources.resources
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csproj.GenerateResource.cache
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csproj.CopyComplete
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.exe
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.pdb
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\app.exe
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\app.pdb
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\System.Web.Services.dll
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\DevComponents.DotNetBar2.xml
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csprojAssemblyReference.cache
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Component.frmConnection.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Component.frmQuyDinh.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Component.frmDangNhap.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmXemDiem.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmNhapDiemRieng.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmNhapDiemChung.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmTimKiemHS.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmTimKiemGV.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmPhanLop.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmPhanCong.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmLop.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmHocSinh.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmGiaoVien.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmLoaiNguoiDung.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmNguoiDung.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmLoaiDiem.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmKetQua.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmHanhKiem.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmHocLuc.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmKhoiLop.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmHocKy.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmNamHoc.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmMonHoc.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptKetQuaHocKy_MonHoc.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptKetQuaHocKy_Lop.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptKetQuaCaNam_MonHoc.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptKetQuaCaNam_Lop.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptDanhSachLopHoc.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptDanhSachHocSinh.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptDanhSachGiaoVien.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmAbout.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmMain.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Properties.Resources.resources
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csproj.GenerateResource.cache
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csproj.CoreCompileInputs.cache
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csproj.CopyComplete
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.exe
+D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.pdb
