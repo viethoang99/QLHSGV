@@ -57,7 +57,7 @@ namespace app.Component
                     {
                         cmbDatabase.Items.Add(m_DReader[0].ToString());
                     }
-                    if (String.Compare(txtServer.Text, "") == 0)
+                    if (String.Compare(txtServer.Text, "") > 0)
                         MessageBoxEx.Show("Kết nối thành công!", "SUCCESSED", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                         MessageBoxEx.Show("Lỗi kết nối", "FAILED", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

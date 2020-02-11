@@ -218,3 +218,4 @@ D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\o
 D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csproj.CopyComplete
 D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.exe
 D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.pdb
+C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\bin\Debug\DevComponents.DotNetBar2.xml
