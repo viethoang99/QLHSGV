@@ -11,8 +11,8 @@ Thong so co ban:
 -->
 <config>
   <costatus>true</costatus>
-  <servname>DESKTOP-8V08BMC\SQLEXPRESS</servname>
+  <servname>WIN7PROX64\SQLEXPRESS</servname>
   <username />
   <password />
-  <database>QuanLyHS_GV</database>
+  <database>QLHocSinhTHPT</database>
 </config>

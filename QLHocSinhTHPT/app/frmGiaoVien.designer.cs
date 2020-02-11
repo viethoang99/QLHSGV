@@ -108,6 +108,8 @@
             // ctxMenu
             // 
             this.ctxMenu.DockSide = DevComponents.DotNetBar.eDockSide.Document;
+            this.ctxMenu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxMenu.IsMaximized = false;
             this.ctxMenu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnMenu});
             this.ctxMenu.Location = new System.Drawing.Point(279, 203);
@@ -122,7 +124,6 @@
             // btnMenu
             // 
             this.btnMenu.AutoExpandOnClick = true;
-            this.btnMenu.ImagePaddingHorizontal = 8;
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
             this.btnMenu.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -136,7 +137,6 @@
             // btnAdd
             // 
             this.btnAdd.Image = global::app.Properties.Resources.add;
-            this.btnAdd.ImagePaddingHorizontal = 8;
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.Ins);
             this.btnAdd.Text = "Thêm mới";
@@ -145,7 +145,6 @@
             // btnRefesh
             // 
             this.btnRefesh.Image = global::app.Properties.Resources.refresh;
-            this.btnRefesh.ImagePaddingHorizontal = 8;
             this.btnRefesh.Name = "btnRefesh";
             this.btnRefesh.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F5);
             this.btnRefesh.Text = "Làm tươi danh dách";
@@ -154,7 +153,6 @@
             // btnDelete
             // 
             this.btnDelete.Image = global::app.Properties.Resources.delete;
-            this.btnDelete.ImagePaddingHorizontal = 8;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.Del);
             this.btnDelete.Text = "Xóa dòng được chọn";
@@ -163,7 +161,6 @@
             // btnSave
             // 
             this.btnSave.Image = global::app.Properties.Resources.save;
-            this.btnSave.ImagePaddingHorizontal = 8;
             this.btnSave.Name = "btnSave";
             this.btnSave.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlS);
             this.btnSave.Text = "Lưu danh sách";
@@ -172,7 +169,6 @@
             // btnClose
             // 
             this.btnClose.Image = global::app.Properties.Resources.exit;
-            this.btnClose.ImagePaddingHorizontal = 8;
             this.btnClose.Name = "btnClose";
             this.btnClose.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.AltF4);
             this.btnClose.Text = "Đóng cửa sổ này";
@@ -317,6 +313,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 21);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -403,8 +400,8 @@
             // navPaneLeft
             // 
             this.navPaneLeft.CanCollapse = true;
-            this.navPaneLeft.Controls.Add(this.navPanelNhapDuLieu);
             this.navPaneLeft.Controls.Add(this.navPanelTimKiem);
+            this.navPaneLeft.Controls.Add(this.navPanelNhapDuLieu);
             this.navPaneLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.navPaneLeft.ItemPaddingBottom = 2;
             this.navPaneLeft.ItemPaddingTop = 2;
@@ -422,6 +419,7 @@
             // 
             // 
             this.navPaneLeft.TitlePanel.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.navPaneLeft.TitlePanel.DisabledBackColor = System.Drawing.Color.Empty;
             this.navPaneLeft.TitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.navPaneLeft.TitlePanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navPaneLeft.TitlePanel.Location = new System.Drawing.Point(1, 1);
@@ -436,7 +434,7 @@
             this.navPaneLeft.TitlePanel.Style.GradientAngle = 90;
             this.navPaneLeft.TitlePanel.Style.MarginLeft = 4;
             this.navPaneLeft.TitlePanel.TabIndex = 0;
-            this.navPaneLeft.TitlePanel.Text = "Nhập liệu thông tin";
+            this.navPaneLeft.TitlePanel.Text = "Tìm kiếm thông tin";
             // 
             // navPanelNhapDuLieu
             // 
@@ -453,11 +451,12 @@
             this.navPanelNhapDuLieu.Controls.Add(this.label4);
             this.navPanelNhapDuLieu.Controls.Add(this.txtDienThoai);
             this.navPanelNhapDuLieu.Controls.Add(this.txtTenGiaoVien);
+            this.navPanelNhapDuLieu.DisabledBackColor = System.Drawing.Color.Empty;
             this.navPanelNhapDuLieu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navPanelNhapDuLieu.Location = new System.Drawing.Point(1, 25);
+            this.navPanelNhapDuLieu.Location = new System.Drawing.Point(1, 1);
             this.navPanelNhapDuLieu.Name = "navPanelNhapDuLieu";
             this.navPanelNhapDuLieu.ParentItem = this.buttonItemNhapDuLieu;
-            this.navPanelNhapDuLieu.Size = new System.Drawing.Size(183, 270);
+            this.navPanelNhapDuLieu.Size = new System.Drawing.Size(183, 396);
             this.navPanelNhapDuLieu.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navPanelNhapDuLieu.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navPanelNhapDuLieu.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -532,6 +531,7 @@
             // 
             // 
             this.txtMaGiaoVien.Border.Class = "TextBoxBorder";
+            this.txtMaGiaoVien.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtMaGiaoVien.Location = new System.Drawing.Point(11, 25);
             this.txtMaGiaoVien.MaxLength = 6;
             this.txtMaGiaoVien.Name = "txtMaGiaoVien";
@@ -544,6 +544,7 @@
             // 
             // 
             this.txtDiaChi.Border.Class = "TextBoxBorder";
+            this.txtDiaChi.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtDiaChi.Location = new System.Drawing.Point(11, 115);
             this.txtDiaChi.MaxLength = 50;
             this.txtDiaChi.Name = "txtDiaChi";
@@ -574,6 +575,7 @@
             // 
             // 
             this.txtDienThoai.Border.Class = "TextBoxBorder";
+            this.txtDienThoai.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtDienThoai.Location = new System.Drawing.Point(11, 160);
             this.txtDienThoai.MaxLength = 11;
             this.txtDienThoai.Name = "txtDienThoai";
@@ -586,6 +588,7 @@
             // 
             // 
             this.txtTenGiaoVien.Border.Class = "TextBoxBorder";
+            this.txtTenGiaoVien.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTenGiaoVien.Location = new System.Drawing.Point(11, 70);
             this.txtTenGiaoVien.MaxLength = 30;
             this.txtTenGiaoVien.Name = "txtTenGiaoVien";
@@ -597,7 +600,6 @@
             this.buttonItemNhapDuLieu.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.buttonItemNhapDuLieu.Checked = true;
             this.buttonItemNhapDuLieu.Image = ((System.Drawing.Image)(resources.GetObject("buttonItemNhapDuLieu.Image")));
-            this.buttonItemNhapDuLieu.ImagePaddingHorizontal = 8;
             this.buttonItemNhapDuLieu.Name = "buttonItemNhapDuLieu";
             this.buttonItemNhapDuLieu.OptionGroup = "navBar";
             this.buttonItemNhapDuLieu.Text = "Nhập liệu thông tin";
@@ -610,11 +612,12 @@
             this.navPanelTimKiem.Controls.Add(this.chkTimTheoMa);
             this.navPanelTimKiem.Controls.Add(this.btnTimKiem);
             this.navPanelTimKiem.Controls.Add(this.txtTimKiem);
+            this.navPanelTimKiem.DisabledBackColor = System.Drawing.Color.Empty;
             this.navPanelTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navPanelTimKiem.Location = new System.Drawing.Point(1, 1);
+            this.navPanelTimKiem.Location = new System.Drawing.Point(1, 25);
             this.navPanelTimKiem.Name = "navPanelTimKiem";
             this.navPanelTimKiem.ParentItem = this.buttonItemTimKiem;
-            this.navPanelTimKiem.Size = new System.Drawing.Size(183, 294);
+            this.navPanelTimKiem.Size = new System.Drawing.Size(183, 270);
             this.navPanelTimKiem.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navPanelTimKiem.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navPanelTimKiem.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -634,6 +637,10 @@
             // 
             // chkTimTheoTen
             // 
+            // 
+            // 
+            // 
+            this.chkTimTheoTen.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.chkTimTheoTen.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
             this.chkTimTheoTen.Location = new System.Drawing.Point(8, 75);
             this.chkTimTheoTen.Name = "chkTimTheoTen";
@@ -643,6 +650,10 @@
             // 
             // chkTimTheoMa
             // 
+            // 
+            // 
+            // 
+            this.chkTimTheoMa.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.chkTimTheoMa.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
             this.chkTimTheoMa.Checked = true;
             this.chkTimTheoMa.CheckState = System.Windows.Forms.CheckState.Checked;
@@ -670,6 +681,7 @@
             // 
             // 
             this.txtTimKiem.Border.Class = "TextBoxBorder";
+            this.txtTimKiem.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtTimKiem.Location = new System.Drawing.Point(11, 25);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(160, 20);
@@ -679,8 +691,8 @@
             // buttonItemTimKiem
             // 
             this.buttonItemTimKiem.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItemTimKiem.Checked = true;
             this.buttonItemTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("buttonItemTimKiem.Image")));
-            this.buttonItemTimKiem.ImagePaddingHorizontal = 8;
             this.buttonItemTimKiem.Name = "buttonItemTimKiem";
             this.buttonItemTimKiem.OptionGroup = "navBar";
             this.buttonItemTimKiem.Text = "Tìm kiếm thông tin";
@@ -693,6 +705,7 @@
             this.ctxMenu.SetContextMenuEx(this, this.btnMenu);
             this.Controls.Add(this.groupBoxDanhSach);
             this.Controls.Add(this.navPaneLeft);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmGiaoVien";
             this.ShowInTaskbar = false;
