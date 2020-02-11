@@ -48,11 +48,17 @@ namespace app.DataLayer
 
         public DataTable TimTheoMa(String id)
         {
+            string sql = "SELECT * FROM GIAOVIEN WHERE MaGiaoVien LIKE '%" + id + "%'";
+            SqlCommand com = new SqlCommand(sql);
+            m_GiaoVienData.Load(com);
             return m_GiaoVienData;
         }
 
         public DataTable TimTheoTen(String ten)
         {
+            string sql = "SELECT * FROM GIAOVIEN WHERE TenGiaoVien LIKE '%" + ten + "%'";
+            SqlCommand com = new SqlCommand(sql);
+            m_GiaoVienData.Load(com);
             return m_GiaoVienData;
         }
 
