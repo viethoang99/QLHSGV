@@ -10,7 +10,11 @@ namespace app.DataLayer
 
         public DataTable LayDsGiaoVien()
         {
+            string sql = "SELECT * FROM GIAOVIEN";
+            SqlCommand com = new SqlCommand(sql);
+            m_GiaoVienData.Load(com);
             return m_GiaoVienData;
+
         }
 
         public DataTable LayDsGiaoVienForReport()
@@ -35,6 +39,11 @@ namespace app.DataLayer
 
         public void LuuGiaoVien(String maGiaoVien, String tenGiaoVien, String diaChi, String dienThoai, String chuyenMon)
         {
+            string sql = "INSERT INTO GIAOVIEN VALUES ('" + maGiaoVien + "',N'"
+                + tenGiaoVien + "',N'" + diaChi + "','" + dienThoai + "','" + chuyenMon + "')";
+            SqlCommand com = new SqlCommand(sql);
+            m_GiaoVienData.ExecuteNoneQuery(com);
+
         }
 
         public DataTable TimTheoMa(String id)

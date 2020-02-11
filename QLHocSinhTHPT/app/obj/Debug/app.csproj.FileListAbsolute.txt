@@ -219,3 +219,47 @@ D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\o
 D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.exe
 D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.pdb
 C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\bin\Debug\DevComponents.DotNetBar2.xml
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\app.exe
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\app.pdb
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\DevComponents.DotNetBar2.dll
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\System.Web.Services.dll
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\DevComponents.DotNetBar2.xml
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csprojAssemblyReference.cache
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Component.frmConnection.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Component.frmQuyDinh.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Component.frmDangNhap.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmXemDiem.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmNhapDiemRieng.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmNhapDiemChung.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmTimKiemHS.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmTimKiemGV.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmPhanLop.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmPhanCong.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmLop.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmHocSinh.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmGiaoVien.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmLoaiNguoiDung.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmNguoiDung.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmLoaiDiem.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmKetQua.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmHanhKiem.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmHocLuc.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmKhoiLop.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmHocKy.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmNamHoc.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmMonHoc.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptKetQuaHocKy_MonHoc.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptKetQuaHocKy_Lop.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptKetQuaCaNam_MonHoc.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptKetQuaCaNam_Lop.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptDanhSachLopHoc.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptDanhSachHocSinh.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Reports.frptDanhSachGiaoVien.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmAbout.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.frmMain.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Properties.Resources.resources
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csproj.GenerateResource.cache
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csproj.CopyComplete
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.exe
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.pdb
