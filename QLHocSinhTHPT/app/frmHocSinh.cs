@@ -11,9 +11,18 @@ namespace app
 {
     public partial class frmHocSinh : Office2007Form
     {
+        public static int countRowsPre;
+        public static int countRowsNext;
+        public static String maHS;
+        public static String hoTen;
+        public static bool gioiTinh;
+        public static DateTime nSinh;
+        public static String noiSinh;
+        public static String temp;
+        DataTable data = new DataTable();
         #region Fields
-        HocSinhCtrl     m_HocSinhCtrl       = new HocSinhCtrl();
-        QuyDinh         quyDinh             = new QuyDinh();
+        HocSinhCtrl m_HocSinhCtrl = new HocSinhCtrl();
+        QuyDinh quyDinh = new QuyDinh();
         #endregion
 
         #region Constructor
@@ -26,9 +35,9 @@ namespace app
 
         #region Load
         private void frmHocSinh_Load(object sender, EventArgs e)
-        { 
-
+        {
             m_HocSinhCtrl.HienThi(dGVHocSinh, bindingNavigatorHocSinh, txtMaHocSinh, txtTenHocSinh, txtGioiTinh, dtpNgaySinh, txtNoiSinh);
+            countRowsPre = dGVHocSinh.RowCount;
         }
         #endregion
 
@@ -54,12 +63,12 @@ namespace app
             if (dGVHocSinh.RowCount == 0)
                 bindingNavigatorDeleteItem.Enabled = true;
 
-            DataRow m_Row           = m_HocSinhCtrl.ThemDongMoi();
-            m_Row["MaHocSinh"]      = "HS" + quyDinh.LaySTT(dGVHocSinh.Rows.Count + 1);
-            m_Row["HoTen"]          = "";
-            m_Row["GioiTinh"]       = false;
-            m_Row["NgaySinh"]       = DateTime.Today;
-            m_Row["NoiSinh"]        = "";
+            DataRow m_Row = m_HocSinhCtrl.ThemDongMoi();
+            m_Row["MaHocSinh"] = "HS" + quyDinh.LaySTT(dGVHocSinh.Rows.Count + 1);
+            m_Row["HoTen"] = "";
+            m_Row["GioiTinh"] = false;
+            m_Row["NgaySinh"] = DateTime.Today;
+            m_Row["NoiSinh"] = "";
             m_HocSinhCtrl.ThemHocSinh(m_Row);
             bindingNavigatorHocSinh.BindingSource.MoveLast();
         }
@@ -69,7 +78,7 @@ namespace app
             m_HocSinhCtrl.HienThi(dGVHocSinh, bindingNavigatorHocSinh, txtMaHocSinh, txtTenHocSinh, txtGioiTinh, dtpNgaySinh, txtNoiSinh);
         }
 
-        public Boolean KiemTraTruocKhiLuu(String cellString)
+        public String KiemTraTruocKhiLuu(String cellString)
         {
             foreach (DataGridViewRow row in dGVHocSinh.Rows)
             {
@@ -79,47 +88,60 @@ namespace app
                     if (str == "")
                     {
                         MessageBoxEx.Show("Thông tin học sinh " + row.Cells["colHoTen"].Value.ToString() + " không hợp lệ!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return false;
+                        return "";
                     }
                 }
+                temp = row.Cells[cellString].Value.ToString();
             }
-            return true;
+            return temp;
         }
 
-        public Boolean KiemTraDoTuoiTruocKhiLuu(String doTuoiColumn)
+        public String KiemTraDoTuoiTruocKhiLuu(String doTuoiColumn)
         {
+            countRowsNext = dGVHocSinh.RowCount;
             foreach (DataGridViewRow row in dGVHocSinh.Rows)
             {
                 if (row.Cells[doTuoiColumn].Value != null)
                 {
                     DateTime ngaySinh = Convert.ToDateTime(row.Cells[doTuoiColumn].Value.ToString());
-                    
                     if (quyDinh.KiemTraDoTuoi(ngaySinh) == false)
                     {
                         MessageBoxEx.Show("Tuổi học sinh " + row.Cells["colHoTen"].Value.ToString() + " không đúng quy định!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return false;
+                        return "";
                     }
                 }
+                temp = row.Cells[doTuoiColumn].Value.ToString();
             }
-            return true;
+            return temp;
         }
 
         private void bindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            if (KiemTraTruocKhiLuu("colMaHocSinh") == true &&
-                KiemTraTruocKhiLuu("colHoTen") == true &&
-                KiemTraTruocKhiLuu("colNoiSinh") == true &&
-                KiemTraTruocKhiLuu("colMaDanToc") == true &&
-                KiemTraTruocKhiLuu("colMaTonGiao") == true &&
-                KiemTraTruocKhiLuu("colHoTenCha") == true &&
-                KiemTraTruocKhiLuu("colMaNNghiepCha") == true &&
-                KiemTraTruocKhiLuu("colHoTenMe") == true &&
-                KiemTraTruocKhiLuu("colMaNNghiepMe") == true)
+            if (KiemTraTruocKhiLuu("colMaHocSinh").Equals("") != true &&
+                KiemTraTruocKhiLuu("colHoTen").Equals("") != true &&
+                KiemTraTruocKhiLuu("colNoiSinh").Equals("") != true)
+            //KiemTraTruocKhiLuu("colMaDanToc") == true &&
+            //KiemTraTruocKhiLuu("colMaTonGiao") == true &&
+            //KiemTraTruocKhiLuu("colHoTenCha") == true &&
+            //KiemTraTruocKhiLuu("colMaNNghiepCha") == true &&
+            //KiemTraTruocKhiLuu("colHoTenMe") == true &&
+            //KiemTraTruocKhiLuu("colMaNNghiepMe") == true)
             {
-                if (KiemTraDoTuoiTruocKhiLuu("colNgaySinh") == true)
+                if (KiemTraDoTuoiTruocKhiLuu("colNgaySinh").Equals("") != true)
                 {
                     bindingNavigatorPositionItem.Focus();
                     m_HocSinhCtrl.LuuHocSinh();
+                    if (countRowsNext > countRowsPre)
+                    {
+                        maHS = KiemTraTruocKhiLuu("colMaHocSinh");
+                        hoTen = KiemTraTruocKhiLuu("colHoTen");
+                        noiSinh = KiemTraTruocKhiLuu("colNoiSinh");
+                        nSinh = Convert.ToDateTime(KiemTraDoTuoiTruocKhiLuu("colNgaySinh").ToString());
+                        if (KiemTraTruocKhiLuu("colGioiTinh").Equals("Nam"))
+                            gioiTinh = true;
+                        else gioiTinh = false;
+                        m_HocSinhCtrl.LuuHocSinh(maHS, hoTen, gioiTinh, nSinh, noiSinh);
+                    }
                 }
             }
         }
@@ -168,17 +190,17 @@ namespace app
                 ckbGTinhNam.Checked = true;
         }
 
- 
+
         private void btnLuuVaoDS_Click(object sender, EventArgs e)
         {
             bool gioiTinh = false;
             if (ckbGTinhNu.Checked == true)
                 gioiTinh = true;
 
-            if (txtMaHocSinh.Text               != "" &&
-                txtTenHocSinh.Text              != "" &&
-                txtNoiSinh.Text                 != "" &&
-                dtpNgaySinh.Value               != null
+            if (txtMaHocSinh.Text != "" &&
+                txtTenHocSinh.Text != "" &&
+                txtNoiSinh.Text != "" &&
+                dtpNgaySinh.Value != null
                )
             {
                 if (quyDinh.KiemTraDoTuoi(dtpNgaySinh.Value) == true)
