@@ -10,6 +10,8 @@ namespace app.DataLayer
 
         public DataTable LayDsHanhKiem()
         {
+            SqlCommand cmd = new SqlCommand("select * from HANHKIEM");
+            m_HanhKiemData.Load(cmd);
             return m_HanhKiemData;
         }
 
