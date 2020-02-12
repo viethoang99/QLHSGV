@@ -151,7 +151,7 @@ namespace app.Controller
                 HocSinhInfo hs = new HocSinhInfo();
                 hs.MaHocSinh        = Convert.ToString(Row["MaHocSinh"]);
                 hs.HoTen            = Convert.ToString(Row["HoTen"]);
-                hs.GioiTinh         = Convert.ToString(Row["GioiTinh"]);
+                hs.GioiTinh         = Convert.ToString(Row["GioiTinh"]).Trim();
                 hs.NgaySinh         = Convert.ToDateTime(Row["NgaySinh"]);
                 hs.NoiSinh          = Convert.ToString(Row["NoiSinh"]);
 

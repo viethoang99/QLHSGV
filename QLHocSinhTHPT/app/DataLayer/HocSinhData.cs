@@ -50,6 +50,8 @@ namespace app.DataLayer
 
         public DataTable LayDsHocSinhForReport()
         {
+            SqlCommand cmd = new SqlCommand("SELECT * FROM HOCSINH");
+            m_HocSinhData.Load(cmd);
             return m_HocSinhData;
         }
 
@@ -109,3 +111,5 @@ namespace app.DataLayer
         }
     }
 }
+
+//DESKTOP-8V08BMC\SQLEXPRESS
