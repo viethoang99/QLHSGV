@@ -199,7 +199,7 @@
             // 
             this.ctxMenu.DockSide = DevComponents.DotNetBar.eDockSide.Document;
             this.ctxMenu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ctxMenu.IsMaximized = false;
+           // this.ctxMenu.IsMaximized = false;
             this.ctxMenu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnMenu});
             this.ctxMenu.Location = new System.Drawing.Point(249, 203);
@@ -457,7 +457,7 @@
             this.navPanelNhapDuLieu.Controls.Add(this.txtNoiSinh);
             this.navPanelNhapDuLieu.Controls.Add(this.txtTenHocSinh);
             this.navPanelNhapDuLieu.Controls.Add(this.txtGioiTinh);
-            this.navPanelNhapDuLieu.DisabledBackColor = System.Drawing.Color.Empty;
+           // this.navPanelNhapDuLieu.DisabledBackColor = System.Drawing.Color.Empty;
             this.navPanelNhapDuLieu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navPanelNhapDuLieu.Location = new System.Drawing.Point(1, 25);
             this.navPanelNhapDuLieu.Name = "navPanelNhapDuLieu";
@@ -477,7 +477,7 @@
             this.groupPanelGioiTinh.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanelGioiTinh.Controls.Add(this.ckbGTinhNam);
             this.groupPanelGioiTinh.Controls.Add(this.ckbGTinhNu);
-            this.groupPanelGioiTinh.DisabledBackColor = System.Drawing.Color.Empty;
+            //this.groupPanelGioiTinh.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanelGioiTinh.Location = new System.Drawing.Point(11, 115);
             this.groupPanelGioiTinh.Name = "groupPanelGioiTinh";
             this.groupPanelGioiTinh.Size = new System.Drawing.Size(160, 24);
@@ -555,7 +555,7 @@
             this.dtpNgaySinh.BackgroundStyle.Class = "DateTimeInputBackground";
             this.dtpNgaySinh.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dtpNgaySinh.ButtonDropDown.Visible = true;
-            this.dtpNgaySinh.IsPopupCalendarOpen = false;
+            //this.dtpNgaySinh.IsPopupCalendarOpen = false;
             this.dtpNgaySinh.Location = new System.Drawing.Point(11, 160);
             this.dtpNgaySinh.MaxDate = new System.DateTime(2050, 12, 31, 0, 0, 0, 0);
             this.dtpNgaySinh.MinDate = new System.DateTime(1980, 1, 1, 0, 0, 0, 0);
@@ -745,7 +745,7 @@
             this.navPanelTimKiem.Controls.Add(this.chkTimTheoMa);
             this.navPanelTimKiem.Controls.Add(this.btnTimKiem);
             this.navPanelTimKiem.Controls.Add(this.txtTimKiem);
-            this.navPanelTimKiem.DisabledBackColor = System.Drawing.Color.Empty;
+            //this.navPanelTimKiem.DisabledBackColor = System.Drawing.Color.Empty;
             this.navPanelTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navPanelTimKiem.Location = new System.Drawing.Point(1, 1);
             this.navPanelTimKiem.Name = "navPanelTimKiem";

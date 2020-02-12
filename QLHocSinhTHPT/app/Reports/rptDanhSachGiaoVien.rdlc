@@ -140,7 +140,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                       </Style>
-                      <Value>=Fields!MonHoc.Value.TenMonHoc</Value>
+                      <Value>=Fields!MonHoc.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -385,7 +385,7 @@
           <DataField>MaGiaoVien</DataField>
         </Field>
         <Field Name="MonHoc">
-          <rd:TypeName>app.Bussiness.MonHocInfo</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
           <DataField>MonHoc</DataField>
         </Field>
         <Field Name="TenGiaoVien">

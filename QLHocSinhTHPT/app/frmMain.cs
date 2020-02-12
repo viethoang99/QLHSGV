@@ -127,6 +127,7 @@ namespace app
             Default();
         }
 
+        
 
         private void btnQLNguoiDung_Click(object sender, EventArgs e)
         {
@@ -138,6 +139,32 @@ namespace app
             }
             else
                 m_FrmNguoiDung.Activate();
+        }
+
+        private void btnSaoLuu_Click(object sender, EventArgs e)
+        {
+            if (backupDialog.ShowDialog() == DialogResult.OK)
+            {
+                System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand("BACKUP DATABASE " + Utilities.DatabaseName + " TO DISK = '" + backupDialog.FileName.ToString() + "'");
+                DataService data = new DataService();
+                data.Load(cmd);
+                MessageBoxEx.Show("Sao lưu dữ liệu thành công!", "BACKUP COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+                return;
+        }
+
+        private void btnPhucHoi_Click(object sender, EventArgs e)
+        {
+            if (restoreDialog.ShowDialog() == DialogResult.OK)
+            {
+                System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand("USE master RESTORE DATABASE " + Utilities.DatabaseName + " FROM DISK = '" + restoreDialog.FileName.ToString() + "'");
+                DataService data = new DataService();
+                data.Load(cmd);
+                MessageBoxEx.Show("Phục hồi dữ liệu thành công!", "RESTORE COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+                return;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
@@ -207,6 +234,7 @@ namespace app
             ThamSo.ShowFormPhanLop();
         }
 
+        
 
         private void btnGiaoVien_Click(object sender, EventArgs e)
         {
@@ -368,8 +396,6 @@ namespace app
         }
         #endregion
 
-       
-
         #region Giao diện mặc định
         public void Default()
         {
@@ -384,7 +410,11 @@ namespace app
             //False
             btnDangXuat.Enabled         = false;
             btnDangXuatContext.Enabled  = false;
+            //
+            //
             btnQLNguoiDung.Enabled      = false;
+            //
+            //
 
             btnLopHoc.Enabled           = false;
             btnKhoiLop.Enabled          = false;
@@ -398,6 +428,9 @@ namespace app
             btnHanhKiem.Enabled         = false;
             btnHocSinh.Enabled          = false;
             btnPhanLop.Enabled          = false;
+            //
+            //
+            //
             btnGiaoVien.Enabled         = false;
             btnPhanCong.Enabled         = false;
 
@@ -429,7 +462,11 @@ namespace app
             //True
             btnDangXuat.Enabled         = true;
             btnDangXuatContext.Enabled  = true;
+            //
+            //
             btnQLNguoiDung.Enabled      = true;
+            //
+            //
             btnThoat.Enabled            = true;
             btnThoatContext.Enabled     = true;
 
@@ -445,6 +482,9 @@ namespace app
             btnHanhKiem.Enabled         = true;
             btnHocSinh.Enabled          = true;
             btnPhanLop.Enabled          = true;
+            //
+            //
+            //
             btnGiaoVien.Enabled         = true;
             btnPhanCong.Enabled         = true;
 
@@ -475,6 +515,8 @@ namespace app
             //True
             btnDangXuat.Enabled         = true;
             btnDangXuatContext.Enabled  = true;
+            //
+            //
             btnThoat.Enabled            = true;
             btnThoatContext.Enabled     = true;
 
@@ -500,6 +542,8 @@ namespace app
             btnDangNhap.Enabled         = false;
             btnDangNhapContext.Enabled  = false;
             btnQLNguoiDung.Enabled      = false;
+            //
+            //
 
             btnLopHoc.Enabled           = false;
             btnKhoiLop.Enabled          = false;
@@ -510,6 +554,9 @@ namespace app
             btnHanhKiem.Enabled         = false;
             btnHocSinh.Enabled          = false;
             btnPhanLop.Enabled          = false;
+            //
+            //
+            //
             btnGiaoVien.Enabled         = false;
             btnPhanCong.Enabled         = false;
 
@@ -526,6 +573,8 @@ namespace app
             //True
             btnDangXuat.Enabled         = true;
             btnDangXuatContext.Enabled  = true;
+            //
+            //
             btnThoat.Enabled            = true;
             btnThoatContext.Enabled     = true;
             
@@ -541,6 +590,9 @@ namespace app
             btnDiem.Enabled             = true;
             btnHocSinh.Enabled          = true;
             btnPhanLop.Enabled          = true;
+            //
+            //
+            //
 
             btnKQHKTheoLop.Enabled      = true;
             btnKQHKTheoMon.Enabled      = true;
@@ -560,6 +612,8 @@ namespace app
             btnDangNhap.Enabled         = false;
             btnDangNhapContext.Enabled  = false;
             btnQLNguoiDung.Enabled      = false;
+            //
+            //
 
             btnGiaoVien.Enabled         = false;
             btnPhanCong.Enabled         = false;
@@ -573,19 +627,5 @@ namespace app
 
         #endregion
 
-        private void RibbonBarXuatDanhSach_ItemClick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RibbonBarKQHocKy_ItemClick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RibbonBarNamHoc_ItemClick(object sender, EventArgs e)
-        {
-
-        }
     }
 }
