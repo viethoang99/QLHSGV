@@ -95,29 +95,8 @@ namespace app.DataLayer
             return m_HocSinhData;
         }
 
-        public DataTable TimKiemHocSinh(String hoTen, String theoNSinh, String noiSinh)
-        {
-            string condition = frmTimKiemHS.rs;
-            if (condition.Equals("AND"))
-            {
-                string query = "SELECT * FROM dbo.HOCSINH WHERE HoTen like '%" + hoTen + "%'" +
-                    "AND NoiSinh like N'%" + noiSinh + "%'";
-                SqlCommand cmd = new SqlCommand(query);
-                m_HocSinhData.Load(cmd);
-            }
-            else if (condition.Equals("OR"))
-            {
-                string query = "SELECT * FROM dbo.HOCSINH WHERE HoTen like '%" + hoTen + "%'" +
-                    "OR NoiSinh like N'%" + noiSinh + "%'";
-                SqlCommand cmd = new SqlCommand(query);
-                m_HocSinhData.Load(cmd);
-            }
-            else if (condition.Equals("NONE"))
-            {
-                string query = "SELECT * FROM dbo.HOCSINH WHERE HoTen like '%" + hoTen + "%'";
-                SqlCommand cmd = new SqlCommand(query);
-                m_HocSinhData.Load(cmd);
-            }
+        public DataTable TimKiemHocSinh(String hoTen)
+        {         
             return m_HocSinhData;
         }
     }

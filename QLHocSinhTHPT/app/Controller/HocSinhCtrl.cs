@@ -186,14 +186,12 @@ namespace app.Controller
         #endregion
 
         #region Tim kiem
-        public void TimKiemHocSinh(TextBoxX txtHoTen,
-                                   ComboBoxEx cmbTheoNSinh,
-                                   TextBoxX txtNoiSinh,
+        public void TimKiemHocSinh(TextBoxX txtHoTen,                              
                                    DataGridViewX dGV,
                                    BindingNavigator bN)
         {
             BindingSource bS = new BindingSource();
-            bS.DataSource = m_HocSinhData.TimKiemHocSinh(txtHoTen.Text, cmbTheoNSinh.Text, txtNoiSinh.Text);
+            bS.DataSource = m_HocSinhData.TimKiemHocSinh(txtHoTen.Text);
 
             bN.BindingSource = bS;
             dGV.DataSource = bS;
