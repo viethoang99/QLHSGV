@@ -278,7 +278,7 @@ namespace app
                                     diemDaXuLy = chuoiDiemChuaXuLy.Substring(i - count, count);
 
                                     if (diemDaXuLy != null && diemDaXuLy != " " && quyDinh.KiemTraDiem(diemDaXuLy))
-                                        m_DiemCtrl.LuuDiem(row.Cells["colMaHocSinh"].Value.ToString(),
+                                        m_DiemCtrl.CapNhatDiem(row.Cells["colMaHocSinh"].Value.ToString(),
                                                            cmbMonHocSD.SelectedValue.ToString(),
                                                            cmbHocKySD.SelectedValue.ToString(),
                                                            cmbNamHocSD.SelectedValue.ToString(),
@@ -315,7 +315,7 @@ namespace app
                                     diemDaXuLy = chuoiDiemChuaXuLy.Substring(i - count, count);
 
                                     if (diemDaXuLy != null && diemDaXuLy != " " && quyDinh.KiemTraDiem(diemDaXuLy))
-                                        m_DiemCtrl.LuuDiem(row.Cells["colMaHocSinh"].Value.ToString(),
+                                        m_DiemCtrl.CapNhatDiem(row.Cells["colMaHocSinh"].Value.ToString(),
                                                            cmbMonHocSD.SelectedValue.ToString(),
                                                            cmbHocKySD.SelectedValue.ToString(),
                                                            cmbNamHocSD.SelectedValue.ToString(),
@@ -352,7 +352,7 @@ namespace app
                                     diemDaXuLy = chuoiDiemChuaXuLy.Substring(i - count, count);
 
                                     if (diemDaXuLy != null && diemDaXuLy != " " && quyDinh.KiemTraDiem(diemDaXuLy))
-                                        m_DiemCtrl.LuuDiem(row.Cells["colMaHocSinh"].Value.ToString(),
+                                        m_DiemCtrl.CapNhatDiem(row.Cells["colMaHocSinh"].Value.ToString(),
                                                            cmbMonHocSD.SelectedValue.ToString(),
                                                            cmbHocKySD.SelectedValue.ToString(),
                                                            cmbNamHocSD.SelectedValue.ToString(),
@@ -372,7 +372,7 @@ namespace app
                         {
                             String diemThi = row.Cells["colDiemThi"].Value.ToString();
                             if (quyDinh.KiemTraDiem(diemThi))
-                                m_DiemCtrl.LuuDiem(row.Cells["colMaHocSinh"].Value.ToString(),
+                                m_DiemCtrl.CapNhatDiem(row.Cells["colMaHocSinh"].Value.ToString(),
                                                            cmbMonHocSD.SelectedValue.ToString(),
                                                            cmbHocKySD.SelectedValue.ToString(),
                                                            cmbNamHocSD.SelectedValue.ToString(),
@@ -549,5 +549,15 @@ namespace app
             cmbMonHocSD.DataBindings.Clear();
         }
         #endregion
+
+        private void NavPaneLeft_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonItemCapNhatDuLieu_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

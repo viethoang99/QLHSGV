@@ -117,6 +117,8 @@
             // ctxMenu
             // 
             this.ctxMenu.DockSide = DevComponents.DotNetBar.eDockSide.Document;
+            this.ctxMenu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ctxMenu.IsMaximized = false;
             this.ctxMenu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnMenu});
             this.ctxMenu.Location = new System.Drawing.Point(274, 180);
@@ -131,7 +133,6 @@
             // btnMenu
             // 
             this.btnMenu.AutoExpandOnClick = true;
-            this.btnMenu.ImagePaddingHorizontal = 8;
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
             this.btnMenu.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -143,7 +144,6 @@
             // btnXDiem
             // 
             this.btnXDiem.Image = global::app.Properties.Resources.xemdiem;
-            this.btnXDiem.ImagePaddingHorizontal = 8;
             this.btnXDiem.Name = "btnXDiem";
             this.btnXDiem.Text = "Xem điểm";
             this.btnXDiem.Click += new System.EventHandler(this.btnXemDiem_Click);
@@ -151,7 +151,6 @@
             // btnLDiem
             // 
             this.btnLDiem.Image = global::app.Properties.Resources.save;
-            this.btnLDiem.ImagePaddingHorizontal = 8;
             this.btnLDiem.Name = "btnLDiem";
             this.btnLDiem.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlS);
             this.btnLDiem.Text = "Lưu vào bảng điểm";
@@ -160,7 +159,6 @@
             // btnClose
             // 
             this.btnClose.Image = global::app.Properties.Resources.exit;
-            this.btnClose.ImagePaddingHorizontal = 8;
             this.btnClose.Name = "btnClose";
             this.btnClose.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.AltF4);
             this.btnClose.Text = "Đóng cửa sổ này";
@@ -319,6 +317,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 21);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -357,7 +356,7 @@
             this.btnLuuDiem.Image = global::app.Properties.Resources.save;
             this.btnLuuDiem.Name = "btnLuuDiem";
             this.btnLuuDiem.RightToLeftAutoMirrorImage = true;
-            this.btnLuuDiem.Size = new System.Drawing.Size(70, 32);
+            this.btnLuuDiem.Size = new System.Drawing.Size(77, 32);
             this.btnLuuDiem.Text = "Lưu điểm";
             this.btnLuuDiem.Click += new System.EventHandler(this.btnLuuDiem_Click);
             // 
@@ -366,7 +365,7 @@
             this.btnXemDiem.Image = global::app.Properties.Resources.xemdiem;
             this.btnXemDiem.Name = "btnXemDiem";
             this.btnXemDiem.RightToLeftAutoMirrorImage = true;
-            this.btnXemDiem.Size = new System.Drawing.Size(72, 32);
+            this.btnXemDiem.Size = new System.Drawing.Size(81, 32);
             this.btnXemDiem.Text = "Xem điểm";
             this.btnXemDiem.Click += new System.EventHandler(this.btnXemDiem_Click);
             // 
@@ -375,7 +374,7 @@
             this.btnThoat.Image = global::app.Properties.Resources.exit;
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.RightToLeftAutoMirrorImage = true;
-            this.btnThoat.Size = new System.Drawing.Size(55, 32);
+            this.btnThoat.Size = new System.Drawing.Size(57, 32);
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -392,14 +391,14 @@
             this.btnHelp.RightToLeftAutoMirrorImage = true;
             this.btnHelp.Size = new System.Drawing.Size(23, 32);
             this.superTooltip.SetSuperTooltip(this.btnHelp, new DevComponents.DotNetBar.SuperTooltipInfo("Cách nhập điểm cho môn học", "Nhấn F1 để biết thêm về cách nhập điểm", "Nếu loại điểm có nhiều cột điểm thì mỗi điểm nhập cách nhau một dấu chấm phẩy như" +
-                        " hình bên.<br />\r\nGiả sử: Có 3 cột điểm miệng là 5.5; 7 và 9 điểm thì nhập: <b>5" +
-                        ".5;7;9</b>", global::app.Properties.Resources.cachnhapdiem, global::app.Properties.Resources.help, DevComponents.DotNetBar.eTooltipColor.Office2003, true, true, new System.Drawing.Size(400, 125)));
+            " hình bên.<br />\r\nGiả sử: Có 3 cột điểm miệng là 5.5; 7 và 9 điểm thì nhập: <b>5" +
+            ".5;7;9</b>", global::app.Properties.Resources.cachnhapdiem, global::app.Properties.Resources.help, DevComponents.DotNetBar.eTooltipColor.Office2003, true, true, new System.Drawing.Size(400, 125)));
             // 
             // navPaneLeft
             // 
             this.navPaneLeft.CanCollapse = true;
-            this.navPaneLeft.Controls.Add(this.navPanelNhapDuLieu);
             this.navPaneLeft.Controls.Add(this.navPanelCapNhatDuLieu);
+            this.navPaneLeft.Controls.Add(this.navPanelNhapDuLieu);
             this.navPaneLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.navPaneLeft.ItemPaddingBottom = 2;
             this.navPaneLeft.ItemPaddingTop = 2;
@@ -417,6 +416,7 @@
             // 
             // 
             this.navPaneLeft.TitlePanel.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.navPaneLeft.TitlePanel.DisabledBackColor = System.Drawing.Color.Empty;
             this.navPaneLeft.TitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.navPaneLeft.TitlePanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navPaneLeft.TitlePanel.Location = new System.Drawing.Point(1, 1);
@@ -431,7 +431,9 @@
             this.navPaneLeft.TitlePanel.Style.GradientAngle = 90;
             this.navPaneLeft.TitlePanel.Style.MarginLeft = 4;
             this.navPaneLeft.TitlePanel.TabIndex = 0;
-            this.navPaneLeft.TitlePanel.Text = "Nhập điểm học sinh";
+            this.navPaneLeft.TitlePanel.Text = "Cập nhật điểm học sinh";
+            this.navPaneLeft.TitlePanel.Visible = false;
+            this.navPaneLeft.Load += new System.EventHandler(this.NavPaneLeft_Load);
             // 
             // navPanelNhapDuLieu
             // 
@@ -449,11 +451,12 @@
             this.navPanelNhapDuLieu.Controls.Add(this.cmbHocKy);
             this.navPanelNhapDuLieu.Controls.Add(this.cmbLop);
             this.navPanelNhapDuLieu.Controls.Add(this.label03);
+            this.navPanelNhapDuLieu.DisabledBackColor = System.Drawing.Color.Empty;
             this.navPanelNhapDuLieu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navPanelNhapDuLieu.Location = new System.Drawing.Point(1, 25);
+            this.navPanelNhapDuLieu.Location = new System.Drawing.Point(1, 1);
             this.navPanelNhapDuLieu.Name = "navPanelNhapDuLieu";
             this.navPanelNhapDuLieu.ParentItem = this.buttonItemNhapDuLieu;
-            this.navPanelNhapDuLieu.Size = new System.Drawing.Size(188, 240);
+            this.navPanelNhapDuLieu.Size = new System.Drawing.Size(188, 366);
             this.navPanelNhapDuLieu.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navPanelNhapDuLieu.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navPanelNhapDuLieu.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -602,9 +605,7 @@
             // buttonItemNhapDuLieu
             // 
             this.buttonItemNhapDuLieu.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItemNhapDuLieu.Checked = true;
             this.buttonItemNhapDuLieu.Image = ((System.Drawing.Image)(resources.GetObject("buttonItemNhapDuLieu.Image")));
-            this.buttonItemNhapDuLieu.ImagePaddingHorizontal = 8;
             this.buttonItemNhapDuLieu.Name = "buttonItemNhapDuLieu";
             this.buttonItemNhapDuLieu.OptionGroup = "navBar";
             this.buttonItemNhapDuLieu.Text = "Nhập điểm học sinh";
@@ -621,11 +622,12 @@
             this.navPanelCapNhatDuLieu.Controls.Add(this.cmbHocKySD);
             this.navPanelCapNhatDuLieu.Controls.Add(this.cmbLopSD);
             this.navPanelCapNhatDuLieu.Controls.Add(this.label07);
+            this.navPanelCapNhatDuLieu.DisabledBackColor = System.Drawing.Color.Empty;
             this.navPanelCapNhatDuLieu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navPanelCapNhatDuLieu.Location = new System.Drawing.Point(1, 1);
             this.navPanelCapNhatDuLieu.Name = "navPanelCapNhatDuLieu";
             this.navPanelCapNhatDuLieu.ParentItem = this.buttonItemCapNhatDuLieu;
-            this.navPanelCapNhatDuLieu.Size = new System.Drawing.Size(188, 366);
+            this.navPanelCapNhatDuLieu.Size = new System.Drawing.Size(188, 264);
             this.navPanelCapNhatDuLieu.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navPanelCapNhatDuLieu.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navPanelCapNhatDuLieu.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -730,15 +732,17 @@
             // buttonItemCapNhatDuLieu
             // 
             this.buttonItemCapNhatDuLieu.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItemCapNhatDuLieu.Checked = true;
             this.buttonItemCapNhatDuLieu.Image = ((System.Drawing.Image)(resources.GetObject("buttonItemCapNhatDuLieu.Image")));
-            this.buttonItemCapNhatDuLieu.ImagePaddingHorizontal = 8;
             this.buttonItemCapNhatDuLieu.Name = "buttonItemCapNhatDuLieu";
             this.buttonItemCapNhatDuLieu.OptionGroup = "navBar";
             this.buttonItemCapNhatDuLieu.Text = "Cập nhật điểm học sinh";
+            this.buttonItemCapNhatDuLieu.Click += new System.EventHandler(this.ButtonItemCapNhatDuLieu_Click);
             // 
             // superTooltip
             // 
             this.superTooltip.DefaultFont = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.superTooltip.DefaultTooltipSettings = new DevComponents.DotNetBar.SuperTooltipInfo("", "", "", null, null, DevComponents.DotNetBar.eTooltipColor.Gray);
             // 
             // frmNhapDiemChung
             // 
@@ -747,6 +751,7 @@
             this.ClientSize = new System.Drawing.Size(834, 368);
             this.Controls.Add(this.groupBoxDanhSach);
             this.Controls.Add(this.navPaneLeft);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmNhapDiemChung";
             this.ShowInTaskbar = false;

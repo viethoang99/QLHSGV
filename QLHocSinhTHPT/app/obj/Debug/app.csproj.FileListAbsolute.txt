@@ -91,7 +91,6 @@ C:\Users\thg60\OneDrive\Desktop\QLHS\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsof
 C:\Users\thg60\OneDrive\Desktop\QLHS\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\thg60\OneDrive\Desktop\QLHS\QLHSGV\QLHocSinhTHPT\app\bin\Debug\System.Web.Services.dll
 C:\Users\thg60\OneDrive\Desktop\QLHS\QLHSGV\QLHocSinhTHPT\app\bin\Debug\DevComponents.DotNetBar2.xml
-C:\Users\thg60\OneDrive\Desktop\QLHS\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.WinForms.xml
 C:\Users\thg60\OneDrive\Desktop\QLHS\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csprojAssemblyReference.cache
 C:\Users\thg60\OneDrive\Desktop\QLHS\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Component.frmConnection.resources
 C:\Users\thg60\OneDrive\Desktop\QLHS\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Component.frmQuyDinh.resources
@@ -263,3 +262,5 @@ F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csproj.Gene
 F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csproj.CopyComplete
 F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.exe
 F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.pdb
+C:\Users\thg60\OneDrive\Desktop\QLHS\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\thg60\OneDrive\Desktop\QLHS\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
