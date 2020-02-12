@@ -105,7 +105,7 @@
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                       </Style>
-                      <Value>=IIf(Fields!GioiTinh.Value, "Nu", "Nam")</Value>
+                      <Value>=Fields!GioiTinh.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
