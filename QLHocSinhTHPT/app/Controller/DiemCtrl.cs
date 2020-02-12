@@ -23,6 +23,11 @@ namespace app.Controller
         {
             m_DiemData.LuuDiem(maHocSinh, maMonHoc, maHocKy, maNamHoc, maLop, maLoaiDiem, diemSo);
         }
+        public void CapNhatDiem(String maHocSinh, String maMonHoc, String maHocKy, String maNamHoc, String maLop, String maLoaiDiem, float diemSo)
+        {
+            m_DiemData.CapNhatDiem(maHocSinh, maMonHoc, maHocKy, maNamHoc, maLop, maLoaiDiem, diemSo);
+        }
+
         #endregion
 
         #region Xoa diem
