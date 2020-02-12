@@ -85,18 +85,11 @@ namespace app.Controller
             foreach (DataRow Row in m_DT.Rows)
             {
                 GiaoVienInfo gv = new GiaoVienInfo();
-
-                MonHocInfo mh = new MonHocInfo();
-                mh.MaMonHoc = Convert.ToString(Row["MaMonHoc"]);
-                mh.TenMonHoc = Convert.ToString(Row["TenMonHoc"]);
-                mh.SoTiet = Convert.ToInt32(Row["SoTiet"]);
-                mh.HeSo = Convert.ToInt32(Row["HeSo"]);
-
                 gv.MaGiaoVien = Convert.ToString(Row["MaGiaoVien"]);
                 gv.TenGiaoVien = Convert.ToString(Row["TenGiaoVien"]);
                 gv.DiaChi = Convert.ToString(Row["DiaChi"]);
                 gv.DienThoai = Convert.ToString(Row["DienThoai"]);
-                gv.MonHoc = mh;
+                gv.MonHoc = Convert.ToString(Row["TenMonHoc"]);
 
                 dS.Add(gv);
             }

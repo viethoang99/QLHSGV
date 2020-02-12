@@ -109,7 +109,7 @@
             // 
             this.ctxMenu.DockSide = DevComponents.DotNetBar.eDockSide.Document;
             this.ctxMenu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ctxMenu.IsMaximized = false;
+            //this.ctxMenu.IsMaximized = false;
             this.ctxMenu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnMenu});
             this.ctxMenu.Location = new System.Drawing.Point(279, 203);
@@ -419,7 +419,7 @@
             // 
             // 
             this.navPaneLeft.TitlePanel.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.navPaneLeft.TitlePanel.DisabledBackColor = System.Drawing.Color.Empty;
+            //this.navPaneLeft.TitlePanel.DisabledBackColor = System.Drawing.Color.Empty;
             this.navPaneLeft.TitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.navPaneLeft.TitlePanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navPaneLeft.TitlePanel.Location = new System.Drawing.Point(1, 1);
@@ -451,7 +451,7 @@
             this.navPanelNhapDuLieu.Controls.Add(this.label4);
             this.navPanelNhapDuLieu.Controls.Add(this.txtDienThoai);
             this.navPanelNhapDuLieu.Controls.Add(this.txtTenGiaoVien);
-            this.navPanelNhapDuLieu.DisabledBackColor = System.Drawing.Color.Empty;
+            //this.navPanelNhapDuLieu.DisabledBackColor = System.Drawing.Color.Empty;
             this.navPanelNhapDuLieu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navPanelNhapDuLieu.Location = new System.Drawing.Point(1, 1);
             this.navPanelNhapDuLieu.Name = "navPanelNhapDuLieu";
@@ -612,7 +612,7 @@
             this.navPanelTimKiem.Controls.Add(this.chkTimTheoMa);
             this.navPanelTimKiem.Controls.Add(this.btnTimKiem);
             this.navPanelTimKiem.Controls.Add(this.txtTimKiem);
-            this.navPanelTimKiem.DisabledBackColor = System.Drawing.Color.Empty;
+            //this.navPanelTimKiem.DisabledBackColor = System.Drawing.Color.Empty;
             this.navPanelTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navPanelTimKiem.Location = new System.Drawing.Point(1, 25);
             this.navPanelTimKiem.Name = "navPanelTimKiem";

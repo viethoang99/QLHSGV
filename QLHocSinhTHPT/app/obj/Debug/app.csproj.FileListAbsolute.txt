@@ -5,7 +5,6 @@ C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csproj.CoreCompile
 C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\bin\Debug\app.exe
 C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\bin\Debug\app.pdb
 C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\bin\Debug\System.Web.Services.dll
-C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.WinForms.xml
 C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Component.frmConnection.resources
 C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Component.frmQuyDinh.resources
 C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Component.frmDangNhap.resources
@@ -217,7 +216,6 @@ D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\o
 D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csproj.CopyComplete
 D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.exe
 D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.pdb
-C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\bin\Debug\DevComponents.DotNetBar2.xml
 F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\app.exe
 F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\app.pdb
 F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\DevComponents.DotNetBar2.dll
@@ -264,3 +262,7 @@ F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.exe
 F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.pdb
 C:\Users\thg60\OneDrive\Desktop\QLHS\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 C:\Users\thg60\OneDrive\Desktop\QLHS\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.WinForms.dll

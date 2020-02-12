@@ -40,8 +40,8 @@ namespace app.Bussiness
             set { m_DienThoai = value; }
         }
 
-        private MonHocInfo m_MonHoc;
-        public MonHocInfo MonHoc
+        private String m_MonHoc;
+        public String MonHoc
         {
             get { return m_MonHoc; }
             set { m_MonHoc = value; }
