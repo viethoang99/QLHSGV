@@ -30,6 +30,20 @@
         private void InitializeComponent()
         {
             this.ribbonControl = new DevComponents.DotNetBar.RibbonControl();
+            this.ribbonPanelGiupDo = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBarHuongDan = new DevComponents.DotNetBar.RibbonBar();
+            this.btnHuongDan = new DevComponents.DotNetBar.ButtonItem();
+            this.btnThongTin = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanelQuyDinh = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBarQuyDinh = new DevComponents.DotNetBar.RibbonBar();
+            this.btnDoTuoi = new DevComponents.DotNetBar.ButtonItem();
+            this.btnSiSo = new DevComponents.DotNetBar.ButtonItem();
+            this.btnThangDiem = new DevComponents.DotNetBar.ButtonItem();
+            this.btnTruong = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanelTraCuu = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBarTraCuu = new DevComponents.DotNetBar.RibbonBar();
+            this.btnTimKiemHS = new DevComponents.DotNetBar.ButtonItem();
+            this.btnTimKiemGV = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanelThongKe = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBarXuatDanhSach = new DevComponents.DotNetBar.RibbonBar();
             this.btnDanhSachHocSinh = new DevComponents.DotNetBar.ButtonItem();
@@ -61,20 +75,6 @@
             this.ribbonBarLop = new DevComponents.DotNetBar.RibbonBar();
             this.btnLopHoc = new DevComponents.DotNetBar.ButtonItem();
             this.btnKhoiLop = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanelGiupDo = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBarHuongDan = new DevComponents.DotNetBar.RibbonBar();
-            this.btnHuongDan = new DevComponents.DotNetBar.ButtonItem();
-            this.btnThongTin = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanelQuyDinh = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBarQuyDinh = new DevComponents.DotNetBar.RibbonBar();
-            this.btnDoTuoi = new DevComponents.DotNetBar.ButtonItem();
-            this.btnSiSo = new DevComponents.DotNetBar.ButtonItem();
-            this.btnThangDiem = new DevComponents.DotNetBar.ButtonItem();
-            this.btnTruong = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanelTraCuu = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBarTraCuu = new DevComponents.DotNetBar.RibbonBar();
-            this.btnTimKiemHS = new DevComponents.DotNetBar.ButtonItem();
-            this.btnTimKiemGV = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonTabQuanLy = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabThongKe = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabTraCuu = new DevComponents.DotNetBar.RibbonTabItem();
@@ -104,11 +104,11 @@
             this.helpProvider = new System.Windows.Forms.HelpProvider();
             this.superTooltip = new DevComponents.DotNetBar.SuperTooltip();
             this.ribbonControl.SuspendLayout();
-            this.ribbonPanelThongKe.SuspendLayout();
-            this.ribbonPanelQuanLy.SuspendLayout();
             this.ribbonPanelGiupDo.SuspendLayout();
             this.ribbonPanelQuyDinh.SuspendLayout();
             this.ribbonPanelTraCuu.SuspendLayout();
+            this.ribbonPanelThongKe.SuspendLayout();
+            this.ribbonPanelQuanLy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bottomBar)).BeginInit();
             this.bottomBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ctxMenuMain)).BeginInit();
@@ -118,8 +118,8 @@
             // 
             this.ribbonControl.BackColor = System.Drawing.SystemColors.Control;
             this.ribbonControl.CaptionVisible = true;
-            this.ribbonControl.Controls.Add(this.ribbonPanelQuanLy);
             this.ribbonControl.Controls.Add(this.ribbonPanelThongKe);
+            this.ribbonControl.Controls.Add(this.ribbonPanelQuanLy);
             this.ribbonControl.Controls.Add(this.ribbonPanelGiupDo);
             this.ribbonControl.Controls.Add(this.ribbonPanelQuyDinh);
             this.ribbonControl.Controls.Add(this.ribbonPanelTraCuu);
@@ -161,6 +161,178 @@
             this.ribbonControl.TabGroupsVisible = true;
             this.ribbonControl.TabIndex = 0;
             // 
+            // ribbonPanelGiupDo
+            // 
+            this.ribbonPanelGiupDo.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.ctxMenuMain.SetContextMenuEx(this.ribbonPanelGiupDo, this.btnMenuMain);
+            this.ribbonPanelGiupDo.Controls.Add(this.ribbonBarHuongDan);
+            this.ribbonPanelGiupDo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanelGiupDo.Location = new System.Drawing.Point(0, 56);
+            this.ribbonPanelGiupDo.Name = "ribbonPanelGiupDo";
+            this.ribbonPanelGiupDo.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanelGiupDo.Size = new System.Drawing.Size(792, 91);
+            this.ribbonPanelGiupDo.TabIndex = 3;
+            this.ribbonPanelGiupDo.Visible = false;
+            // 
+            // ribbonBarHuongDan
+            // 
+            this.ribbonBarHuongDan.AutoOverflowEnabled = true;
+            this.ribbonBarHuongDan.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBarHuongDan.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnHuongDan,
+            this.btnThongTin});
+            this.ribbonBarHuongDan.Location = new System.Drawing.Point(3, 0);
+            this.ribbonBarHuongDan.Name = "ribbonBarHuongDan";
+            this.ribbonBarHuongDan.Size = new System.Drawing.Size(134, 88);
+            this.ribbonBarHuongDan.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.ribbonBarHuongDan.TabIndex = 1;
+            this.ribbonBarHuongDan.Text = "Hướng Dẫn";
+            // 
+            // btnHuongDan
+            // 
+            this.btnHuongDan.Image = global::app.Properties.Resources.huongdan;
+            this.btnHuongDan.ImagePaddingHorizontal = 8;
+            this.btnHuongDan.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnHuongDan.Name = "btnHuongDan";
+            this.btnHuongDan.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F1);
+            this.btnHuongDan.SplitButton = true;
+            this.btnHuongDan.Text = "<div align=\"center\">Hướng dẫn<br/>sử dụng</div>";
+            this.btnHuongDan.Tooltip = "Hướng dẫn sử dụng (F1)";
+            this.btnHuongDan.Click += new System.EventHandler(this.btnHuongDan_Click);
+            // 
+            // btnThongTin
+            // 
+            this.btnThongTin.Image = global::app.Properties.Resources.thongtinphanmem;
+            this.btnThongTin.ImagePaddingHorizontal = 8;
+            this.btnThongTin.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnThongTin.Name = "btnThongTin";
+            this.btnThongTin.SplitButton = true;
+            this.btnThongTin.Text = "<div align=\"center\">Thông tin<br/>phần mềm</div>";
+            this.btnThongTin.Tooltip = "Thông tin phần mềm";
+            this.btnThongTin.Click += new System.EventHandler(this.btnThongTin_Click);
+            // 
+            // ribbonPanelQuyDinh
+            // 
+            this.ribbonPanelQuyDinh.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.ctxMenuMain.SetContextMenuEx(this.ribbonPanelQuyDinh, this.btnMenuMain);
+            this.ribbonPanelQuyDinh.Controls.Add(this.ribbonBarQuyDinh);
+            this.ribbonPanelQuyDinh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanelQuyDinh.Location = new System.Drawing.Point(0, 56);
+            this.ribbonPanelQuyDinh.Name = "ribbonPanelQuyDinh";
+            this.ribbonPanelQuyDinh.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanelQuyDinh.Size = new System.Drawing.Size(792, 91);
+            this.ribbonPanelQuyDinh.TabIndex = 3;
+            this.ribbonPanelQuyDinh.Visible = false;
+            // 
+            // ribbonBarQuyDinh
+            // 
+            this.ribbonBarQuyDinh.AutoOverflowEnabled = true;
+            this.ribbonBarQuyDinh.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBarQuyDinh.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnDoTuoi,
+            this.btnSiSo,
+            this.btnThangDiem,
+            this.btnTruong});
+            this.ribbonBarQuyDinh.Location = new System.Drawing.Point(3, 0);
+            this.ribbonBarQuyDinh.Name = "ribbonBarQuyDinh";
+            this.ribbonBarQuyDinh.Size = new System.Drawing.Size(246, 88);
+            this.ribbonBarQuyDinh.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.ribbonBarQuyDinh.TabIndex = 1;
+            this.ribbonBarQuyDinh.Text = "Quy Định Chung";
+            // 
+            // btnDoTuoi
+            // 
+            this.btnDoTuoi.Image = global::app.Properties.Resources.qddotuoi;
+            this.btnDoTuoi.ImagePaddingHorizontal = 8;
+            this.btnDoTuoi.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnDoTuoi.Name = "btnDoTuoi";
+            this.btnDoTuoi.SplitButton = true;
+            this.btnDoTuoi.Text = "<div align=\"center\">Quy định<br/>về độ tuổi</div>";
+            this.btnDoTuoi.Tooltip = "Quy định về độ tuổi";
+            this.btnDoTuoi.Click += new System.EventHandler(this.btnDoTuoi_Click);
+            // 
+            // btnSiSo
+            // 
+            this.btnSiSo.Image = global::app.Properties.Resources.qdsiso;
+            this.btnSiSo.ImagePaddingHorizontal = 8;
+            this.btnSiSo.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnSiSo.Name = "btnSiSo";
+            this.btnSiSo.SplitButton = true;
+            this.btnSiSo.Text = "<div align=\"center\">Quy định<br/>về sỉ số</div>";
+            this.btnSiSo.Tooltip = "Quy định về sỉ số";
+            this.btnSiSo.Click += new System.EventHandler(this.btnSiSo_Click);
+            // 
+            // btnThangDiem
+            // 
+            this.btnThangDiem.Image = global::app.Properties.Resources.qdthangdiem;
+            this.btnThangDiem.ImagePaddingHorizontal = 8;
+            this.btnThangDiem.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnThangDiem.Name = "btnThangDiem";
+            this.btnThangDiem.SplitButton = true;
+            this.btnThangDiem.Text = "<div align=\"center\">Quy định<br/>thang điểm</div>";
+            this.btnThangDiem.Tooltip = "Quy định về thang điểm";
+            this.btnThangDiem.Click += new System.EventHandler(this.btnThangDiem_Click);
+            // 
+            // btnTruong
+            // 
+            this.btnTruong.Image = global::app.Properties.Resources.tttruonghoc;
+            this.btnTruong.ImagePaddingHorizontal = 8;
+            this.btnTruong.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnTruong.Name = "btnTruong";
+            this.btnTruong.SplitButton = true;
+            this.btnTruong.Text = "<div align=\"center\">Thông tin<br/>trường học</div>";
+            this.btnTruong.Tooltip = "Thông tin trường học";
+            this.btnTruong.Click += new System.EventHandler(this.btnTruong_Click);
+            // 
+            // ribbonPanelTraCuu
+            // 
+            this.ribbonPanelTraCuu.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.ctxMenuMain.SetContextMenuEx(this.ribbonPanelTraCuu, this.btnMenuMain);
+            this.ribbonPanelTraCuu.Controls.Add(this.ribbonBarTraCuu);
+            this.ribbonPanelTraCuu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanelTraCuu.Location = new System.Drawing.Point(0, 56);
+            this.ribbonPanelTraCuu.Name = "ribbonPanelTraCuu";
+            this.ribbonPanelTraCuu.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanelTraCuu.Size = new System.Drawing.Size(792, 91);
+            this.ribbonPanelTraCuu.TabIndex = 4;
+            this.ribbonPanelTraCuu.Visible = false;
+            // 
+            // ribbonBarTraCuu
+            // 
+            this.ribbonBarTraCuu.AutoOverflowEnabled = true;
+            this.ribbonBarTraCuu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBarTraCuu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnTimKiemHS,
+            this.btnTimKiemGV});
+            this.ribbonBarTraCuu.Location = new System.Drawing.Point(3, 0);
+            this.ribbonBarTraCuu.Name = "ribbonBarTraCuu";
+            this.ribbonBarTraCuu.Size = new System.Drawing.Size(114, 88);
+            this.ribbonBarTraCuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.ribbonBarTraCuu.TabIndex = 1;
+            this.ribbonBarTraCuu.Text = "Tra Cứu";
+            // 
+            // btnTimKiemHS
+            // 
+            this.btnTimKiemHS.Image = global::app.Properties.Resources.tracuuhocsinh;
+            this.btnTimKiemHS.ImagePaddingHorizontal = 8;
+            this.btnTimKiemHS.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnTimKiemHS.Name = "btnTimKiemHS";
+            this.btnTimKiemHS.SplitButton = true;
+            this.btnTimKiemHS.Text = "<div align=\"center\">Tra cứu<br/>học sinh</div>";
+            this.btnTimKiemHS.Tooltip = "Tra cứu học sinh";
+            this.btnTimKiemHS.Click += new System.EventHandler(this.btnTimKiemHS_Click);
+            // 
+            // btnTimKiemGV
+            // 
+            this.btnTimKiemGV.Image = global::app.Properties.Resources.tracuugiaovien;
+            this.btnTimKiemGV.ImagePaddingHorizontal = 8;
+            this.btnTimKiemGV.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnTimKiemGV.Name = "btnTimKiemGV";
+            this.btnTimKiemGV.SplitButton = true;
+            this.btnTimKiemGV.Text = "<div align=\"center\">Tra cứu<br/>giáo viên</div>";
+            this.btnTimKiemGV.Tooltip = "Tra cứu giáo viên";
+            this.btnTimKiemGV.Click += new System.EventHandler(this.btnTimKiemGV_Click);
+            // 
             // ribbonPanelThongKe
             // 
             this.ribbonPanelThongKe.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
@@ -174,7 +346,6 @@
             this.ribbonPanelThongKe.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.ribbonPanelThongKe.Size = new System.Drawing.Size(792, 91);
             this.ribbonPanelThongKe.TabIndex = 3;
-            this.ribbonPanelThongKe.Visible = false;
             // 
             // ribbonBarXuatDanhSach
             // 
@@ -312,6 +483,7 @@
             this.ribbonPanelQuanLy.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.ribbonPanelQuanLy.Size = new System.Drawing.Size(792, 91);
             this.ribbonPanelQuanLy.TabIndex = 1;
+            this.ribbonPanelQuanLy.Visible = false;
             // 
             // ribbonBarGiaoVien
             // 
@@ -545,181 +717,8 @@
             this.btnKhoiLop.Tooltip = "Khối lớp";
             this.btnKhoiLop.Click += new System.EventHandler(this.btnKhoiLop_Click);
             // 
-            // ribbonPanelGiupDo
-            // 
-            this.ribbonPanelGiupDo.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.ctxMenuMain.SetContextMenuEx(this.ribbonPanelGiupDo, this.btnMenuMain);
-            this.ribbonPanelGiupDo.Controls.Add(this.ribbonBarHuongDan);
-            this.ribbonPanelGiupDo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanelGiupDo.Location = new System.Drawing.Point(0, 56);
-            this.ribbonPanelGiupDo.Name = "ribbonPanelGiupDo";
-            this.ribbonPanelGiupDo.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanelGiupDo.Size = new System.Drawing.Size(792, 91);
-            this.ribbonPanelGiupDo.TabIndex = 3;
-            this.ribbonPanelGiupDo.Visible = false;
-            // 
-            // ribbonBarHuongDan
-            // 
-            this.ribbonBarHuongDan.AutoOverflowEnabled = true;
-            this.ribbonBarHuongDan.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBarHuongDan.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnHuongDan,
-            this.btnThongTin});
-            this.ribbonBarHuongDan.Location = new System.Drawing.Point(3, 0);
-            this.ribbonBarHuongDan.Name = "ribbonBarHuongDan";
-            this.ribbonBarHuongDan.Size = new System.Drawing.Size(134, 88);
-            this.ribbonBarHuongDan.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.ribbonBarHuongDan.TabIndex = 1;
-            this.ribbonBarHuongDan.Text = "Hướng Dẫn";
-            // 
-            // btnHuongDan
-            // 
-            this.btnHuongDan.Image = global::app.Properties.Resources.huongdan;
-            this.btnHuongDan.ImagePaddingHorizontal = 8;
-            this.btnHuongDan.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnHuongDan.Name = "btnHuongDan";
-            this.btnHuongDan.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F1);
-            this.btnHuongDan.SplitButton = true;
-            this.btnHuongDan.Text = "<div align=\"center\">Hướng dẫn<br/>sử dụng</div>";
-            this.btnHuongDan.Tooltip = "Hướng dẫn sử dụng (F1)";
-            this.btnHuongDan.Click += new System.EventHandler(this.btnHuongDan_Click);
-            // 
-            // btnThongTin
-            // 
-            this.btnThongTin.Image = global::app.Properties.Resources.thongtinphanmem;
-            this.btnThongTin.ImagePaddingHorizontal = 8;
-            this.btnThongTin.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnThongTin.Name = "btnThongTin";
-            this.btnThongTin.SplitButton = true;
-            this.btnThongTin.Text = "<div align=\"center\">Thông tin<br/>phần mềm</div>";
-            this.btnThongTin.Tooltip = "Thông tin phần mềm";
-            this.btnThongTin.Click += new System.EventHandler(this.btnThongTin_Click);
-            // 
-            // ribbonPanelQuyDinh
-            // 
-            this.ribbonPanelQuyDinh.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.ctxMenuMain.SetContextMenuEx(this.ribbonPanelQuyDinh, this.btnMenuMain);
-            this.ribbonPanelQuyDinh.Controls.Add(this.ribbonBarQuyDinh);
-            this.ribbonPanelQuyDinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanelQuyDinh.Location = new System.Drawing.Point(0, 56);
-            this.ribbonPanelQuyDinh.Name = "ribbonPanelQuyDinh";
-            this.ribbonPanelQuyDinh.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanelQuyDinh.Size = new System.Drawing.Size(792, 91);
-            this.ribbonPanelQuyDinh.TabIndex = 3;
-            this.ribbonPanelQuyDinh.Visible = false;
-            // 
-            // ribbonBarQuyDinh
-            // 
-            this.ribbonBarQuyDinh.AutoOverflowEnabled = true;
-            this.ribbonBarQuyDinh.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBarQuyDinh.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnDoTuoi,
-            this.btnSiSo,
-            this.btnThangDiem,
-            this.btnTruong});
-            this.ribbonBarQuyDinh.Location = new System.Drawing.Point(3, 0);
-            this.ribbonBarQuyDinh.Name = "ribbonBarQuyDinh";
-            this.ribbonBarQuyDinh.Size = new System.Drawing.Size(246, 88);
-            this.ribbonBarQuyDinh.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.ribbonBarQuyDinh.TabIndex = 1;
-            this.ribbonBarQuyDinh.Text = "Quy Định Chung";
-            // 
-            // btnDoTuoi
-            // 
-            this.btnDoTuoi.Image = global::app.Properties.Resources.qddotuoi;
-            this.btnDoTuoi.ImagePaddingHorizontal = 8;
-            this.btnDoTuoi.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnDoTuoi.Name = "btnDoTuoi";
-            this.btnDoTuoi.SplitButton = true;
-            this.btnDoTuoi.Text = "<div align=\"center\">Quy định<br/>về độ tuổi</div>";
-            this.btnDoTuoi.Tooltip = "Quy định về độ tuổi";
-            this.btnDoTuoi.Click += new System.EventHandler(this.btnDoTuoi_Click);
-            // 
-            // btnSiSo
-            // 
-            this.btnSiSo.Image = global::app.Properties.Resources.qdsiso;
-            this.btnSiSo.ImagePaddingHorizontal = 8;
-            this.btnSiSo.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnSiSo.Name = "btnSiSo";
-            this.btnSiSo.SplitButton = true;
-            this.btnSiSo.Text = "<div align=\"center\">Quy định<br/>về sỉ số</div>";
-            this.btnSiSo.Tooltip = "Quy định về sỉ số";
-            this.btnSiSo.Click += new System.EventHandler(this.btnSiSo_Click);
-            // 
-            // btnThangDiem
-            // 
-            this.btnThangDiem.Image = global::app.Properties.Resources.qdthangdiem;
-            this.btnThangDiem.ImagePaddingHorizontal = 8;
-            this.btnThangDiem.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnThangDiem.Name = "btnThangDiem";
-            this.btnThangDiem.SplitButton = true;
-            this.btnThangDiem.Text = "<div align=\"center\">Quy định<br/>thang điểm</div>";
-            this.btnThangDiem.Tooltip = "Quy định về thang điểm";
-            this.btnThangDiem.Click += new System.EventHandler(this.btnThangDiem_Click);
-            // 
-            // btnTruong
-            // 
-            this.btnTruong.Image = global::app.Properties.Resources.tttruonghoc;
-            this.btnTruong.ImagePaddingHorizontal = 8;
-            this.btnTruong.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnTruong.Name = "btnTruong";
-            this.btnTruong.SplitButton = true;
-            this.btnTruong.Text = "<div align=\"center\">Thông tin<br/>trường học</div>";
-            this.btnTruong.Tooltip = "Thông tin trường học";
-            this.btnTruong.Click += new System.EventHandler(this.btnTruong_Click);
-            // 
-            // ribbonPanelTraCuu
-            // 
-            this.ribbonPanelTraCuu.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.ctxMenuMain.SetContextMenuEx(this.ribbonPanelTraCuu, this.btnMenuMain);
-            this.ribbonPanelTraCuu.Controls.Add(this.ribbonBarTraCuu);
-            this.ribbonPanelTraCuu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanelTraCuu.Location = new System.Drawing.Point(0, 56);
-            this.ribbonPanelTraCuu.Name = "ribbonPanelTraCuu";
-            this.ribbonPanelTraCuu.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanelTraCuu.Size = new System.Drawing.Size(792, 91);
-            this.ribbonPanelTraCuu.TabIndex = 4;
-            this.ribbonPanelTraCuu.Visible = false;
-            // 
-            // ribbonBarTraCuu
-            // 
-            this.ribbonBarTraCuu.AutoOverflowEnabled = true;
-            this.ribbonBarTraCuu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBarTraCuu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnTimKiemHS,
-            this.btnTimKiemGV});
-            this.ribbonBarTraCuu.Location = new System.Drawing.Point(3, 0);
-            this.ribbonBarTraCuu.Name = "ribbonBarTraCuu";
-            this.ribbonBarTraCuu.Size = new System.Drawing.Size(114, 88);
-            this.ribbonBarTraCuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.ribbonBarTraCuu.TabIndex = 1;
-            this.ribbonBarTraCuu.Text = "Tra Cứu";
-            // 
-            // btnTimKiemHS
-            // 
-            this.btnTimKiemHS.Image = global::app.Properties.Resources.tracuuhocsinh;
-            this.btnTimKiemHS.ImagePaddingHorizontal = 8;
-            this.btnTimKiemHS.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnTimKiemHS.Name = "btnTimKiemHS";
-            this.btnTimKiemHS.SplitButton = true;
-            this.btnTimKiemHS.Text = "<div align=\"center\">Tra cứu<br/>học sinh</div>";
-            this.btnTimKiemHS.Tooltip = "Tra cứu học sinh";
-            this.btnTimKiemHS.Click += new System.EventHandler(this.btnTimKiemHS_Click);
-            // 
-            // btnTimKiemGV
-            // 
-            this.btnTimKiemGV.Image = global::app.Properties.Resources.tracuugiaovien;
-            this.btnTimKiemGV.ImagePaddingHorizontal = 8;
-            this.btnTimKiemGV.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnTimKiemGV.Name = "btnTimKiemGV";
-            this.btnTimKiemGV.SplitButton = true;
-            this.btnTimKiemGV.Text = "<div align=\"center\">Tra cứu<br/>giáo viên</div>";
-            this.btnTimKiemGV.Tooltip = "Tra cứu giáo viên";
-            this.btnTimKiemGV.Click += new System.EventHandler(this.btnTimKiemGV_Click);
-            // 
             // ribbonTabQuanLy
             // 
-            this.ribbonTabQuanLy.Checked = true;
             this.ribbonTabQuanLy.ImagePaddingHorizontal = 8;
             this.ribbonTabQuanLy.Name = "ribbonTabQuanLy";
             this.ribbonTabQuanLy.Panel = this.ribbonPanelQuanLy;
@@ -729,6 +728,7 @@
             // 
             // ribbonTabThongKe
             // 
+            this.ribbonTabThongKe.Checked = true;
             this.ribbonTabThongKe.ImagePaddingHorizontal = 8;
             this.ribbonTabThongKe.Name = "ribbonTabThongKe";
             this.ribbonTabThongKe.Panel = this.ribbonPanelThongKe;
@@ -1054,11 +1054,11 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.ribbonControl.ResumeLayout(false);
             this.ribbonControl.PerformLayout();
-            this.ribbonPanelThongKe.ResumeLayout(false);
-            this.ribbonPanelQuanLy.ResumeLayout(false);
             this.ribbonPanelGiupDo.ResumeLayout(false);
             this.ribbonPanelQuyDinh.ResumeLayout(false);
             this.ribbonPanelTraCuu.ResumeLayout(false);
+            this.ribbonPanelThongKe.ResumeLayout(false);
+            this.ribbonPanelQuanLy.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bottomBar)).EndInit();
             this.bottomBar.ResumeLayout(false);
             this.bottomBar.PerformLayout();
