@@ -132,8 +132,6 @@ C:\Users\thg60\OneDrive\Desktop\QLHS\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.pdb
 F:\GitProject\QLHSGV\QLHocSinhTHPT\app\bin\Debug\app.exe
 F:\GitProject\QLHSGV\QLHocSinhTHPT\app\bin\Debug\app.pdb
 F:\GitProject\QLHSGV\QLHocSinhTHPT\app\bin\Debug\System.Web.Services.dll
-F:\GitProject\QLHSGV\QLHocSinhTHPT\app\bin\Debug\DevComponents.DotNetBar2.xml
-F:\GitProject\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.WinForms.xml
 F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csprojAssemblyReference.cache
 F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Component.frmConnection.resources
 F:\GitProject\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Component.frmQuyDinh.resources
@@ -266,3 +264,7 @@ C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer
 C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
 C:\Users\vietm\Desktop\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.Common.dll
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+F:\GitProject\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.WinForms.dll
