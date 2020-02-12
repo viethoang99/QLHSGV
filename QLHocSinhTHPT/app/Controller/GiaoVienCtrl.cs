@@ -123,16 +123,12 @@ namespace app.Controller
         #endregion
 
         #region Tìm kiem
-        public void TimKiemGiaoVien(TextBoxX txtHoTen,
-                                    ComboBoxEx cmbTheoDChi,
-                                    TextBoxX txtDiaChi,
-                                    ComboBoxEx cmbTheoCMon,
-                                    ComboBoxEx cmbCMon,
+        public void TimKiemGiaoVien(TextBoxX txtHoTen,                                   
                                     DataGridViewX dGV,
                                     BindingNavigator bN)
         {
             BindingSource bS = new BindingSource();
-            bS.DataSource = m_GiaoVienData.TimKiemGiaoVien(txtHoTen.Text, cmbTheoDChi.Text, txtDiaChi.Text, cmbTheoCMon.Text, cmbCMon.Text);
+            bS.DataSource = m_GiaoVienData.TimKiemGiaoVien(txtHoTen.Text);
 
             bN.BindingSource = bS;
             dGV.DataSource = bS;

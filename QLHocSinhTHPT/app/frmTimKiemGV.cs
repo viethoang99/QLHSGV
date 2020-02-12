@@ -26,7 +26,7 @@ namespace app
         #region Load
         private void frmTimKiemGV_Load(object sender, EventArgs e)
         {
-            m_MonHocCtrl.HienThiComboBox(cmbCMon);
+           // m_MonHocCtrl.HienThiComboBox(cmbCMon);
         }
         #endregion
 
@@ -40,7 +40,7 @@ namespace app
         #region Tìm kiếm giáo viên
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            m_GiaoVienCtrl.TimKiemGiaoVien(txtHoTen, cmbTheoDChi, txtDiaChi, cmbTheoCMon, cmbCMon, dGVKetQuaTimKiem, bindingNavigatorKetQuaTimKiem);
+            m_GiaoVienCtrl.TimKiemGiaoVien(txtHoTen,dGVKetQuaTimKiem, bindingNavigatorKetQuaTimKiem);
             
             if (dGVKetQuaTimKiem.RowCount == 0)
                 MessageBoxEx.Show("Không có giáo viên cần tìm trong hệ thống!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);

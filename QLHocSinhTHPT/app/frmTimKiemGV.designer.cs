@@ -51,19 +51,6 @@
             this.bindingNavigatorExitItem = new System.Windows.Forms.ToolStripButton();
             this.navPaneLeft = new DevComponents.DotNetBar.NavigationPane();
             this.navPanelTimKiem = new DevComponents.DotNetBar.NavigationPanePanel();
-            this.cmbCMon = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.cmbTheoCMon = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.col04 = new DevComponents.Editors.ComboItem();
-            this.col05 = new DevComponents.Editors.ComboItem();
-            this.col06 = new DevComponents.Editors.ComboItem();
-            this.cmbTheoDChi = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.col01 = new DevComponents.Editors.ComboItem();
-            this.col02 = new DevComponents.Editors.ComboItem();
-            this.col03 = new DevComponents.Editors.ComboItem();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtDiaChi = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnTimKiem = new DevComponents.DotNetBar.ButtonX();
             this.txtHoTen = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.buttonItemTimKiem = new DevComponents.DotNetBar.ButtonItem();
@@ -218,6 +205,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 21);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -300,13 +288,6 @@
             // navPanelTimKiem
             // 
             this.navPanelTimKiem.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.navPanelTimKiem.Controls.Add(this.cmbCMon);
-            this.navPanelTimKiem.Controls.Add(this.cmbTheoCMon);
-            this.navPanelTimKiem.Controls.Add(this.cmbTheoDChi);
-            this.navPanelTimKiem.Controls.Add(this.label3);
-            this.navPanelTimKiem.Controls.Add(this.label2);
-            this.navPanelTimKiem.Controls.Add(this.label1);
-            this.navPanelTimKiem.Controls.Add(this.txtDiaChi);
             this.navPanelTimKiem.Controls.Add(this.btnTimKiem);
             this.navPanelTimKiem.Controls.Add(this.txtHoTen);
             this.navPanelTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -321,112 +302,6 @@
             this.navPanelTimKiem.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText;
             this.navPanelTimKiem.Style.GradientAngle = 90;
             this.navPanelTimKiem.TabIndex = 1;
-            // 
-            // cmbCMon
-            // 
-            this.cmbCMon.DisplayMember = "Text";
-            this.cmbCMon.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbCMon.FormattingEnabled = true;
-            this.cmbCMon.ItemHeight = 14;
-            this.cmbCMon.Location = new System.Drawing.Point(11, 135);
-            this.cmbCMon.Name = "cmbCMon";
-            this.cmbCMon.Size = new System.Drawing.Size(160, 20);
-            this.cmbCMon.TabIndex = 5;
-            // 
-            // cmbTheoCMon
-            // 
-            this.cmbTheoCMon.DisplayMember = "Text";
-            this.cmbTheoCMon.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbTheoCMon.FormattingEnabled = true;
-            this.cmbTheoCMon.ItemHeight = 14;
-            this.cmbTheoCMon.Items.AddRange(new object[] {
-            this.col04,
-            this.col05,
-            this.col06});
-            this.cmbTheoCMon.Location = new System.Drawing.Point(11, 110);
-            this.cmbTheoCMon.Name = "cmbTheoCMon";
-            this.cmbTheoCMon.Size = new System.Drawing.Size(54, 20);
-            this.cmbTheoCMon.TabIndex = 4;
-            this.cmbTheoCMon.Text = "NONE";
-            // 
-            // col04
-            // 
-            this.col04.Text = "NONE";
-            // 
-            // col05
-            // 
-            this.col05.Text = "AND";
-            // 
-            // col06
-            // 
-            this.col06.Text = "OR";
-            // 
-            // cmbTheoDChi
-            // 
-            this.cmbTheoDChi.DisplayMember = "Text";
-            this.cmbTheoDChi.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbTheoDChi.FormattingEnabled = true;
-            this.cmbTheoDChi.ItemHeight = 14;
-            this.cmbTheoDChi.Items.AddRange(new object[] {
-            this.col01,
-            this.col02,
-            this.col03});
-            this.cmbTheoDChi.Location = new System.Drawing.Point(11, 55);
-            this.cmbTheoDChi.Name = "cmbTheoDChi";
-            this.cmbTheoDChi.Size = new System.Drawing.Size(54, 20);
-            this.cmbTheoDChi.TabIndex = 2;
-            this.cmbTheoDChi.Text = "NONE";
-            // 
-            // col01
-            // 
-            this.col01.Text = "NONE";
-            // 
-            // col02
-            // 
-            this.col02.Text = "AND";
-            // 
-            // col03
-            // 
-            this.col03.Text = "OR";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(70, 114);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Chuyên môn:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(70, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Địa chỉ:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Họ và tên:";
-            // 
-            // txtDiaChi
-            // 
-            // 
-            // 
-            // 
-            this.txtDiaChi.Border.Class = "TextBoxBorder";
-            this.txtDiaChi.Location = new System.Drawing.Point(11, 80);
-            this.txtDiaChi.MaxLength = 50;
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(160, 20);
-            this.txtDiaChi.TabIndex = 3;
             // 
             // btnTimKiem
             // 
@@ -445,11 +320,13 @@
             // 
             // 
             this.txtHoTen.Border.Class = "TextBoxBorder";
-            this.txtHoTen.Location = new System.Drawing.Point(11, 25);
+            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.Location = new System.Drawing.Point(11, 118);
             this.txtHoTen.MaxLength = 30;
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(160, 20);
             this.txtHoTen.TabIndex = 1;
+            this.txtHoTen.Text = "Nhập thông tin cần tìm kiếm";
             // 
             // buttonItemTimKiem
             // 
@@ -468,6 +345,7 @@
             this.ClientSize = new System.Drawing.Size(814, 398);
             this.Controls.Add(this.groupBoxDanhSach);
             this.Controls.Add(this.navPaneLeft);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmTimKiemGV";
             this.ShowInTaskbar = false;
@@ -482,7 +360,6 @@
             this.bindingNavigatorKetQuaTimKiem.PerformLayout();
             this.navPaneLeft.ResumeLayout(false);
             this.navPanelTimKiem.ResumeLayout(false);
-            this.navPanelTimKiem.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -493,23 +370,10 @@
         private System.Windows.Forms.GroupBox groupBoxDanhSach;
         private DevComponents.DotNetBar.Controls.DataGridViewX dGVKetQuaTimKiem;
         private DevComponents.DotNetBar.Controls.TextBoxX txtHoTen;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbTheoCMon;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtDiaChi;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbTheoDChi;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbCMon;
         private DevComponents.DotNetBar.NavigationPane navPaneLeft;
         private DevComponents.DotNetBar.NavigationPanePanel navPanelTimKiem;
         private DevComponents.DotNetBar.ButtonItem buttonItemTimKiem;
         private DevComponents.DotNetBar.ButtonX btnTimKiem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private DevComponents.Editors.ComboItem col01;
-        private DevComponents.Editors.ComboItem col02;
-        private DevComponents.Editors.ComboItem col03;
-        private DevComponents.Editors.ComboItem col04;
-        private DevComponents.Editors.ComboItem col05;
-        private DevComponents.Editors.ComboItem col06;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaGiaoVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenGiaoVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDiaChi;
