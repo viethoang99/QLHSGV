@@ -19,7 +19,12 @@ namespace app.DataLayer
 
         public DataTable LayDsGiaoVienForReport()
         {
+            string sql = "SELECT * FROM GIAOVIEN as gv JOIN MONHOC as mh ON " +
+                 "gv.MaMonHoc = mh.MaMonHoc";
+            SqlCommand com = new SqlCommand(sql);
+            m_GiaoVienData.Load(com);
             return m_GiaoVienData;
+
         }
 
         public DataRow ThemDongMoi()
