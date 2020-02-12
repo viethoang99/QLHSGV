@@ -10,6 +10,8 @@ namespace app.DataLayer
 
         public DataTable LayDsHocLuc()
         {
+            SqlCommand cmd = new SqlCommand("select * from HOCLUC");
+            m_HocLucData.Load(cmd);
             return m_HocLucData;
         }
 
