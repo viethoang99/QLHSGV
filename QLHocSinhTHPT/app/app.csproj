@@ -92,6 +92,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bussiness\HocSinhInfo.cs" />
+    <Compile Include="Bussiness\KQCaNamMonHocInfo.cs" />
+    <Compile Include="Bussiness\KQCaNamTongHopInfo.cs" />
+    <Compile Include="Bussiness\KQHocKyMonHocInfo.cs" />
+    <Compile Include="Bussiness\KQHocKyTongHopInfo.cs" />
     <Compile Include="Bussiness\QuyDinhInfo.cs" />
     <Compile Include="Bussiness\PhanLopInfo.cs" />
     <Compile Include="Bussiness\DiemInfo.cs" />
@@ -132,6 +136,10 @@
     </Compile>
     <Compile Include="Component\Utilities.cs" />
     <Compile Include="Controller\DiemCtrl.cs" />
+    <Compile Include="Controller\KQCaNamMonHocCtrl.cs" />
+    <Compile Include="Controller\KQCaNamTongHopCtrl.cs" />
+    <Compile Include="Controller\KQHocKyMonHocCtrl.cs" />
+    <Compile Include="Controller\KQHocKyTongHopCtrl.cs" />
     <Compile Include="Controller\QuyDinhCtrl.cs" />
     <Compile Include="Controller\PhanCongCtrl.cs" />
     <Compile Include="Controller\LopCtrl.cs" />
@@ -147,6 +155,10 @@
     <Compile Include="Controller\HocKyCtrl.cs" />
     <Compile Include="Controller\NamHocCtrl.cs" />
     <Compile Include="Controller\MonHocCtrl.cs" />
+    <Compile Include="DataLayer\KQCaNamMonHocData.cs" />
+    <Compile Include="DataLayer\KQCaNamTongHopData.cs" />
+    <Compile Include="DataLayer\KQHocKyMonHocData.cs" />
+    <Compile Include="DataLayer\KQHocKyTongHopData.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
