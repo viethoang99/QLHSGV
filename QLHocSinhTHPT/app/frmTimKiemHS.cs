@@ -39,8 +39,7 @@ namespace app
         #region Tìm kiếm học sinh
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            rs = cmbTheoNSinh.Text;
-            m_HocSinhCtrl.TimKiemHocSinh(txtHoTen, cmbTheoNSinh, txtNoiSinh, dGVKetQuaTimKiem, bindingNavigatorKetQuaTimKiem);
+            m_HocSinhCtrl.TimKiemHocSinh(txtHoTen, dGVKetQuaTimKiem, bindingNavigatorKetQuaTimKiem);
             
             if (dGVKetQuaTimKiem.RowCount == 0)
                 MessageBoxEx.Show("Không có học sinh cần tìm trong hệ thống!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);

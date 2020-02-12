@@ -33,6 +33,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTimKiemHS));
             this.groupBoxDanhSach = new System.Windows.Forms.GroupBox();
             this.dGVKetQuaTimKiem = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.colMaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNoiSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigatorKetQuaTimKiem = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -46,13 +51,6 @@
             this.bindingNavigatorExitItem = new System.Windows.Forms.ToolStripButton();
             this.navPaneLeft = new DevComponents.DotNetBar.NavigationPane();
             this.navPanelTimKiem = new DevComponents.DotNetBar.NavigationPanePanel();
-            this.cmbTheoNSinh = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.col01 = new DevComponents.Editors.ComboItem();
-            this.col02 = new DevComponents.Editors.ComboItem();
-            this.col03 = new DevComponents.Editors.ComboItem();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNoiSinh = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnTimKiem = new DevComponents.DotNetBar.ButtonX();
             this.txtHoTen = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.buttonItemTimKiem = new DevComponents.DotNetBar.ButtonItem();
@@ -61,11 +59,6 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNoiSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGVKetQuaTimKiem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorKetQuaTimKiem)).BeginInit();
@@ -115,6 +108,45 @@
             this.dGVKetQuaTimKiem.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dGVKetQuaTimKiem.Size = new System.Drawing.Size(498, 344);
             this.dGVKetQuaTimKiem.TabIndex = 4;
+            // 
+            // colMaHocSinh
+            // 
+            this.colMaHocSinh.DataPropertyName = "MaHocSinh";
+            this.colMaHocSinh.HeaderText = "Mã học sinh";
+            this.colMaHocSinh.Name = "colMaHocSinh";
+            this.colMaHocSinh.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colMaHocSinh.Width = 80;
+            // 
+            // colHoTen
+            // 
+            this.colHoTen.DataPropertyName = "HoTen";
+            this.colHoTen.HeaderText = "Họ và tên";
+            this.colHoTen.Name = "colHoTen";
+            this.colHoTen.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colHoTen.Width = 120;
+            // 
+            // colNgaySinh
+            // 
+            this.colNgaySinh.DataPropertyName = "NgaySinh";
+            this.colNgaySinh.HeaderText = "Ngày sinh";
+            this.colNgaySinh.Name = "colNgaySinh";
+            this.colNgaySinh.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colNgaySinh.Width = 80;
+            // 
+            // colGioiTinh
+            // 
+            this.colGioiTinh.DataPropertyName = "GioiTinh";
+            this.colGioiTinh.HeaderText = "Giới Tính";
+            this.colGioiTinh.Name = "colGioiTinh";
+            this.colGioiTinh.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colNoiSinh
+            // 
+            this.colNoiSinh.DataPropertyName = "NoiSinh";
+            this.colNoiSinh.HeaderText = "Nơi sinh";
+            this.colNoiSinh.Name = "colNoiSinh";
+            this.colNoiSinh.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colNoiSinh.Width = 120;
             // 
             // bindingNavigatorKetQuaTimKiem
             // 
@@ -179,6 +211,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 21);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -261,10 +294,6 @@
             // navPanelTimKiem
             // 
             this.navPanelTimKiem.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.navPanelTimKiem.Controls.Add(this.cmbTheoNSinh);
-            this.navPanelTimKiem.Controls.Add(this.label2);
-            this.navPanelTimKiem.Controls.Add(this.label1);
-            this.navPanelTimKiem.Controls.Add(this.txtNoiSinh);
             this.navPanelTimKiem.Controls.Add(this.btnTimKiem);
             this.navPanelTimKiem.Controls.Add(this.txtHoTen);
             this.navPanelTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -280,69 +309,11 @@
             this.navPanelTimKiem.Style.GradientAngle = 90;
             this.navPanelTimKiem.TabIndex = 1;
             // 
-            // cmbTheoNSinh
-            // 
-            this.cmbTheoNSinh.DisplayMember = "Text";
-            this.cmbTheoNSinh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbTheoNSinh.FormattingEnabled = true;
-            this.cmbTheoNSinh.ItemHeight = 14;
-            this.cmbTheoNSinh.Items.AddRange(new object[] {
-            this.col01,
-            this.col02,
-            this.col03});
-            this.cmbTheoNSinh.Location = new System.Drawing.Point(11, 68);
-            this.cmbTheoNSinh.Name = "cmbTheoNSinh";
-            this.cmbTheoNSinh.Size = new System.Drawing.Size(54, 20);
-            this.cmbTheoNSinh.TabIndex = 2;
-            this.cmbTheoNSinh.Text = "NONE";
-            // 
-            // col01
-            // 
-            this.col01.Text = "NONE";
-            // 
-            // col02
-            // 
-            this.col02.Text = "AND";
-            // 
-            // col03
-            // 
-            this.col03.Text = "OR";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 104);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nơi sinh:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Họ và tên:";
-            // 
-            // txtNoiSinh
-            // 
-            // 
-            // 
-            // 
-            this.txtNoiSinh.Border.Class = "TextBoxBorder";
-            this.txtNoiSinh.Location = new System.Drawing.Point(11, 120);
-            this.txtNoiSinh.MaxLength = 50;
-            this.txtNoiSinh.Name = "txtNoiSinh";
-            this.txtNoiSinh.Size = new System.Drawing.Size(160, 20);
-            this.txtNoiSinh.TabIndex = 3;
-            // 
             // btnTimKiem
             // 
             this.btnTimKiem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnTimKiem.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground;
-            this.btnTimKiem.Location = new System.Drawing.Point(11, 220);
+            this.btnTimKiem.Location = new System.Drawing.Point(11, 132);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(160, 23);
             this.btnTimKiem.TabIndex = 8;
@@ -355,11 +326,14 @@
             // 
             // 
             this.txtHoTen.Border.Class = "TextBoxBorder";
-            this.txtHoTen.Location = new System.Drawing.Point(11, 25);
+            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtHoTen.Location = new System.Drawing.Point(11, 92);
             this.txtHoTen.MaxLength = 30;
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(160, 20);
             this.txtHoTen.TabIndex = 1;
+            this.txtHoTen.Text = "Nhập thông tin tìm kiếm";
             // 
             // buttonItemTimKiem
             // 
@@ -411,45 +385,6 @@
             this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn5.Width = 120;
             // 
-            // colMaHocSinh
-            // 
-            this.colMaHocSinh.DataPropertyName = "MaHocSinh";
-            this.colMaHocSinh.HeaderText = "Mã học sinh";
-            this.colMaHocSinh.Name = "colMaHocSinh";
-            this.colMaHocSinh.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colMaHocSinh.Width = 80;
-            // 
-            // colHoTen
-            // 
-            this.colHoTen.DataPropertyName = "HoTen";
-            this.colHoTen.HeaderText = "Họ và tên";
-            this.colHoTen.Name = "colHoTen";
-            this.colHoTen.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colHoTen.Width = 120;
-            // 
-            // colNgaySinh
-            // 
-            this.colNgaySinh.DataPropertyName = "NgaySinh";
-            this.colNgaySinh.HeaderText = "Ngày sinh";
-            this.colNgaySinh.Name = "colNgaySinh";
-            this.colNgaySinh.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colNgaySinh.Width = 80;
-            // 
-            // colGioiTinh
-            // 
-            this.colGioiTinh.DataPropertyName = "GioiTinh";
-            this.colGioiTinh.HeaderText = "Giới Tính";
-            this.colGioiTinh.Name = "colGioiTinh";
-            this.colGioiTinh.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colNoiSinh
-            // 
-            this.colNoiSinh.DataPropertyName = "NoiSinh";
-            this.colNoiSinh.HeaderText = "Nơi sinh";
-            this.colNoiSinh.Name = "colNoiSinh";
-            this.colNoiSinh.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colNoiSinh.Width = 120;
-            // 
             // frmTimKiemHS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,7 +407,6 @@
             this.bindingNavigatorKetQuaTimKiem.PerformLayout();
             this.navPaneLeft.ResumeLayout(false);
             this.navPanelTimKiem.ResumeLayout(false);
-            this.navPanelTimKiem.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -482,18 +416,11 @@
         #region Components
         private System.Windows.Forms.GroupBox groupBoxDanhSach;
         private DevComponents.DotNetBar.Controls.DataGridViewX dGVKetQuaTimKiem;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbTheoNSinh;
         private DevComponents.DotNetBar.Controls.TextBoxX txtHoTen;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtNoiSinh;
         private DevComponents.DotNetBar.NavigationPane navPaneLeft;
         private DevComponents.DotNetBar.NavigationPanePanel navPanelTimKiem;
         private DevComponents.DotNetBar.ButtonItem buttonItemTimKiem;
         private DevComponents.DotNetBar.ButtonX btnTimKiem; 
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private DevComponents.Editors.ComboItem col01;
-        private DevComponents.Editors.ComboItem col02;
-        private DevComponents.Editors.ComboItem col03;
         private System.Windows.Forms.BindingNavigator bindingNavigatorKetQuaTimKiem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
