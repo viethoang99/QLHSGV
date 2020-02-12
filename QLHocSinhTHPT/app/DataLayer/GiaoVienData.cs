@@ -67,51 +67,51 @@ namespace app.DataLayer
             return m_GiaoVienData;
         }
 
-        public DataTable TimKiemGiaoVien(String hoTen, String theoDChi, String diaChi, String theoCMon, String cMon)
+        public DataTable TimKiemGiaoVien(String hoTen)
         {
             string sql ="";
-            if(theoDChi == "NONE")
-            {
-                if(theoCMon == "NONE")
-                {
-                    sql = "SELECT " +
-                        "gv.MaGiaoVien, gv.TenGiaoVien,gv.DiaChi, " +
-                        "gv.DienThoai, MONHOC.TenMonHoc FROM GIAOVIEN as gv JOIN MONHOC " +
-                        "ON gv.MaMonHoc = MONHOC.MaMonHoc " +
-                        " WHERE TenGiaoVien LIKE '%" + hoTen + "%'";
-                } 
-                else
-                {
-                    sql = "SELECT " +
-                        "gv.MaGiaoVien, gv.TenGiaoVien,gv.DiaChi, " +
-                        "gv.DienThoai, MONHOC.TenMonHoc FROM GIAOVIEN as gv JOIN MONHOC " +
-                        "ON gv.MaMonHoc = MONHOC.MaMonHoc " +
-                        " WHERE TenGiaoVien LIKE '%" + hoTen + "%' " +
-                    theoCMon + " MONHOC.TenMonHoc = '" + cMon + "'";
-                }              
-            }
-            else
-            {
-                if(theoCMon == "NONE")
-                {
-                    sql = "SELECT " +
-                        "gv.MaGiaoVien, gv.TenGiaoVien,gv.DiaChi, " +
-                        "gv.DienThoai, MONHOC.TenMonHoc FROM GIAOVIEN as gv JOIN MONHOC " +
-                        "ON gv.MaMonHoc = MONHOC.MaMonHoc " +
-                        " WHERE TenGiaoVien LIKE '%" + hoTen + "%' " +
-                        theoDChi + " DiaChi LIKE '" + diaChi + "%'";
-                }
-                else
-                {
-                    sql = "SELECT " +
-                        "gv.MaGiaoVien, gv.TenGiaoVien,gv.DiaChi, " +
-                        "gv.DienThoai, MONHOC.TenMonHoc FROM GIAOVIEN as gv JOIN MONHOC " +
-                        "ON gv.MaMonHoc = MONHOC.MaMonHoc " +
-                        " WHERE TenGiaoVien LIKE '%" + hoTen + "%' " +
-                        theoDChi + " DiaChi LIKE '" + diaChi + "%' " +
-                    theoCMon + " MONHOC.TenMonHoc = '" + cMon + "'";
-                }
-            }
+            //if(theoDChi == "NONE")
+            //{
+            //    if(theoCMon == "NONE")
+            //    {
+            //        sql = "SELECT " +
+            //            "gv.MaGiaoVien, gv.TenGiaoVien,gv.DiaChi, " +
+            //            "gv.DienThoai, MONHOC.TenMonHoc FROM GIAOVIEN as gv JOIN MONHOC " +
+            //            "ON gv.MaMonHoc = MONHOC.MaMonHoc " +
+            //            " WHERE TenGiaoVien LIKE '%" + hoTen + "%'";
+            //    } 
+            //    else
+            //    {
+            //        sql = "SELECT " +
+            //            "gv.MaGiaoVien, gv.TenGiaoVien,gv.DiaChi, " +
+            //            "gv.DienThoai, MONHOC.TenMonHoc FROM GIAOVIEN as gv JOIN MONHOC " +
+            //            "ON gv.MaMonHoc = MONHOC.MaMonHoc " +
+            //            " WHERE TenGiaoVien LIKE '%" + hoTen + "%' " +
+            //        theoCMon + " MONHOC.TenMonHoc = '" + cMon + "'";
+            //    }              
+            //}
+            //else
+            //{
+            //    if(theoCMon == "NONE")
+            //    {
+            //        sql = "SELECT " +
+            //            "gv.MaGiaoVien, gv.TenGiaoVien,gv.DiaChi, " +
+            //            "gv.DienThoai, MONHOC.TenMonHoc FROM GIAOVIEN as gv JOIN MONHOC " +
+            //            "ON gv.MaMonHoc = MONHOC.MaMonHoc " +
+            //            " WHERE TenGiaoVien LIKE '%" + hoTen + "%' " +
+            //            theoDChi + " DiaChi LIKE '" + diaChi + "%'";
+            //    }
+            //    else
+            //    {
+            //        sql = "SELECT " +
+            //            "gv.MaGiaoVien, gv.TenGiaoVien,gv.DiaChi, " +
+            //            "gv.DienThoai, MONHOC.TenMonHoc FROM GIAOVIEN as gv JOIN MONHOC " +
+            //            "ON gv.MaMonHoc = MONHOC.MaMonHoc " +
+            //            " WHERE TenGiaoVien LIKE '%" + hoTen + "%' " +
+            //            theoDChi + " DiaChi LIKE '" + diaChi + "%' " +
+            //        theoCMon + " MONHOC.TenMonHoc = '" + cMon + "'";
+            //    }
+            //}
 
             SqlCommand com = new SqlCommand(sql);
             m_GiaoVienData.Load(com);
