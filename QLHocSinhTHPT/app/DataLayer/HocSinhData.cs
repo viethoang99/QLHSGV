@@ -96,7 +96,15 @@ namespace app.DataLayer
         }
 
         public DataTable TimKiemHocSinh(String hoTen)
-        {         
+        {
+            string query = "SELECT * FROM HOCSINH WHERE " +
+                "HoTen LIKE '%" + hoTen + "%' " +
+                "OR NgaySinh LIKE '%" + hoTen + "%' " +
+                "OR MaHocSinh LIKE '%" + hoTen + "%' " +
+                "OR GioiTinh LIKE '%" + hoTen + "%' " +
+                "OR NoiSinh LIKE '%" + hoTen + "%'";
+            SqlCommand cmd = new SqlCommand(query);
+            m_HocSinhData.Load(cmd);
             return m_HocSinhData;
         }
     }
