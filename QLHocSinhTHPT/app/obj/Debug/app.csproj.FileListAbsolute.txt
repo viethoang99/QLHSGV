@@ -213,10 +213,7 @@ D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\o
 D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.pdb
 F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\app.exe
 F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\app.pdb
-F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\DevComponents.DotNetBar2.dll
 F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\System.Web.Services.dll
-F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\DevComponents.DotNetBar2.xml
-F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.WinForms.xml
 F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.csprojAssemblyReference.cache
 F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Component.frmConnection.resources
 F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\obj\Debug\app.Component.frmQuyDinh.resources
@@ -269,3 +266,7 @@ D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\b
 D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
 D:\Study\College Stuff\Nam3\Kỳ 2\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.Common.dll
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+F:\Desktop\Thực tập nhóm\QLHSGV\QLHocSinhTHPT\app\bin\Debug\Microsoft.ReportViewer.WinForms.dll
