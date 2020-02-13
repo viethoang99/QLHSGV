@@ -69,7 +69,7 @@ namespace app.DataLayer
 
         public DataTable TimKiemGiaoVien(String hoTen)
         {
-            string sql ="a";
+            string sql = "SELECT * FROM GIAOVIEN WHERE TenGiaoVien LIKE '%" + hoTen + "%'";
             //if(theoDChi == "NONE")
             //{
             //    if(theoCMon == "NONE")
