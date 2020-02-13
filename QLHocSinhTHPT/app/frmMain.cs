@@ -298,24 +298,21 @@ namespace app
 
         #region Menu quy dinh
         frmQuyDinh m_FrmQD = new frmQuyDinh();
-        private void btnDoTuoi_Click(object sender, EventArgs e)
-        {
-            ThamSo.ShowFormQuyDinh();
-            m_FrmQD.tabControlPanelDoTuoi.Select();
-        }
-
         private void btnSiSo_Click(object sender, EventArgs e)
         {
             ThamSo.ShowFormQuyDinh();
             m_FrmQD.tabControlPanelSiSo.Select();
         }
-
+        private void btnDoTuoi_Click(object sender, EventArgs e)
+        {
+            ThamSo.ShowFormQuyDinh();
+            m_FrmQD.tabControlPanelDoTuoi.Select();
+        }
         private void btnThangDiem_Click(object sender, EventArgs e)
         {
             ThamSo.ShowFormQuyDinh();
             m_FrmQD.tabControlPanelThangDiem.Select();
         }
-
         private void btnTruong_Click(object sender, EventArgs e)
         {
             ThamSo.ShowFormQuyDinh();
