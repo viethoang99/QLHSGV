@@ -24,7 +24,6 @@ namespace app.DataLayer
             cmd.Parameters.Add("namHoc", SqlDbType.VarChar).Value = namHoc;
             m_LopData.Load(cmd);
             return m_LopData;
-            return m_LopData;
         }
 
         public DataTable LayDsLop(String khoiLop, String namHoc)
