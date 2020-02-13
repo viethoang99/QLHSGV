@@ -10,6 +10,9 @@ namespace app.DataLayer
 
         public DataTable LayDsKhoiLop()
         {
+            string sql = "SELECT * FROM KHOILOP";
+            SqlCommand com = new SqlCommand(sql);
+            m_KhoiLopData.Load(com);
             return m_KhoiLopData;
         }
 
