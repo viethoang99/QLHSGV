@@ -25,7 +25,7 @@ namespace app.Controller
             bS.DataSource = m_QuyDinhData.LayDsQuyDinh();
 
             DataTable dT = m_QuyDinhData.LayDsQuyDinh();
-            int thangDiem = Convert.ToInt32(dT.Rows[0]["ThangDiem"]);
+            int thangDiem = Convert.ToInt32(dT.Rows[1]["ThangDiem"]);
 
             if (thangDiem == 10)
                 ckbThang10.Checked = true;
