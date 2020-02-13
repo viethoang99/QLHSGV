@@ -10,6 +10,8 @@ namespace app.DataLayer
 
         public DataTable LayDsQuyDinh()
         {
+            SqlCommand cmd = new SqlCommand("select * from QUYDINH");
+            m_QuyDinhData.Load(cmd);
             return m_QuyDinhData;
         }
 
