@@ -69,7 +69,7 @@ namespace app.DataLayer
 
         public DataTable TimKiemGiaoVien(String hoTen)
         {
-            string sql ="";
+            string sql ="a";
             //if(theoDChi == "NONE")
             //{
             //    if(theoCMon == "NONE")
