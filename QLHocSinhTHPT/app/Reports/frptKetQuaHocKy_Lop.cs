@@ -48,6 +48,20 @@ namespace app.Reports
         #region Click event
         private void btnXem_Click(object sender, EventArgs e)
         {
+            IList<ReportParameter> param = new List<ReportParameter>();
+            QuyDinhInfo m_ThongTinTruong = QuyDinh.LayThongTinTruong();
+            param.Add(new ReportParameter("TenTruong", m_ThongTinTruong.TenTruong));
+            param.Add(new ReportParameter("DiaChiTruong", m_ThongTinTruong.DiaChiTruong));
+            param.Add(new ReportParameter("NamHoc", cmbNamHoc.SelectedValue.ToString()));
+            param.Add(new ReportParameter("HocKy", cmbHocKy.SelectedValue.ToString()));
+            param.Add(new ReportParameter("Lop", cmbLop.SelectedValue.ToString()));
+            param.Add(new ReportParameter("NgayLap", DateTime.Today.Day + "/" + DateTime.Today.Month + "/" + DateTime.Today.Year));
+            this.reportViewerKQHKTH.LocalReport.SetParameters(param);
+            IList<KQHocKyTongHopInfo> KQHKTH =
+            KQHocKyTongHopCtrl.LayDsKQHocKyTongHop(cmbLop.SelectedValue.ToString(),cmbHocKy.SelectedValue.ToString(),cmbNamHoc.SelectedValue.ToString());
+            this.bSKQHKTH.DataSource = KQHKTH;
+            this.reportViewerKQHKTH.RefreshReport();
+
         }
         #endregion
     }
