@@ -11,7 +11,11 @@ Thong so co ban:
 -->
 <config>
   <costatus>true</costatus>
+<<<<<<< HEAD
   <servname>DESKTOP-8V08BMC\SQLEXPRESS</servname>
+=======
+  <servname>localhost</servname>
+>>>>>>> 83f6a6d23b7f20eb673d49b75ae8c5a3ecf95351
   <username />
   <password />
   <database>QuanLyHS_GV</database>
