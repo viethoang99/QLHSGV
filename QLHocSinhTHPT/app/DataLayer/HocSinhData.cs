@@ -18,34 +18,48 @@ namespace app.DataLayer
 
         public DataTable LayDsHocSinhTheoLop(String namHoc, String lop)
         {
-            SqlCommand cmd = new SqlCommand("SELECT * FROM HOCSINH hs ,LOP l ,NAMHOC nh,PHANLOP pl"
-            + " where pl.MaHocSinh = hs.MaHocSinh and pl.MaLop = l.MaLop and l.MaNamHoc = nh.MaNamHoc" +
-            " and l.MaLop = @lop and nh.MaNamHoc = @namHoc");
-            cmd.Parameters.Add("lop", SqlDbType.VarChar).Value = lop;
-            cmd.Parameters.Add("namHoc", SqlDbType.VarChar).Value = namHoc;
+            string query = "SELECT HS.MaHocSinh,HS.HoTen,HS.GioiTinh,HS.NgaySinh,HS.NoiSinh from HOCSINH HS, " +
+                "PHANLOP PL WHERE HS.MaHocSinh = PL.MaHocSinh AND " +
+                "PL.MaLop = '" + lop + "' AND MaNamHoc = '" + namHoc + "'";
+            SqlCommand cmd = new SqlCommand(query);
             m_HocSinhData.Load(cmd);
             return m_HocSinhData;
         }
 
         public DataTable LayDsHocSinhTheoLop(String namHoc, String khoiLop, String lop)
         {
+            string query = "SELECT HS.MaHocSinh,HS.HoTen,HS.GioiTinh,HS.NgaySinh,HS.NoiSinh from HOCSINH HS, " +
+                "PHANLOP PL WHERE HS.MaHocSinh = PL.MaHocSinh AND PL.MaKhoiLop = '" + khoiLop + "' AND " +
+                "PL.MaLop = '" + lop + "' AND PL.MaNamHoc = '" + namHoc + "'";
+            SqlCommand cmd = new SqlCommand(query);
+            m_HocSinhData.Load(cmd);
             return m_HocSinhData;
         }
 
         public DataTable LayDsHocSinhTheoNamHoc(String namHoc)
         {
-
+            string query = "SELECT HS.MaHocSinh,HS.HoTen,HS.GioiTinh,HS.NgaySinh,HS.NoiSinh,L.TenLop from HOCSINH HS, " +
+                "PHANLOP PL, LOP L WHERE HS.MaHocSinh = PL.MaHocSinh AND PL.MaLop = L.MaLop AND " +
+                "PL.MaNamHoc = '" + namHoc + "'";
+            SqlCommand cmd = new SqlCommand(query);
+            m_HocSinhData.Load(cmd);
             return m_HocSinhData;
         }
 
         public void LuuHSVaoBangPhanLop(String maNamHoc, String maKhoiLop, String maLop, String maHS)
         {
-
+            string query = "INSERT PHANLOP VALUES " +
+                "('" + maNamHoc + "','" + maKhoiLop + "','" + maLop + "','" + maHS + "')";
+            SqlCommand cmd = new SqlCommand(query);
+            m_HocSinhData.Load(cmd);
         }
 
         public void XoaHSKhoiBangPhanLop(String maNamHoc, String maKhoiLop, String maLop, String maHS)
         {
-
+            string query = "DELETE FROM PHANLOP WHERE MaNamHoc = '" + maNamHoc + "' AND " +
+                "MaKhoiLop = '" + maKhoiLop + "' AND MaLop = '" + maLop + "' AND MaHocSinh = '" + maHS + "'";
+            SqlCommand cmd = new SqlCommand(query);
+            m_HocSinhData.Load(cmd);
         }
 
         public DataTable LayDsHocSinhForReport()

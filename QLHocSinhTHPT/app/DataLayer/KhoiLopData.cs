@@ -10,11 +10,21 @@ namespace app.DataLayer
 
         public DataTable LayDsKhoiLop()
         {
+            SqlCommand cmd = new SqlCommand("SELECT * FROM KHOILOP");
+            m_KhoiLopData.Load(cmd);
             return m_KhoiLopData;
         }
 
         public DataTable LayDsKhoiLop(String khoiLopCu)
         {
+            //string a = khoiLopCu;
+            string query = "SELECT * FROM KHOILOP";
+            //if (khoiLopCu.ToString().Equals("") == false)
+            //{             
+            //    query = "SELECT * FROM KHOILOP where MaKhoiLop = '" + khoiLopCu + "'";               
+            //}
+            SqlCommand cmd = new SqlCommand(query);
+            m_KhoiLopData.Load(cmd);
             return m_KhoiLopData;
         }
 
