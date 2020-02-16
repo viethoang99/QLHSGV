@@ -77,10 +77,10 @@ namespace app.Controller
             //txtMaHocSinh.DataBindings.Add("Text", bS, "MaHocSinh");
 
             txtTenHocSinh.DataBindings.Clear();
-           // txtTenHocSinh.DataBindings.Add("Text", bS, "HoTen");
+            // txtTenHocSinh.DataBindings.Add("Text", bS, "HoTen");
 
             txtGioiTinh.DataBindings.Clear();
-           // txtGioiTinh.DataBindings.Add("Text", bS, "GioiTinh");
+            // txtGioiTinh.DataBindings.Add("Text", bS, "GioiTinh");
 
             dtpNgaySinh.DataBindings.Clear();
             //dtpNgaySinh.DataBindings.Add("Value", bS, "NgaySinh");
@@ -97,7 +97,7 @@ namespace app.Controller
         {
             BindingSource bS = new BindingSource();
             bS.DataSource = m_HocSinhData.LayDsHocSinhTheoLop(namHoc, lop);
-            
+
             bN.BindingSource = bS;
             dGV.DataSource = bS;
         }
@@ -112,7 +112,7 @@ namespace app.Controller
                 ListViewItem item = new ListViewItem();
                 item.Text = Row["MaHocSinh"].ToString();
                 item.SubItems.Add(Row["HoTen"].ToString());
-                
+
                 lV.Items.Add(item);
             }
         }
@@ -124,18 +124,21 @@ namespace app.Controller
 
         public void XoaHSKhoiBangPhanLop(String namHocCu, String khoiLopCu, String lopCu, ListViewEx hocSinh)
         {
-            foreach (ListViewItem item in hocSinh.Items)
-            {
-                m_HocSinhData.XoaHSKhoiBangPhanLop(namHocCu, khoiLopCu, lopCu, item.SubItems[0].Text.ToString());
-            }
+            //foreach (ListViewItem item in hocSinh.Items)
+            //{
+            string temp = frmPhanLop.HSChuyen;
+            m_HocSinhData.XoaHSKhoiBangPhanLop(namHocCu, khoiLopCu, lopCu, temp);
+            //m_HocSinhData.XoaHSKhoiBangPhanLop(namHocCu, khoiLopCu, lopCu, );
+            //}
         }
-        
+
         public void LuuHSVaoBangPhanLop(String namHocMoi, String khoiLopMoi, String lopMoi, ListViewEx hocSinh)
         {
-            foreach (ListViewItem item in hocSinh.Items)
-            {
-                m_HocSinhData.LuuHSVaoBangPhanLop(namHocMoi, khoiLopMoi, lopMoi, item.SubItems[0].Text.ToString());
-            }
+            //foreach (ListViewItem item in hocSinh.Items)
+            //{
+                string temp = frmPhanLop.HSChuyen;
+                m_HocSinhData.LuuHSVaoBangPhanLop(namHocMoi, khoiLopMoi, lopMoi,temp);
+            //}
         }
 
         #region Lay danh sach hoc sinh do vao report
@@ -149,11 +152,11 @@ namespace app.Controller
             foreach (DataRow Row in m_DT.Rows)
             {
                 HocSinhInfo hs = new HocSinhInfo();
-                hs.MaHocSinh        = Convert.ToString(Row["MaHocSinh"]);
-                hs.HoTen            = Convert.ToString(Row["HoTen"]);
-                hs.GioiTinh         = Convert.ToString(Row["GioiTinh"]).Trim();
-                hs.NgaySinh         = Convert.ToDateTime(Row["NgaySinh"]);
-                hs.NoiSinh          = Convert.ToString(Row["NoiSinh"]);
+                hs.MaHocSinh = Convert.ToString(Row["MaHocSinh"]);
+                hs.HoTen = Convert.ToString(Row["HoTen"]);
+                hs.GioiTinh = Convert.ToString(Row["GioiTinh"]).Trim();
+                hs.NgaySinh = Convert.ToDateTime(Row["NgaySinh"]);
+                hs.NoiSinh = Convert.ToString(Row["NoiSinh"]);
 
                 dS.Add(hs);
             }
@@ -186,7 +189,7 @@ namespace app.Controller
         #endregion
 
         #region Tim kiem
-        public void TimKiemHocSinh(TextBoxX txtHoTen,                              
+        public void TimKiemHocSinh(TextBoxX txtHoTen,
                                    DataGridViewX dGV,
                                    BindingNavigator bN)
         {

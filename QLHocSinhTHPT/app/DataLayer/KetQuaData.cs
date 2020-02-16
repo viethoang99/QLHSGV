@@ -10,6 +10,8 @@ namespace app.DataLayer
 
         public DataTable LayDsKetQua()
         {
+            SqlCommand cmd = new SqlCommand("select * from KETQUA ");
+            m_KetQuaData.Load(cmd);
             return m_KetQuaData;
         }
 

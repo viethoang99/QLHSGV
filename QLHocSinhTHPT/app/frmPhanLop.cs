@@ -12,6 +12,7 @@ namespace app
 {
     public partial class frmPhanLop : Office2007Form
     {
+        public static string HSChuyen;
         #region Fields
         NamHocCtrl      m_NamHocCuCtrl      = new NamHocCtrl();
         NamHocCtrl      m_NamHocMoiCtrl     = new NamHocCtrl();
@@ -47,6 +48,7 @@ namespace app
             while (ie.MoveNext())
             {
                 ListViewItem olditem = (ListViewItem)ie.Current;
+                HSChuyen = ie.Current.ToString().Split('{')[1].Split('}')[0];
                 ListViewItem newitem = new ListViewItem();
                 
                 //Trạng thái học sinh đã được chuyển lớp hay chưa?
@@ -68,15 +70,16 @@ namespace app
                     dT = m_HocSinhCtrl.HienThiDsHocSinhTheoNamHoc(cmbNamHocMoi.SelectedValue.ToString());
                 }
 
-                foreach (DataRow row in dT.Rows)
-                {
-                    if (olditem.SubItems[0].Text.ToString() == row["MaHocSinh"].ToString())
-                    {
-                        MessageBoxEx.Show("Học sinh " + row["HoTen"].ToString() + " hiện đang học trong lớp " + row["TenLop"].ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        state = true;
-                        goto Cont;
-                    }
-                }
+                //foreach (DataRow row in dT.Rows)
+                //{
+                //    //if (olditem.SubItems[0].Text.ToString() == row["MaHocSinh"].ToString())
+                //    if (olditem.Text.ToString().Equals(row["MaHocSinh"].ToString()))
+                //    {
+                //        MessageBoxEx.Show("Học sinh " + row["HoTen"].ToString() + " hiện đang học trong lớp " + row["TenLop"].ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //        state = true;
+                //        goto Cont;
+                //    }
+                //}
 
                 newitem.SubItems.Add(olditem.SubItems[1].Text);
                 newitem.Tag = olditem.Tag;
@@ -160,7 +163,7 @@ namespace app
             {
                 m_LopCuCtrl.HienThiComboBox(cmbKhoiLopCu.SelectedValue.ToString(), cmbNamHocCu.SelectedValue.ToString(), cmbLopCu);
                 m_KhoiLopMoiCtrl.HienThiComboBox(cmbKhoiLopCu.SelectedValue.ToString(), cmbKhoiLopMoi);
-                
+
                 cmbLopCu.DataBindings.Clear();
                 lVLopCu.Items.Clear();
             }

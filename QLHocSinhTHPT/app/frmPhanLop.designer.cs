@@ -32,8 +32,8 @@
             this.splitContainerPhanLop = new System.Windows.Forms.SplitContainer();
             this.panelChaTrai = new System.Windows.Forms.Panel();
             this.lVLopCu = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.colMaHSCu = new System.Windows.Forms.ColumnHeader();
-            this.colHoTenCu = new System.Windows.Forms.ColumnHeader();
+            this.colMaHSCu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHoTenCu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageListPhanLop = new System.Windows.Forms.ImageList(this.components);
             this.panelConTren = new System.Windows.Forms.Panel();
             this.groupPanelLopCu = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -49,8 +49,8 @@
             this.btnXoa = new DevComponents.DotNetBar.ButtonX();
             this.btnChuyen = new DevComponents.DotNetBar.ButtonX();
             this.lVLopMoi = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.colMaHSMoi = new System.Windows.Forms.ColumnHeader();
-            this.colHoTenMoi = new System.Windows.Forms.ColumnHeader();
+            this.colMaHSMoi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHoTenMoi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupPanelLopMoi = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.cmbLopMoi = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
@@ -58,6 +58,7 @@
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.cmbNamHocMoi = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
+            this.comboItem1 = new DevComponents.Editors.ComboItem();
             this.splitContainerPhanLop.Panel1.SuspendLayout();
             this.splitContainerPhanLop.Panel2.SuspendLayout();
             this.splitContainerPhanLop.SuspendLayout();
@@ -146,11 +147,11 @@
             this.groupPanelLopCu.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanelLopCu.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.groupPanelLopCu.Controls.Add(this.cmbLopCu);
-            this.groupPanelLopCu.Controls.Add(this.cmbKhoiLopCu);
             this.groupPanelLopCu.Controls.Add(this.cmbNamHocCu);
             this.groupPanelLopCu.Controls.Add(this.labelX3);
             this.groupPanelLopCu.Controls.Add(this.labelX2);
             this.groupPanelLopCu.Controls.Add(this.labelX1);
+            this.groupPanelLopCu.Controls.Add(this.cmbKhoiLopCu);
             this.groupPanelLopCu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPanelLopCu.Location = new System.Drawing.Point(0, 0);
             this.groupPanelLopCu.Name = "groupPanelLopCu";
@@ -394,6 +395,8 @@
             this.cmbKhoiLopMoi.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbKhoiLopMoi.FormattingEnabled = true;
             this.cmbKhoiLopMoi.ItemHeight = 14;
+            this.cmbKhoiLopMoi.Items.AddRange(new object[] {
+            this.comboItem1});
             this.cmbKhoiLopMoi.Location = new System.Drawing.Point(120, 40);
             this.cmbKhoiLopMoi.Name = "cmbKhoiLopMoi";
             this.cmbKhoiLopMoi.Size = new System.Drawing.Size(121, 20);
@@ -430,12 +433,17 @@
             this.labelX6.TabIndex = 0;
             this.labelX6.Text = "Lớp:";
             // 
+            // comboItem1
+            // 
+            this.comboItem1.Text = "comboItem1";
+            // 
             // frmPhanLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 468);
             this.Controls.Add(this.splitContainerPhanLop);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmPhanLop";
             this.ShowInTaskbar = false;
@@ -488,5 +496,7 @@
         private System.Windows.Forms.ColumnHeader colHoTenMoi;
         private System.Windows.Forms.ImageList imageListPhanLop;
         #endregion
+
+        private DevComponents.Editors.ComboItem comboItem1;
     }
 }

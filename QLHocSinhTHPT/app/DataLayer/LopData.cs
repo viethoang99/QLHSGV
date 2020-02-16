@@ -17,17 +17,17 @@ namespace app.DataLayer
 
         public DataTable LayDsLop(String namHoc)
         {
-
-            SqlCommand cmd = new SqlCommand("SELECT l.MaLop,l.TenLop,l.MaKhoiLop,l.MaNamHoc,l.SiSo,l.MaGiaoVien" +
-                " FROM LOP as l ,NAMHOC as nh" +
-                " where l.MaNamHoc = nh.MaNamHoc and nh.MaNamHoc = @namHoc ");
-            cmd.Parameters.Add("namHoc", SqlDbType.VarChar).Value = namHoc;
+            string query = "SELECT * FROM LOP WHERE MaNamHoc = '" + namHoc + "'";
+            SqlCommand cmd = new SqlCommand(query);
             m_LopData.Load(cmd);
             return m_LopData;
         }
 
         public DataTable LayDsLop(String khoiLop, String namHoc)
         {
+            string query = "SELECT * FROM LOP WHERE MaNamHoc = '" + namHoc + "' AND MaKhoiLop = '" + khoiLop + "'";
+            SqlCommand cmd = new SqlCommand(query);
+            m_LopData.Load(cmd);
             return m_LopData;
         }
 
