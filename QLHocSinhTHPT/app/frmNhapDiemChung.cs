@@ -109,7 +109,7 @@ namespace app
                 KiemTraDiemTruocKhiLuu("colDiemThi")    == true)
             {
                 #region Nếu nhập điểm
-                if (buttonItemNhapDuLieu.Checked == true && STT == null)
+                if (buttonItemNhapDuLieu.Checked == true )
                 {
                     int rowcount = 0;
 
@@ -248,7 +248,7 @@ namespace app
                 #endregion
 
                 #region Nếu sửa điểm
-                if (buttonItemCapNhatDuLieu.Checked == true || STT != null)
+                if (buttonItemCapNhatDuLieu.Checked == true )
                 {
                     int rowcount = 0;
 
@@ -556,6 +556,11 @@ namespace app
         }
 
         private void ButtonItemCapNhatDuLieu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dGVDiem_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
