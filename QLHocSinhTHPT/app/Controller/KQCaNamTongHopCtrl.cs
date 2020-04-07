@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using DevComponents.DotNetBar.Controls;
 using System.Collections.Generic;
 using DevComponents.Editors;
-using app.Bussiness;
+using app.init;
 using app.DataLayer;
 
 namespace app.Controller

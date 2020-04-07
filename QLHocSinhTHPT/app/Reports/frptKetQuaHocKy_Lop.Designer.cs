@@ -47,7 +47,7 @@
             // reportViewerKQHKTH
             // 
             this.reportViewerKQHKTH.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "app_Bussiness_KQHocKyTongHopInfo";
+            reportDataSource2.Name = "app_init_KQHocKyTongHopInfo";
             reportDataSource2.Value = this.bSKQHKTH;
             this.reportViewerKQHKTH.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewerKQHKTH.LocalReport.ReportEmbeddedResource = "app.Reports.rptKetQuaHocKy_Lop.rdlc";

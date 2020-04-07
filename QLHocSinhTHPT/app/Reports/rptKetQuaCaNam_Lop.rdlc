@@ -48,7 +48,7 @@
     <ReportItems>
       <Table Name="tblKQCNTH">
         <Left>0.026cm</Left>
-        <DataSetName>app_Bussiness_KQCaNamTongHopInfo</DataSetName>
+        <DataSetName>app_init_KQCaNamTongHopInfo</DataSetName>
         <Top>1.51158in</Top>
         <ZIndex>6</ZIndex>
         <Width>16.95314cm</Width>
@@ -492,10 +492,10 @@
   <rd:ReportID>8f189f29-8d92-4e12-96af-00dd72589031</rd:ReportID>
   <LeftMargin>2cm</LeftMargin>
   <DataSets>
-    <DataSet Name="app_Bussiness_KQCaNamTongHopInfo">
+    <DataSet Name="app_init_KQCaNamTongHopInfo">
       <rd:DataSetInfo>
-        <rd:DataSetName>app.Bussiness</rd:DataSetName>
-        <rd:ObjectDataSourceType>app.Bussiness.KQCaNamTongHopInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>app.init</rd:DataSetName>
+        <rd:ObjectDataSourceType>app.init.KQCaNamTongHopInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
         <rd:TableName>KQCaNamTongHopInfo</rd:TableName>
       </rd:DataSetInfo>
       <Query>
@@ -509,27 +509,27 @@
           <DataField>DTBCaNam</DataField>
         </Field>
         <Field Name="HanhKiem">
-          <rd:TypeName>app.Bussiness.HanhKiemInfo</rd:TypeName>
+          <rd:TypeName>app.init.HanhKiemInfo</rd:TypeName>
           <DataField>HanhKiem</DataField>
         </Field>
         <Field Name="HocLuc">
-          <rd:TypeName>app.Bussiness.HocLucInfo</rd:TypeName>
+          <rd:TypeName>app.init.HocLucInfo</rd:TypeName>
           <DataField>HocLuc</DataField>
         </Field>
         <Field Name="HocSinh">
-          <rd:TypeName>app.Bussiness.HocSinhInfo</rd:TypeName>
+          <rd:TypeName>app.init.HocSinhInfo</rd:TypeName>
           <DataField>HocSinh</DataField>
         </Field>
         <Field Name="KetQua">
-          <rd:TypeName>app.Bussiness.KetQuaInfo</rd:TypeName>
+          <rd:TypeName>app.init.KetQuaInfo</rd:TypeName>
           <DataField>KetQua</DataField>
         </Field>
         <Field Name="Lop">
-          <rd:TypeName>app.Bussiness.LopInfo</rd:TypeName>
+          <rd:TypeName>app.init.LopInfo</rd:TypeName>
           <DataField>Lop</DataField>
         </Field>
         <Field Name="NamHoc">
-          <rd:TypeName>app.Bussiness.NamHocInfo</rd:TypeName>
+          <rd:TypeName>app.init.NamHocInfo</rd:TypeName>
           <DataField>NamHoc</DataField>
         </Field>
       </Fields>

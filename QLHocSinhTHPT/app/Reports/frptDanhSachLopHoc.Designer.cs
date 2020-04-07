@@ -43,12 +43,12 @@
             // 
             // bSDSLop
             // 
-            this.bSDSLop.DataSource = typeof(app.Bussiness.LopInfo);
+            this.bSDSLop.DataSource = typeof(app.init.LopInfo);
             // 
             // reportViewerDSLop
             // 
             this.reportViewerDSLop.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "app_Bussiness_LopInfo";
+            reportDataSource2.Name = "app_init_LopInfo";
             reportDataSource2.Value = this.bSDSLop;
             this.reportViewerDSLop.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewerDSLop.LocalReport.ReportEmbeddedResource = "app.Reports.rptDanhSachLopHoc.rdlc";

@@ -37,12 +37,12 @@
             // 
             // bSDSHocSinh
             // 
-            this.bSDSHocSinh.DataSource = typeof(app.Bussiness.HocSinhInfo);
+            this.bSDSHocSinh.DataSource = typeof(app.init.HocSinhInfo);
             // 
             // reportViewerDSHS
             // 
             this.reportViewerDSHS.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "app_Bussiness_HocSinhInfo";
+            reportDataSource1.Name = "app_init_HocSinhInfo";
             reportDataSource1.Value = this.bSDSHocSinh;
             this.reportViewerDSHS.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewerDSHS.LocalReport.ReportEmbeddedResource = "app.Reports.rptDanhSachHocSinh.rdlc";

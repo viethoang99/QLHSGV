@@ -4,7 +4,7 @@ using System.Data;
 using System.Xml;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using app.Bussiness;
+using app.init;
 using app.Reports;
 using app.Controller;
 using DevComponents.DotNetBar;
@@ -147,292 +147,292 @@ namespace app.Component
         #region Fields
         public static frmAbout                  m_FrmAbout              = null;
         public static frmConnection             m_FrmConnection         = null;
-        public static frmGiaoVien               m_FrmGiaoVien           = null;
-        public static frmHanhKiem               m_FrmHanhKiem           = null;
-        public static frmHocKy                  m_FrmHocKy              = null;
-        public static frmHocLuc                 m_FrmHocLuc             = null;
-        public static frmHocSinh                m_FrmHocSinh            = null;
-        public static frmKetQua                 m_FrmKetQua             = null;
-        public static frmKhoiLop                m_FrmKhoiLop            = null;
-        public static frmLop                    m_FrmLop                = null;
-        public static frmMain                   m_FrmMain               = null;
-        public static frmMonHoc                 m_FrmMonHoc             = null;
-        public static frmNamHoc                 m_FrmNamHoc             = null;
-        public static frmNhapDiemRieng          m_FrmNhapDiemRieng      = null;
-        public static frmNhapDiemChung          m_FrmNhapDiemChung      = null;
-        public static frmXemDiem                m_FrmXemDiem            = null;
-        public static frmPhanCong               m_FrmPhanCong           = null;
-        public static frmPhanLop                m_FrmPhanLop            = null;
-        public static frmLoaiNguoiDung          m_FrmLoaiNguoiDung      = null;
-        public static frmLoaiDiem               m_FrmLoaiDiem           = null;
-        public static frmTimKiemGV              m_TimKiemGV             = null;
-        public static frmTimKiemHS              m_TimKiemHS             = null;
+        public static TeachersFrom               m_TeachersFrom           = null;
+        public static ConductForm               m_ConductForm           = null;
+        public static TermForm                  m_TermForm              = null;
+        public static PerformanceForm                 m_PerformanceForm             = null;
+        public static StudentsForm                m_StudentsForm            = null;
+        public static Results                 m_Results             = null;
+        public static Grades                m_Grades            = null;
+        public static Classes                    m_Classes                = null;
+        public static MainForm                   m_MainForm               = null;
+        public static Subjects                 m_Subjects             = null;
+        public static SchoolYear                 m_SchoolYear             = null;
+        public static PrivateMark          m_PrivateMark      = null;
+        public static GeneralMark          m_GeneralMark      = null;
+        public static Mark                m_Mark            = null;
+        public static Assigning               m_Assigning           = null;
+        public static ClassDivision                m_ClassDivision            = null;
+        public static UsersType          m_UsersType      = null;
+        public static MarkTypes               m_MarkTypes           = null;
+        public static searchTeachers              m_TimKiemGV             = null;
+        public static searchStudents              m_TimKiemHS             = null;
         public static frmQuyDinh                m_FrmQuyDinh            = null;
         public static frptDanhSachGiaoVien      m_FrmDSGiaoVien         = null;
         public static frptDanhSachHocSinh       m_FrmDSHocSinh          = null;
         public static frptDanhSachLopHoc        m_FrmDSLopHoc           = null;
-        public static frptKetQuaCaNam_Lop       m_FrmKetQuaCaNam_Lop    = null;
-        public static frptKetQuaCaNam_MonHoc    m_FrmKetQuaCaNam_MonHoc = null;
-        public static frptKetQuaHocKy_Lop       m_FrmKetQuaHocKy_Lop    = null;
-        public static frptKetQuaHocKy_MonHoc    m_FrmKetQuaHocKy_MonHoc = null;
+        public static frptKetQuaCaNam_Lop       m_ResultsCaNam_Lop    = null;
+        public static frptKetQuaCaNam_MonHoc    m_ResultsCaNam_MonHoc = null;
+        public static frptKetQuaHocKy_Lop       m_ResultsHocKy_Lop    = null;
+        public static frptKetQuaHocKy_MonHoc    m_ResultsHocKy_MonHoc = null;
         #endregion
 
         #region Ham goi hien form
         #region Menu start
         public static void ShowFormLoaiNguoiDung()
         {
-            if (m_FrmLoaiNguoiDung == null || m_FrmLoaiNguoiDung.IsDisposed)
+            if (m_UsersType == null || m_UsersType.IsDisposed)
             {
-                m_FrmLoaiNguoiDung = new frmLoaiNguoiDung();
-                m_FrmLoaiNguoiDung.MdiParent = frmMain.ActiveForm;
-                m_FrmLoaiNguoiDung.Show();
+                m_UsersType = new UsersType();
+                m_UsersType.MdiParent = MainForm.ActiveForm;
+                m_UsersType.Show();
             }
             else
-                m_FrmLoaiNguoiDung.Activate();
+                m_UsersType.Activate();
         }
         #endregion
 
         #region Menu quan ly
         public static void ShowFormLopHoc()
         {
-            if (m_FrmLop == null || m_FrmLop.IsDisposed)
+            if (m_Classes == null || m_Classes.IsDisposed)
             {
-                m_FrmLop = new frmLop();
-                m_FrmLop.MdiParent = frmMain.ActiveForm;
-                m_FrmLop.Show();
+                m_Classes = new Classes();
+                m_Classes.MdiParent = MainForm.ActiveForm;
+                m_Classes.Show();
             }
             else
-                m_FrmLop.Activate();
+                m_Classes.Activate();
         }
 
         public static void ShowFormKhoiLop()
         {
-            if (m_FrmKhoiLop == null || m_FrmKhoiLop.IsDisposed)
+            if (m_Grades == null || m_Grades.IsDisposed)
             {
-                m_FrmKhoiLop = new frmKhoiLop();
-                m_FrmKhoiLop.MdiParent = frmMain.ActiveForm;
-                m_FrmKhoiLop.Show();
+                m_Grades = new Grades();
+                m_Grades.MdiParent = MainForm.ActiveForm;
+                m_Grades.Show();
             }
             else
-                m_FrmKhoiLop.Activate();
+                m_Grades.Activate();
         }
 
         public static void ShowFormHocKy()
         {
-            if (m_FrmHocKy == null || m_FrmHocKy.IsDisposed)
+            if (m_TermForm == null || m_TermForm.IsDisposed)
             {
-                m_FrmHocKy = new frmHocKy();
-                m_FrmHocKy.MdiParent = frmMain.ActiveForm;
-                m_FrmHocKy.Show();
+                m_TermForm = new TermForm();
+                m_TermForm.MdiParent = MainForm.ActiveForm;
+                m_TermForm.Show();
             }
             else
-                m_FrmHocKy.Activate();
+                m_TermForm.Activate();
         }
 
         public static void ShowFormNamHoc()
         {
-            if (m_FrmNamHoc == null || m_FrmNamHoc.IsDisposed)
+            if (m_SchoolYear == null || m_SchoolYear.IsDisposed)
             {
-                m_FrmNamHoc = new frmNamHoc();
-                m_FrmNamHoc.MdiParent = frmMain.ActiveForm;
-                m_FrmNamHoc.Show();
+                m_SchoolYear = new SchoolYear();
+                m_SchoolYear.MdiParent = MainForm.ActiveForm;
+                m_SchoolYear.Show();
             }
             else
-                m_FrmNamHoc.Activate();
+                m_SchoolYear.Activate();
         }
 
         public static void ShowFormMonHoc()
         {
-            if (m_FrmMonHoc == null || m_FrmMonHoc.IsDisposed)
+            if (m_Subjects == null || m_Subjects.IsDisposed)
             {
-                m_FrmMonHoc = new frmMonHoc();
-                m_FrmMonHoc.MdiParent = frmMain.ActiveForm;
-                m_FrmMonHoc.Show();
+                m_Subjects = new Subjects();
+                m_Subjects.MdiParent = MainForm.ActiveForm;
+                m_Subjects.Show();
             }
             else
-                m_FrmMonHoc.Activate();
+                m_Subjects.Activate();
         }
 
         public static void ShowFormLoaiDiem()
         {
-            if (m_FrmLoaiDiem == null || m_FrmLoaiDiem.IsDisposed)
+            if (m_MarkTypes == null || m_MarkTypes.IsDisposed)
             {
-                m_FrmLoaiDiem = new frmLoaiDiem();
-                m_FrmLoaiDiem.MdiParent = frmMain.ActiveForm;
-                m_FrmLoaiDiem.Show();
+                m_MarkTypes = new MarkTypes();
+                m_MarkTypes.MdiParent = MainForm.ActiveForm;
+                m_MarkTypes.Show();
             }
             else
-                m_FrmLoaiDiem.Activate();
+                m_MarkTypes.Activate();
         }
 
         public static void ShowFormNhapDiemRieng()
         {
-            if (m_FrmNhapDiemRieng == null || m_FrmNhapDiemRieng.IsDisposed)
+            if (m_PrivateMark == null || m_PrivateMark.IsDisposed)
             {
-                m_FrmNhapDiemRieng = new frmNhapDiemRieng();
-                m_FrmNhapDiemRieng.MdiParent = frmMain.ActiveForm;
-                m_FrmNhapDiemRieng.Show();
+                m_PrivateMark = new PrivateMark();
+                m_PrivateMark.MdiParent = MainForm.ActiveForm;
+                m_PrivateMark.Show();
             }
             else
-                m_FrmNhapDiemRieng.Activate();
+                m_PrivateMark.Activate();
         }
 
         public static void ShowFormNhapDiemChung()
         {
-            if (m_FrmNhapDiemChung == null || m_FrmNhapDiemChung.IsDisposed)
+            if (m_GeneralMark == null || m_GeneralMark.IsDisposed)
             {
-                m_FrmNhapDiemChung = new frmNhapDiemChung();
-                m_FrmNhapDiemChung.MdiParent = frmMain.ActiveForm;
-                m_FrmNhapDiemChung.Show();
+                m_GeneralMark = new GeneralMark();
+                m_GeneralMark.MdiParent = MainForm.ActiveForm;
+                m_GeneralMark.Show();
             }
             else
-                m_FrmNhapDiemChung.Activate();
+                m_GeneralMark.Activate();
         }
 
         public static void ShowFormXemDiem()
         {
-            if (m_FrmXemDiem == null || m_FrmXemDiem.IsDisposed)
+            if (m_Mark == null || m_Mark.IsDisposed)
             {
-                m_FrmXemDiem = new frmXemDiem();
-                m_FrmXemDiem.MdiParent = frmMain.ActiveForm;
-                m_FrmXemDiem.Show();
+                m_Mark = new Mark();
+                m_Mark.MdiParent = MainForm.ActiveForm;
+                m_Mark.Show();
             }
             else
-                m_FrmXemDiem.Activate();
+                m_Mark.Activate();
         }
 
         public static void ShowFormKetQua()
         {
-            if (m_FrmKetQua == null || m_FrmKetQua.IsDisposed)
+            if (m_Results == null || m_Results.IsDisposed)
             {
-                m_FrmKetQua = new frmKetQua();
-                m_FrmKetQua.MdiParent = frmMain.ActiveForm;
-                m_FrmKetQua.Show();
+                m_Results = new Results();
+                m_Results.MdiParent = MainForm.ActiveForm;
+                m_Results.Show();
             }
             else
-                m_FrmKetQua.Activate();
+                m_Results.Activate();
         }
 
         public static void ShowFormHocLuc()
         {
-            if (m_FrmHocLuc == null || m_FrmHocLuc.IsDisposed)
+            if (m_PerformanceForm == null || m_PerformanceForm.IsDisposed)
             {
-                m_FrmHocLuc = new frmHocLuc();
-                m_FrmHocLuc.MdiParent = frmMain.ActiveForm;
-                m_FrmHocLuc.Show();
+                m_PerformanceForm = new PerformanceForm();
+                m_PerformanceForm.MdiParent = MainForm.ActiveForm;
+                m_PerformanceForm.Show();
             }
             else
-                m_FrmHocLuc.Activate();
+                m_PerformanceForm.Activate();
         }
 
         public static void ShowFormHanhKiem()
         {
-            if (m_FrmHanhKiem == null || m_FrmHanhKiem.IsDisposed)
+            if (m_ConductForm == null || m_ConductForm.IsDisposed)
             {
-                m_FrmHanhKiem = new frmHanhKiem();
-                m_FrmHanhKiem.MdiParent = frmMain.ActiveForm;
-                m_FrmHanhKiem.Show();
+                m_ConductForm = new ConductForm();
+                m_ConductForm.MdiParent = MainForm.ActiveForm;
+                m_ConductForm.Show();
             }
             else
-                m_FrmHanhKiem.Activate();
+                m_ConductForm.Activate();
         }
 
         public static void ShowFormHocSinh()
         {
-            if (m_FrmHocSinh == null || m_FrmHocSinh.IsDisposed)
+            if (m_StudentsForm == null || m_StudentsForm.IsDisposed)
             {
-                m_FrmHocSinh = new frmHocSinh();
-                m_FrmHocSinh.MdiParent = frmMain.ActiveForm;
-                m_FrmHocSinh.Show();
+                m_StudentsForm = new StudentsForm();
+                m_StudentsForm.MdiParent = MainForm.ActiveForm;
+                m_StudentsForm.Show();
             }
             else
-                m_FrmHocSinh.Activate();
+                m_StudentsForm.Activate();
         }
 
         public static void ShowFormPhanLop()
         {
-            if (m_FrmPhanLop == null || m_FrmPhanLop.IsDisposed)
+            if (m_ClassDivision == null || m_ClassDivision.IsDisposed)
             {
-                m_FrmPhanLop = new frmPhanLop();
-                m_FrmPhanLop.MdiParent = frmMain.ActiveForm;
-                m_FrmPhanLop.Show();
+                m_ClassDivision = new ClassDivision();
+                m_ClassDivision.MdiParent = MainForm.ActiveForm;
+                m_ClassDivision.Show();
             }
             else
-                m_FrmPhanLop.Activate();
+                m_ClassDivision.Activate();
         }
 
         public static void ShowFormGiaoVien()
         {
-            if (m_FrmGiaoVien == null || m_FrmGiaoVien.IsDisposed)
+            if (m_TeachersFrom == null || m_TeachersFrom.IsDisposed)
             {
-                m_FrmGiaoVien = new frmGiaoVien();
-                m_FrmGiaoVien.MdiParent = frmMain.ActiveForm;
-                m_FrmGiaoVien.Show();
+                m_TeachersFrom = new TeachersFrom();
+                m_TeachersFrom.MdiParent = MainForm.ActiveForm;
+                m_TeachersFrom.Show();
             }
             else
-                m_FrmGiaoVien.Activate();
+                m_TeachersFrom.Activate();
         }
 
         public static void ShowFormPhanCong()
         {
-            if (m_FrmPhanCong == null || m_FrmPhanCong.IsDisposed)
+            if (m_Assigning == null || m_Assigning.IsDisposed)
             {
-                m_FrmPhanCong = new frmPhanCong();
-                m_FrmPhanCong.MdiParent = frmMain.ActiveForm;
-                m_FrmPhanCong.Show();
+                m_Assigning = new Assigning();
+                m_Assigning.MdiParent = MainForm.ActiveForm;
+                m_Assigning.Show();
             }
             else
-                m_FrmPhanCong.Activate();
+                m_Assigning.Activate();
         }
         #endregion
 
         #region Menu thong ke
         public static void ShowFormKQHKTheoLop()
         {
-            if (m_FrmKetQuaHocKy_Lop == null || m_FrmKetQuaHocKy_Lop.IsDisposed)
+            if (m_ResultsHocKy_Lop == null || m_ResultsHocKy_Lop.IsDisposed)
             {
-                m_FrmKetQuaHocKy_Lop = new frptKetQuaHocKy_Lop();
-                m_FrmKetQuaHocKy_Lop.MdiParent = frmMain.ActiveForm;
-                m_FrmKetQuaHocKy_Lop.Show();
+                m_ResultsHocKy_Lop = new frptKetQuaHocKy_Lop();
+                m_ResultsHocKy_Lop.MdiParent = MainForm.ActiveForm;
+                m_ResultsHocKy_Lop.Show();
             }
             else
-                m_FrmKetQuaHocKy_Lop.Activate();
+                m_ResultsHocKy_Lop.Activate();
         }
 
         public static void ShowFormKQHKTheoMon()
         {
-            if (m_FrmKetQuaHocKy_MonHoc == null || m_FrmKetQuaHocKy_MonHoc.IsDisposed)
+            if (m_ResultsHocKy_MonHoc == null || m_ResultsHocKy_MonHoc.IsDisposed)
             {
-                m_FrmKetQuaHocKy_MonHoc = new frptKetQuaHocKy_MonHoc();
-                m_FrmKetQuaHocKy_MonHoc.MdiParent = frmMain.ActiveForm;
-                m_FrmKetQuaHocKy_MonHoc.Show();
+                m_ResultsHocKy_MonHoc = new frptKetQuaHocKy_MonHoc();
+                m_ResultsHocKy_MonHoc.MdiParent = MainForm.ActiveForm;
+                m_ResultsHocKy_MonHoc.Show();
             }
             else
-                m_FrmKetQuaHocKy_MonHoc.Activate();
+                m_ResultsHocKy_MonHoc.Activate();
         }
 
         public static void ShowFormKQCNTheoLop()
         {
-            if (m_FrmKetQuaCaNam_Lop == null || m_FrmKetQuaCaNam_Lop.IsDisposed)
+            if (m_ResultsCaNam_Lop == null || m_ResultsCaNam_Lop.IsDisposed)
             {
-                m_FrmKetQuaCaNam_Lop = new frptKetQuaCaNam_Lop();
-                m_FrmKetQuaCaNam_Lop.MdiParent = frmMain.ActiveForm;
-                m_FrmKetQuaCaNam_Lop.Show();
+                m_ResultsCaNam_Lop = new frptKetQuaCaNam_Lop();
+                m_ResultsCaNam_Lop.MdiParent = MainForm.ActiveForm;
+                m_ResultsCaNam_Lop.Show();
             }
             else
-                m_FrmKetQuaCaNam_Lop.Activate();
+                m_ResultsCaNam_Lop.Activate();
         }
 
         public static void ShowFormKQCNTheoMon()
         {
-            if (m_FrmKetQuaCaNam_MonHoc == null || m_FrmKetQuaCaNam_MonHoc.IsDisposed)
+            if (m_ResultsCaNam_MonHoc == null || m_ResultsCaNam_MonHoc.IsDisposed)
             {
-                m_FrmKetQuaCaNam_MonHoc = new frptKetQuaCaNam_MonHoc();
-                m_FrmKetQuaCaNam_MonHoc.MdiParent = frmMain.ActiveForm;
-                m_FrmKetQuaCaNam_MonHoc.Show();
+                m_ResultsCaNam_MonHoc = new frptKetQuaCaNam_MonHoc();
+                m_ResultsCaNam_MonHoc.MdiParent = MainForm.ActiveForm;
+                m_ResultsCaNam_MonHoc.Show();
             }
             else
-                m_FrmKetQuaCaNam_MonHoc.Activate();
+                m_ResultsCaNam_MonHoc.Activate();
         }
 
         public static void ShowFormDanhSachHocSinh()
@@ -440,7 +440,7 @@ namespace app.Component
             if (m_FrmDSHocSinh == null || m_FrmDSHocSinh.IsDisposed)
             {
                 m_FrmDSHocSinh = new frptDanhSachHocSinh();
-                m_FrmDSHocSinh.MdiParent = frmMain.ActiveForm;
+                m_FrmDSHocSinh.MdiParent = MainForm.ActiveForm;
                 m_FrmDSHocSinh.Show();
             }
             else
@@ -452,7 +452,7 @@ namespace app.Component
             if (m_FrmDSGiaoVien == null || m_FrmDSGiaoVien.IsDisposed)
             {
                 m_FrmDSGiaoVien = new frptDanhSachGiaoVien();
-                m_FrmDSGiaoVien.MdiParent = frmMain.ActiveForm;
+                m_FrmDSGiaoVien.MdiParent = MainForm.ActiveForm;
                 m_FrmDSGiaoVien.Show();
             }
             else
@@ -464,7 +464,7 @@ namespace app.Component
             if (m_FrmDSLopHoc == null || m_FrmDSLopHoc.IsDisposed)
             {
                 m_FrmDSLopHoc = new frptDanhSachLopHoc();
-                m_FrmDSLopHoc.MdiParent = frmMain.ActiveForm;
+                m_FrmDSLopHoc.MdiParent = MainForm.ActiveForm;
                 m_FrmDSLopHoc.Show();
             }
             else
@@ -477,8 +477,8 @@ namespace app.Component
         {
             if (m_TimKiemHS == null || m_TimKiemHS.IsDisposed)
             {
-                m_TimKiemHS = new frmTimKiemHS();
-                m_TimKiemHS.MdiParent = frmMain.ActiveForm;
+                m_TimKiemHS = new searchStudents();
+                m_TimKiemHS.MdiParent = MainForm.ActiveForm;
                 m_TimKiemHS.Show();
             }
             else
@@ -489,8 +489,8 @@ namespace app.Component
         {
             if (m_TimKiemGV == null || m_TimKiemGV.IsDisposed)
             {
-                m_TimKiemGV = new frmTimKiemGV();
-                m_TimKiemGV.MdiParent = frmMain.ActiveForm;
+                m_TimKiemGV = new searchTeachers();
+                m_TimKiemGV.MdiParent = MainForm.ActiveForm;
                 m_TimKiemGV.Show();
             }
             else

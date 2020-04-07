@@ -37,12 +37,12 @@ namespace app.Reports
             // 
             // bSDSGiaoVien
             // 
-            this.bSDSGiaoVien.DataSource = typeof(app.Bussiness.GiaoVienInfo);
+            this.bSDSGiaoVien.DataSource = typeof(app.init.GiaoVienInfo);
             // 
             // reportViewerDSGV
             // 
             this.reportViewerDSGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "app_Bussiness_GiaoVienInfo";
+            reportDataSource1.Name = "app_init_GiaoVienInfo";
             reportDataSource1.Value = this.bSDSGiaoVien;
             this.reportViewerDSGV.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewerDSGV.LocalReport.ReportEmbeddedResource = "app.Reports.rptDanhSachGiaoVien.rdlc";

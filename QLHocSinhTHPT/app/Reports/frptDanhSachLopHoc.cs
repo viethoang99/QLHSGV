@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Drawing;
-using app.Bussiness;
+using app.init;
 using app.Component;
 using app.Controller;
 using DevComponents.DotNetBar;

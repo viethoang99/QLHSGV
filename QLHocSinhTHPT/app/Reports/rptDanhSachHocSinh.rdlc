@@ -42,7 +42,7 @@
     <ReportItems>
       <Table Name="tblHocSinh">
         <Left>6cm</Left>
-        <DataSetName>app_Bussiness_HocSinhInfo</DataSetName>
+        <DataSetName>app_init_HocSinhInfo</DataSetName>
         <Top>2.985cm</Top>
         <ZIndex>4</ZIndex>
         <Width>25.63cm</Width>
@@ -357,10 +357,10 @@
   <rd:ReportID>8f189f29-8d92-4e12-96af-00dd72589031</rd:ReportID>
   <LeftMargin>2cm</LeftMargin>
   <DataSets>
-    <DataSet Name="app_Bussiness_HocSinhInfo">
+    <DataSet Name="app_init_HocSinhInfo">
       <rd:DataSetInfo>
-        <rd:DataSetName>app.Bussiness</rd:DataSetName>
-        <rd:ObjectDataSourceType>app.Bussiness.HocSinhInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>app.init</rd:DataSetName>
+        <rd:ObjectDataSourceType>app.init.HocSinhInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
         <rd:TableName>HocSinhInfo</rd:TableName>
       </rd:DataSetInfo>
       <Query>
@@ -370,7 +370,7 @@
       </Query>
       <Fields>
         <Field Name="DanToc">
-          <rd:TypeName>app.Bussiness.DanTocInfo</rd:TypeName>
+          <rd:TypeName>app.init.DanTocInfo</rd:TypeName>
           <DataField>DanToc</DataField>
         </Field>
         <Field Name="GioiTinh">

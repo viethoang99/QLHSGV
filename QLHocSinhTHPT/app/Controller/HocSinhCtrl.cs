@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.Editors.DateTimeAdv;
 using app.DataLayer;
-using app.Bussiness;
+using app.init;
 
 namespace app.Controller
 {
@@ -126,7 +126,7 @@ namespace app.Controller
         {
             //foreach (ListViewItem item in hocSinh.Items)
             //{
-            string temp = frmPhanLop.HSChuyen;
+            string temp = ClassDivision.HSChuyen;
             m_HocSinhData.XoaHSKhoiBangPhanLop(namHocCu, khoiLopCu, lopCu, temp);
             //m_HocSinhData.XoaHSKhoiBangPhanLop(namHocCu, khoiLopCu, lopCu, );
             //}
@@ -136,7 +136,7 @@ namespace app.Controller
         {
             //foreach (ListViewItem item in hocSinh.Items)
             //{
-                string temp = frmPhanLop.HSChuyen;
+                string temp = ClassDivision.HSChuyen;
                 m_HocSinhData.LuuHSVaoBangPhanLop(namHocMoi, khoiLopMoi, lopMoi,temp);
             //}
         }

@@ -6,5 +6,5 @@
     cause the file to be unrecognizable by the program.
 -->
 <GenericObjectDataSource DisplayName="GiaoVienInfo" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>app.Bussiness.GiaoVienInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeInfo>app.init.GiaoVienInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
 </GenericObjectDataSource>

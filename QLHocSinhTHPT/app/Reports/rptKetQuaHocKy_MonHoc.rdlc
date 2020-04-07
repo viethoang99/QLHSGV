@@ -58,7 +58,7 @@
     <ReportItems>
       <Table Name="tblKQHKMH">
         <Left>0.026cm</Left>
-        <DataSetName>app_Bussiness_KQHocKyMonHocInfo</DataSetName>
+        <DataSetName>app_init_KQHocKyMonHocInfo</DataSetName>
         <Top>1.772in</Top>
         <ZIndex>8</ZIndex>
         <Width>16.94999cm</Width>
@@ -452,10 +452,10 @@
   <rd:ReportID>8f189f29-8d92-4e12-96af-00dd72589031</rd:ReportID>
   <LeftMargin>2cm</LeftMargin>
   <DataSets>
-    <DataSet Name="app_Bussiness_KQHocKyMonHocInfo">
+    <DataSet Name="app_init_KQHocKyMonHocInfo">
       <rd:DataSetInfo>
-        <rd:DataSetName>app.Bussiness</rd:DataSetName>
-        <rd:ObjectDataSourceType>app.Bussiness.KQHocKyMonHocInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>app.init</rd:DataSetName>
+        <rd:ObjectDataSourceType>app.init.KQHocKyMonHocInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
         <rd:TableName>KQHocKyMonHocInfo</rd:TableName>
       </rd:DataSetInfo>
       <Query>
@@ -473,23 +473,23 @@
           <DataField>DTBMonHocKy</DataField>
         </Field>
         <Field Name="HocKy">
-          <rd:TypeName>app.Bussiness.HocKyInfo</rd:TypeName>
+          <rd:TypeName>app.init.HocKyInfo</rd:TypeName>
           <DataField>HocKy</DataField>
         </Field>
         <Field Name="HocSinh">
-          <rd:TypeName>app.Bussiness.HocSinhInfo</rd:TypeName>
+          <rd:TypeName>app.init.HocSinhInfo</rd:TypeName>
           <DataField>HocSinh</DataField>
         </Field>
         <Field Name="Lop">
-          <rd:TypeName>app.Bussiness.LopInfo</rd:TypeName>
+          <rd:TypeName>app.init.LopInfo</rd:TypeName>
           <DataField>Lop</DataField>
         </Field>
         <Field Name="MonHoc">
-          <rd:TypeName>app.Bussiness.MonHocInfo</rd:TypeName>
+          <rd:TypeName>app.init.MonHocInfo</rd:TypeName>
           <DataField>MonHoc</DataField>
         </Field>
         <Field Name="NamHoc">
-          <rd:TypeName>app.Bussiness.NamHocInfo</rd:TypeName>
+          <rd:TypeName>app.init.NamHocInfo</rd:TypeName>
           <DataField>NamHoc</DataField>
         </Field>
       </Fields>

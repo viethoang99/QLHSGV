@@ -47,7 +47,7 @@
             // reportViewerKQCNMH
             // 
             this.reportViewerKQCNMH.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource3.Name = "app_Bussiness_KQCaNamMonHocInfo";
+            reportDataSource3.Name = "app_init_KQCaNamMonHocInfo";
             reportDataSource3.Value = this.bSKQCNMH;
             this.reportViewerKQCNMH.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewerKQCNMH.LocalReport.ReportEmbeddedResource = "app.Reports.rptKetQuaCaNam_MonHoc.rdlc";

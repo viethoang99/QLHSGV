@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using DevComponents.DotNetBar.Controls;
 using app.DataLayer;
 using app.Component;
-using app.Bussiness;
+using app.init;
 
 namespace app.Controller
 {

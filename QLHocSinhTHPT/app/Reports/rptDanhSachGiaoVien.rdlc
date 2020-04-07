@@ -38,7 +38,7 @@
     <ReportItems>
       <Table Name="tblGiaoVien">
         <Left>0.026cm</Left>
-        <DataSetName>app_Bussiness_GiaoVienInfo</DataSetName>
+        <DataSetName>app_init_GiaoVienInfo</DataSetName>
         <Top>2.985cm</Top>
         <ZIndex>4</ZIndex>
         <Width>16.95cm</Width>
@@ -360,10 +360,10 @@
   <rd:ReportID>c76d56bf-68b0-4e98-a380-3e5516e748eb</rd:ReportID>
   <LeftMargin>2cm</LeftMargin>
   <DataSets>
-    <DataSet Name="app_Bussiness_GiaoVienInfo">
+    <DataSet Name="app_init_GiaoVienInfo">
       <rd:DataSetInfo>
-        <rd:DataSetName>app.Bussiness</rd:DataSetName>
-        <rd:ObjectDataSourceType>app.Bussiness.GiaoVienInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>app.init</rd:DataSetName>
+        <rd:ObjectDataSourceType>app.init.GiaoVienInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
         <rd:TableName>GiaoVienInfo</rd:TableName>
       </rd:DataSetInfo>
       <Query>
