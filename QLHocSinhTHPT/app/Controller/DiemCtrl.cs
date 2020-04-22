@@ -12,13 +12,13 @@ namespace app.Controller
 {
     public class DiemCtrl
     {
-        #region Fields
+        //Fields
         DiemData    m_DiemData      = new DiemData();
         HocKyData   m_HocKyData     = new HocKyData();
         MonHocData  m_MonHocData    = new MonHocData();
-        #endregion
+        
 
-        #region Luu diem
+        //Luu diem
         public void LuuDiem(String maHocSinh, String maMonHoc, String maHocKy, String maNamHoc, String maLop, String maLoaiDiem, float diemSo)
         {
             m_DiemData.LuuDiem(maHocSinh, maMonHoc, maHocKy, maNamHoc, maLop, maLoaiDiem, diemSo);
@@ -28,16 +28,16 @@ namespace app.Controller
             m_DiemData.CapNhatDiem(maHocSinh, maMonHoc, maHocKy, maNamHoc, maLop, maLoaiDiem, diemSo);
         }
 
-        #endregion
+        
 
-        #region Xoa diem
+        //Xoa diem
         public void XoaDiem(int stt)
         {
             m_DiemData.XoaDiem(stt);
         }
-        #endregion
+        
 
-        #region Hien thi danh sach xem diem
+        //Hien thi danh sach xem diem
         public void HienThiDanhSachXemDiem(ListViewEx lVXemDiem, String maHocSinh, String maMonHoc, String maHocKy, String maNamHoc, String maLop)
         {
             lVXemDiem.Items.Clear();
@@ -58,9 +58,9 @@ namespace app.Controller
                 lVXemDiem.Items.Add(item);
             }
         }
-        #endregion
+        
 
-        #region Tinh diem trung binh
+        //Tinh diem trung binh
         public float DiemTrungBinhKiemTra(String maHocSinh, String maMonHoc, String maHocKy, String maNamHoc, String maLop)
         {
             DataTable m_DT = m_DiemData.LayDsDiemHocSinh(maHocSinh, maMonHoc, maHocKy, maNamHoc, maLop);
@@ -161,6 +161,6 @@ namespace app.Controller
             else
                 return 0;
         }
-        #endregion
+        
     }
 }

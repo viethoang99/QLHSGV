@@ -11,7 +11,7 @@ namespace app.Controller
     {
         HocKyData m_HocKyData = new HocKyData();
 
-        #region Hien thi ComboBox
+        //Hien thi ComboBox
         public void HienThiComboBox(ComboBoxEx comboBox)
         {
             HocKyData m_HKData = new HocKyData();
@@ -20,9 +20,9 @@ namespace app.Controller
             comboBox.DisplayMember = "TenHocKy";
             comboBox.ValueMember = "MaHocKy";
         }
-        #endregion
+        
 
-        #region Hien thi ComboBox trong DataGridView
+        //Hien thi ComboBox trong DataGridView
         public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
         {
             cmbColumn.DataSource = m_HocKyData.LayDsHocKy();
@@ -31,9 +31,9 @@ namespace app.Controller
             cmbColumn.DataPropertyName = "MaHocKy";
             cmbColumn.HeaderText = "Học kỳ";
         }
-        #endregion
+        
 
-        #region Do du lieu vao DataGridView
+        //Do du lieu vao DataGridView
         public void HienThi(DataGridViewX dGV, BindingNavigator bN)
         {
             BindingSource bS = new BindingSource();
@@ -42,9 +42,9 @@ namespace app.Controller
             bN.BindingSource = bS;
             dGV.DataSource = bS;
         }
-        #endregion
+        
 
-        #region Them moi
+        //Them moi
         public DataRow ThemDongMoi()
         {
             return m_HocKyData.ThemDongMoi();
@@ -54,13 +54,13 @@ namespace app.Controller
         {
             m_HocKyData.ThemHocKy(m_Row);
         }
-        #endregion
+        
 
-        #region Luu du lieu
+        //Luu du lieu
         public bool LuuHocKy()
         {
             return m_HocKyData.LuuHocKy();
         }
-        #endregion
+        
     }
 }

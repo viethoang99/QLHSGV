@@ -12,15 +12,15 @@ using System.Collections.Generic;
 
 namespace app.Component
 {
-    #region Utilities
+    //Utilities
     public static class Utilities
     {
         public static NguoiDungInfo NguoiDung;
         public static String DatabaseName;
     }
-    #endregion
+    
 
-    #region QuyDinh
+    //QuyDinh
     public class QuyDinh
     {
         public static QuyDinhInfo LayThongTinTruong()
@@ -139,12 +139,12 @@ namespace app.Component
                 return "";
         }
     }
-    #endregion
+    
 
-    #region ThamSo
+    //ThamSo
     public static class ThamSo
     {
-        #region Fields
+        //Fields
         public static frmAbout                  m_FrmAbout              = null;
         public static frmConnection             m_FrmConnection         = null;
         public static TeachersFrom               m_TeachersFrom           = null;
@@ -175,10 +175,10 @@ namespace app.Component
         public static frptKetQuaCaNam_MonHoc    m_ResultsCaNam_MonHoc = null;
         public static frptKetQuaHocKy_Lop       m_ResultsHocKy_Lop    = null;
         public static frptKetQuaHocKy_MonHoc    m_ResultsHocKy_MonHoc = null;
-        #endregion
+        
 
-        #region Ham goi hien form
-        #region Menu start
+        //Ham goi hien form
+        //Menu start
         public static void ShowFormLoaiNguoiDung()
         {
             if (m_UsersType == null || m_UsersType.IsDisposed)
@@ -190,9 +190,9 @@ namespace app.Component
             else
                 m_UsersType.Activate();
         }
-        #endregion
+        
 
-        #region Menu quan ly
+        //Menu quan ly
         public static void ShowFormLopHoc()
         {
             if (m_Classes == null || m_Classes.IsDisposed)
@@ -384,9 +384,9 @@ namespace app.Component
             else
                 m_Assigning.Activate();
         }
-        #endregion
+        
 
-        #region Menu thong ke
+        //Menu thong ke
         public static void ShowFormKQHKTheoLop()
         {
             if (m_ResultsHocKy_Lop == null || m_ResultsHocKy_Lop.IsDisposed)
@@ -470,9 +470,9 @@ namespace app.Component
             else
                 m_FrmDSLopHoc.Activate();
         }
-        #endregion
+        
 
-        #region Menu tra cuu
+        //Menu tra cuu
         public static void ShowFormTimKiemHS()
         {
             if (m_TimKiemHS == null || m_TimKiemHS.IsDisposed)
@@ -496,9 +496,9 @@ namespace app.Component
             else
                 m_TimKiemGV.Activate();
         }
-        #endregion
+        
 
-        #region Menu quy dinh
+        //Menu quy dinh
         public static void ShowFormQuyDinh()
         {
             if (m_FrmQuyDinh == null || m_FrmQuyDinh.IsDisposed)
@@ -520,9 +520,9 @@ namespace app.Component
             else
                 m_FrmConnection.Activate();
         }
-        #endregion
+        
 
-        #region Menu giup do
+        //Menu giup do
         public static void ShowFormThongTin()
         {
             if (m_FrmAbout == null || m_FrmAbout.IsDisposed)
@@ -533,12 +533,12 @@ namespace app.Component
             else
                 m_FrmAbout.Activate();
         }
-        #endregion
-        #endregion
+        
+        
     }
-    #endregion
+    
 
-    #region Các hàm xử lý tập tin XML
+    //Các hàm xử lý tập tin XML
     public class XML
     {
         public static XmlDocument XMLReader(String filename)
@@ -640,5 +640,5 @@ namespace app.Component
             xmlW.Close();
         }
     }
-    #endregion
+    
 }

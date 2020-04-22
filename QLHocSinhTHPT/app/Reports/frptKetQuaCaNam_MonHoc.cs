@@ -12,21 +12,21 @@ namespace app.Reports
 {
     public partial class frptKetQuaCaNam_MonHoc : Office2007Form
     {
-        #region Fields
+        //Fields
         NamHocCtrl  m_NamHocCtrl    = new NamHocCtrl();
         LopCtrl     m_LopCtrl       = new LopCtrl();
         MonHocCtrl  m_MonHocCtrl    = new MonHocCtrl();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public frptKetQuaCaNam_MonHoc()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void frptKetQuaCaNam_MonHoc_Load(object sender, EventArgs e)
         {
             m_NamHocCtrl.HienThiComboBox(cmbNamHoc);
@@ -35,9 +35,9 @@ namespace app.Reports
             if (cmbNamHoc.SelectedValue != null && cmbLop.SelectedValue != null)
                 m_MonHocCtrl.HienThiComboBox(cmbNamHoc.SelectedValue.ToString(), cmbLop.SelectedValue.ToString(), cmbMonHoc);
         }
-        #endregion
+        
 
-        #region SelectedIndexChanged event
+        //SelectedIndexChanged event
         private void cmbNamHoc_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbNamHoc.SelectedValue != null)
@@ -51,9 +51,9 @@ namespace app.Reports
                 m_MonHocCtrl.HienThiComboBox(cmbNamHoc.SelectedValue.ToString(), cmbLop.SelectedValue.ToString(), cmbMonHoc);
             cmbMonHoc.DataBindings.Clear();
         }
-        #endregion
+        
 
-        #region Click event
+        //Click event
         private void btnXem_Click(object sender, EventArgs e)
         {
             IList<ReportParameter> param = new List<ReportParameter>();
@@ -73,6 +73,6 @@ namespace app.Reports
 
 
         }
-        #endregion
+        
     }
 }

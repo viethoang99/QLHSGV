@@ -11,16 +11,16 @@ namespace app.Controller
     {
         KetQuaData m_KetQuaData = new KetQuaData();
 
-        #region Hien thi ComboBox
+        //Hien thi ComboBox
         public void HienThiComboBox(ComboBoxEx comboBox)
         {
             comboBox.DataSource = m_KetQuaData.LayDsKetQua();
             comboBox.DisplayMember = "TenKetQua";
             comboBox.ValueMember = "MaKetQua";
         }
-        #endregion
+        
 
-        #region Hien thi ComboBox trong DataGridView
+        //Hien thi ComboBox trong DataGridView
         public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
         {
             cmbColumn.DataSource = m_KetQuaData.LayDsKetQua();
@@ -29,9 +29,9 @@ namespace app.Controller
             cmbColumn.DataPropertyName = "MaKetQua";
             cmbColumn.HeaderText = "Kết quả";
         }
-        #endregion
+        
 
-        #region Do du lieu vao DataGridView
+        //Do du lieu vao DataGridView
         public void HienThi(DataGridViewX dGV, BindingNavigator bN)
         {
             BindingSource bS = new BindingSource();
@@ -40,9 +40,9 @@ namespace app.Controller
             bN.BindingSource = bS;
             dGV.DataSource = bS;
         }
-        #endregion
+        
 
-        #region Them moi
+        //Them moi
         public DataRow ThemDongMoi()
         {
             return m_KetQuaData.ThemDongMoi();
@@ -52,13 +52,13 @@ namespace app.Controller
         {
             m_KetQuaData.ThemKetQua(m_Row);
         }
-        #endregion
+        
 
-        #region Luu du lieu
+        //Luu du lieu
         public bool LuuKetQua()
         {
             return m_KetQuaData.LuuKetQua();
         }
-        #endregion
+        
     }
 }

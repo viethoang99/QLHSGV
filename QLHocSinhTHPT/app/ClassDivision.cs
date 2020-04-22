@@ -13,7 +13,7 @@ namespace app
     public partial class ClassDivision : Office2007Form
     {
         public static string HSChuyen;
-        #region Fields
+        //Fields
         NamHocCtrl      m_NamHocCuCtrl      = new NamHocCtrl();
         NamHocCtrl      m_NamHocMoiCtrl     = new NamHocCtrl();
         KhoiLopCtrl     m_KhoiLopCuCtrl     = new KhoiLopCtrl();
@@ -21,27 +21,27 @@ namespace app
         LopCtrl         m_LopCuCtrl         = new LopCtrl();
         LopCtrl         m_LopMoiCtrl        = new LopCtrl();
         HocSinhCtrl     m_HocSinhCtrl       = new HocSinhCtrl();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public ClassDivision()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void ClassDivision_Load(object sender, EventArgs e)
         {
             m_NamHocCuCtrl.HienThiComboBox(cmbNamHocCu);
             m_NamHocMoiCtrl.HienThiComboBox(cmbNamHocMoi);
             m_KhoiLopCuCtrl.HienThiComboBox(cmbKhoiLopCu);
         }
-        #endregion
+        
 
-        #region Click event
-        #region Chuyển lớp
+        //Click event
+        //Chuyển lớp
         private void btnChuyen_Click(object sender, EventArgs e)
         {
             IEnumerator ie = lVLopCu.SelectedItems.GetEnumerator();
@@ -93,9 +93,9 @@ namespace app
                     break;
             }
         }
-        #endregion
+        
 
-        #region Xóa học sinh khỏi lớp mới
+        //Xóa học sinh khỏi lớp mới
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (MessageBoxEx.Show("Bạn có muốn xóa học sinh này khỏi lớp mới không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -108,9 +108,9 @@ namespace app
                 }
             }
         }
-        #endregion
+        
 
-        #region Lưu vào bảng PHANLOP
+        //Lưu vào bảng PHANLOP
         private void btnLuu_Click(object sender, EventArgs e)
         {
             if (cmbNamHocCu.SelectedValue   != null &&
@@ -134,17 +134,17 @@ namespace app
             else
                 MessageBoxEx.Show("Giá trị của các ô không được rỗng!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        #endregion
+        
 
-        #region Đóng form phân lớp
+        //Đóng form phân lớp
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        #endregion
-        #endregion
+        
+        
 
-        #region SelectedIndexChanged event
+        //SelectedIndexChanged event
         private void cmbNamHocCu_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmbKhoiLopCu.DataBindings.Clear();
@@ -191,6 +191,6 @@ namespace app
             if (cmbLopMoi.SelectedValue != null && cmbNamHocMoi.SelectedValue != null && cmbKhoiLopMoi.SelectedValue != null)
                 m_HocSinhCtrl.HienThiDsHocSinhTheoLop(cmbNamHocMoi.SelectedValue.ToString(), cmbKhoiLopMoi.SelectedValue.ToString(), cmbLopMoi.SelectedValue.ToString(), lVLopMoi);
         }
-        #endregion
+        
     }
 }

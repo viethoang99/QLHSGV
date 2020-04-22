@@ -11,27 +11,27 @@ namespace app
 {
     public partial class Results : Office2007Form
     {
-        #region Fields
+        //Fields
         KetQuaCtrl  m_KetQuaCtrl    = new KetQuaCtrl();
         QuyDinh     quyDinh         = new QuyDinh();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public Results()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void Results_Load(object sender, EventArgs e)
         {
             m_KetQuaCtrl.HienThi(dGVKetQua, bindingNavigatorKetQua);
         }
-        #endregion
+        
 
-        #region BindingNavigatorItems
+        //BindingNavigatorItems
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             if (dGVKetQua.RowCount == 0)
@@ -86,13 +86,13 @@ namespace app
                 m_KetQuaCtrl.LuuKetQua();
             }
         }
-        #endregion
+        
 
-        #region DataError event
+        //DataError event
         private void dGVKetQua_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
-        #endregion
+        
     }
 }

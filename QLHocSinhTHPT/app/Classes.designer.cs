@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        //Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -782,9 +782,9 @@
 
         }
 
-        #endregion
+        
 
-        #region Components
+        //Components
         private System.Windows.Forms.GroupBox groupBoxDanhSach;
         private DevComponents.Editors.IntegerInput iniSiSo;
         private DevComponents.DotNetBar.ContextMenuBar ctxMenu;
@@ -841,6 +841,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorSaveItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorExitItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorRefreshItem;
-        #endregion
+        
     }
 }

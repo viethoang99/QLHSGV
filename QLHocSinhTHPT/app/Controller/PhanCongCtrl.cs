@@ -11,7 +11,7 @@ namespace app.Controller
     {
         PhanCongData m_PhanCongData = new PhanCongData();
 
-        #region Do du lieu vao DataGridView
+        //Do du lieu vao DataGridView
         public void HienThi(DataGridView dGV, BindingNavigator bN)
         {
             BindingSource bS = new BindingSource();
@@ -50,9 +50,9 @@ namespace app.Controller
             bN.BindingSource = bS;
             dGV.DataSource = bS;
         }
-        #endregion
+        
 
-        #region Them moi
+        //Them moi
         public DataRow ThemDongMoi()
         {
             return m_PhanCongData.ThemDongMoi();
@@ -63,9 +63,9 @@ namespace app.Controller
         {
             m_PhanCongData.ThemPhanCong(m_Row);
         }
-        #endregion
+        
 
-        #region Luu du lieu
+        //Luu du lieu
         public bool LuuPhanCong()
         {
             return m_PhanCongData.LuuPhanCong();
@@ -75,9 +75,9 @@ namespace app.Controller
         {
             m_PhanCongData.LuuPhanCong(maNamHoc, maLop, maMonHoc, maGiaoVien);
         }
-        #endregion
+        
 
-        #region Tìm kiem
+        //Tìm kiem
         public void TimTheoTenLop(String m_TenLop)
         {
             m_PhanCongData.TimTheoTenLop(m_TenLop);
@@ -87,6 +87,6 @@ namespace app.Controller
         {
             m_PhanCongData.TimTheoTenGV(m_TenGiaoVien);
         }
-        #endregion
+        
     }
 }

@@ -9,26 +9,26 @@ namespace app.Component
 {
     public partial class frmQuyDinh : Office2007Form
     {
-        #region Field
+        //Field
         QuyDinhCtrl m_QuyDinhCtrl = new QuyDinhCtrl();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public frmQuyDinh()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void frmQuyDinh_Load(object sender, EventArgs e)
         {
             m_QuyDinhCtrl.HienThi(txtSiSoCanDuoi, txtSiSoCanTren, txtDoTuoiCanDuoi, txtDoTuoiCanTren, ckbThang10, ckbThang100, txtTenTruong, txtDiaChiTruong);
         }
-        #endregion
+        
 
-        #region Click event
+        //Click event
         private void btnHuyBo_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -87,6 +87,6 @@ namespace app.Component
                 }
             }
         }
-        #endregion
+        
     }
 }

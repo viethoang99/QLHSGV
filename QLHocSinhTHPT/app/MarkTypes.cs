@@ -11,27 +11,27 @@ namespace app
 {
     public partial class MarkTypes : Office2007Form
     {
-        #region Fields
+        //Fields
         LoaiDiemCtrl m_LoaiDiemCtrl = new LoaiDiemCtrl();
         QuyDinh      quyDinh        = new QuyDinh();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public MarkTypes()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void MarkTypes_Load(object sender, EventArgs e)
         {
             m_LoaiDiemCtrl.HienThi(dGVLoaiDiem, bindingNavigatorLoaiDiem);
         }
-        #endregion
+        
 
-        #region BindingNavigatorItems
+        //BindingNavigatorItems
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             if (dGVLoaiDiem.RowCount == 0)
@@ -88,13 +88,13 @@ namespace app
                 m_LoaiDiemCtrl.LuuLoaiDiem();
             }
         }
-        #endregion
+        
 
-        #region LoaiDiem event
+        //LoaiDiem event
         private void dGVLoaiDiem_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
-        #endregion
+        
     }
 }

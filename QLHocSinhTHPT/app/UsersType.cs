@@ -11,27 +11,27 @@ namespace app
 {
     public partial class UsersType : Office2007Form
     {
-        #region Fields
+        //Fields
         LoaiNguoiDungCtrl   m_LoaiNguoiDungCtrl = new LoaiNguoiDungCtrl();
         QuyDinh             quyDinh             = new QuyDinh();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public UsersType()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void UsersType_Load(object sender, EventArgs e)
         {
             m_LoaiNguoiDungCtrl.HienThi(dGVLoaiNguoiDung, bindingNavigatorLoaiNguoiDung);
         }
-        #endregion
+        
 
-        #region BindingNavigatorItems
+        //BindingNavigatorItems
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             if (dGVLoaiNguoiDung.RowCount == 0)
@@ -86,13 +86,13 @@ namespace app
                 m_LoaiNguoiDungCtrl.LuuLoaiNguoiDung();
             }
         }
-        #endregion
+        
 
-        #region DataError event
+        //DataError event
         private void dGVLoaiNguoiDung_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
-        #endregion
+        
     }
 }

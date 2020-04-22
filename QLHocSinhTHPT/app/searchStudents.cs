@@ -11,32 +11,32 @@ namespace app
     public partial class searchStudents : Office2007Form
     {
         public static string rs;
-        #region Fields 
+        //Fields 
         HocSinhCtrl m_HocSinhCtrl = new HocSinhCtrl();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public searchStudents()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void searchStudents_Load(object sender, EventArgs e)
         {
         }
-        #endregion
+        
 
-        #region BindingNavigatorItems
+        //BindingNavigatorItems
         private void bindingNavigatorExitItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        #endregion
+        
 
-        #region Tìm kiếm học sinh
+        //Tìm kiếm học sinh
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             m_HocSinhCtrl.TimKiemHocSinh(txtHoTen, dGVKetQuaTimKiem, bindingNavigatorKetQuaTimKiem);
@@ -44,6 +44,6 @@ namespace app
             if (dGVKetQuaTimKiem.RowCount == 0)
                 MessageBoxEx.Show("Không có học sinh cần tìm trong hệ thống!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        #endregion
+        
     }
 }

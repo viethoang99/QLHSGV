@@ -10,34 +10,34 @@ namespace app
 {
     public partial class searchTeachers : Office2007Form
     {
-        #region Fields
+        //Fields
         MonHocCtrl      m_MonHocCtrl    = new MonHocCtrl();
         GiaoVienCtrl    m_GiaoVienCtrl  = new GiaoVienCtrl();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public searchTeachers()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void searchTeachers_Load(object sender, EventArgs e)
         {
            // m_MonHocCtrl.HienThiComboBox(cmbCMon);
         }
-        #endregion
+        
 
-        #region BindingNavigatorItems
+        //BindingNavigatorItems
         private void bindingNavigatorExitItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        #endregion
+        
 
-        #region Tìm kiếm giáo viên
+        //Tìm kiếm giáo viên
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             m_GiaoVienCtrl.TimKiemGiaoVien(txtHoTen,dGVKetQuaTimKiem, bindingNavigatorKetQuaTimKiem);
@@ -45,6 +45,6 @@ namespace app
             if (dGVKetQuaTimKiem.RowCount == 0)
                 MessageBoxEx.Show("Không có giáo viên cần tìm trong hệ thống!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        #endregion
+        
     }
 }

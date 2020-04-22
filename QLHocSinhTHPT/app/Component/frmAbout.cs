@@ -9,21 +9,21 @@ namespace app
 {
     public partial class frmAbout : Office2007Form
     {
-        #region Constructor
+        //Constructor
         public frmAbout()
         {
             InitializeComponent();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void frmAbout_Load(object sender, EventArgs e)
         {
             this.lbl08Email.Links.Add(0, 19, "mailto:hoangviet.mta.hp@gmail.com");
         }
-        #endregion
+        
 
-        #region Click event
+        //Click event
         private void lbl08Email_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             string strURL = Convert.ToString(e.Link.LinkData);
@@ -42,6 +42,6 @@ namespace app
         {
             this.Close();
         }
-        #endregion
+        
     }
 }

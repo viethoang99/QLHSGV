@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        //Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -518,9 +518,9 @@
 
         }
 
-        #endregion
+        
 
-        #region Components
+        //Components
         private System.Windows.Forms.GroupBox groupBoxDanhSach;
         private DevComponents.DotNetBar.ContextMenuBar ctxMenu;
         private DevComponents.DotNetBar.ButtonItem btnMenu;
@@ -558,6 +558,6 @@
         private System.Windows.Forms.ColumnHeader colDiem;
         private System.Windows.Forms.ImageList imageListDiem;
         private DevComponents.DotNetBar.Controls.TextBoxX txtDiem;
-        #endregion
+        
     }
 }

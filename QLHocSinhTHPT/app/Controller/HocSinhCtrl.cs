@@ -14,7 +14,7 @@ namespace app.Controller
     {
         HocSinhData m_HocSinhData = new HocSinhData();
 
-        #region Hien thi ComboBox
+        //Hien thi ComboBox
         public void HienThiComboBox(ComboBoxEx comboBox)
         {
             comboBox.DataSource = m_HocSinhData.LayDsHocSinh();
@@ -30,9 +30,9 @@ namespace app.Controller
             comboBox.DisplayMember = "HoTen";
             comboBox.ValueMember = "MaHocSinh";
         }
-        #endregion
+        
 
-        #region Hien thi ComboBox trong DataGridView
+        //Hien thi ComboBox trong DataGridView
         public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
         {
             cmbColumn.DataSource = m_HocSinhData.LayDsHocSinh();
@@ -41,9 +41,9 @@ namespace app.Controller
             cmbColumn.DataPropertyName = "MaHocSinh";
             cmbColumn.HeaderText = "Học sinh";
         }
-        #endregion
+        
 
-        #region Do du lieu vao DataGridView
+        //Do du lieu vao DataGridView
         public void HienThi(DataGridView dGV, BindingNavigator bN)
         {
             BindingSource bS = new BindingSource();
@@ -91,7 +91,7 @@ namespace app.Controller
             bN.BindingSource = bS;
             dGV.DataSource = bS;
         }
-        #endregion
+        
 
         public void HienThiDsHocSinhTheoLop(DataGridViewX dGV, BindingNavigator bN, String namHoc, String lop)
         {
@@ -141,7 +141,7 @@ namespace app.Controller
             //}
         }
 
-        #region Lay danh sach hoc sinh do vao report
+        //Lay danh sach hoc sinh do vao report
         public static IList<HocSinhInfo> LayDsHocSinh()
         {
             HocSinhData m_HSData = new HocSinhData();
@@ -162,9 +162,9 @@ namespace app.Controller
             }
             return dS;
         }
-        #endregion
+        
 
-        #region Them moi
+        //Them moi
         public DataRow ThemDongMoi()
         {
             return m_HocSinhData.ThemDongMoi();
@@ -174,9 +174,9 @@ namespace app.Controller
         {
             m_HocSinhData.ThemHocSinh(m_Row);
         }
-        #endregion
+        
 
-        #region Luu du lieu
+        //Luu du lieu
         public bool LuuHocSinh()
         {
             return m_HocSinhData.LuuHocSinh();
@@ -186,9 +186,9 @@ namespace app.Controller
         {
             m_HocSinhData.LuuHocSinh(maHocSinh, hoTen, gioiTinh, ngaySinh, noiSinh);
         }
-        #endregion
+        
 
-        #region Tim kiem
+        //Tim kiem
         public void TimKiemHocSinh(TextBoxX txtHoTen,
                                    DataGridViewX dGV,
                                    BindingNavigator bN)
@@ -209,6 +209,6 @@ namespace app.Controller
         {
             m_HocSinhData.TimTheoTen(m_TenHocSinh);
         }
-        #endregion
+        
     }
 }

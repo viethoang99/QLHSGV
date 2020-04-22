@@ -12,15 +12,15 @@ namespace app.Reports
 {
     public partial class frptDanhSachGiaoVien : Office2007Form
     {
-        #region Constructor
+        //Constructor
         public frptDanhSachGiaoVien()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void frptDanhSachGiaoVien_Load(object sender, EventArgs e)
         {
             IList<ReportParameter> param = new List<ReportParameter>();
@@ -35,6 +35,6 @@ namespace app.Reports
 
             this.reportViewerDSGV.RefreshReport();
         }
-        #endregion
+        
     }
 }

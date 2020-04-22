@@ -12,13 +12,13 @@ namespace app.Controller
 {
     public class KQHocKyTongHopCtrl
     {
-        #region Fields
+        //Fields
         DiemCtrl            m_DiemCtrl              = new DiemCtrl();
         HocLucCtrl          m_HocLucCtrl            = new HocLucCtrl();
         KQHocKyTongHopData  m_KQHocKyTongHopData    = new KQHocKyTongHopData();
-        #endregion
+        
 
-        #region Luu ket qua
+        //Luu ket qua
         public void LuuKetQua(String maHocSinh, String maLop, String maHocKy, String maNamHoc)
         {
             float diemTBChungCacMonHK = (float)Math.Round(m_DiemCtrl.DiemTrungBinhChungCacMonHocKy(maHocSinh, maLop, maHocKy, maNamHoc), 2);
@@ -27,9 +27,9 @@ namespace app.Controller
             m_KQHocKyTongHopData.XoaKetQua(maHocSinh, maLop, maHocKy, maNamHoc);
             m_KQHocKyTongHopData.LuuKetQua(maHocSinh, maLop, maHocKy, maNamHoc, hocLuc, "HK0001", diemTBChungCacMonHK);
         }
-        #endregion
+        
 
-        #region Lay danh sach ket qua hoc ky tong hop do vao report
+        //Lay danh sach ket qua hoc ky tong hop do vao report
         public static IList<KQHocKyTongHopInfo> LayDsKQHocKyTongHop(String maLop, String maHocKy, String maNamHoc)
         {
             KQHocKyTongHopData m_KQHKTHData = new KQHocKyTongHopData();
@@ -77,6 +77,6 @@ namespace app.Controller
             }
             return dS;
         }
-        #endregion
+        
     }
 }

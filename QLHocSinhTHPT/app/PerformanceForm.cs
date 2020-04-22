@@ -11,27 +11,27 @@ namespace app
 {
     public partial class PerformanceForm : Office2007Form
     {
-        #region Fields
+        //Fields
         HocLucCtrl  m_HocLucCtrl    = new HocLucCtrl();
         QuyDinh     quyDinh         = new QuyDinh();
-        #endregion
+        
 
-        #region Costructor
+        //Costructor
         public PerformanceForm()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void PerformanceForm_Load(object sender, EventArgs e)
         {
             m_HocLucCtrl.HienThi(dGVHocLuc, bindingNavigatorHocLuc);
         }
-        #endregion
+        
 
-        #region BindingNavigatorItems
+        //BindingNavigatorItems
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             if (dGVHocLuc.RowCount == 0)
@@ -109,13 +109,13 @@ namespace app
                 m_HocLucCtrl.LuuHocLuc();
             }
         }
-        #endregion
+        
 
-        #region DataError event
+        //DataError event
         private void dGVHocLuc_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
-        #endregion
+        
     }
 }

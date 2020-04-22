@@ -9,14 +9,14 @@ namespace app.Component
 {
     public partial class frmDangNhap : Office2007Form
     {
-        #region Constructor
+        //Constructor
         public frmDangNhap()
         {
             InitializeComponent();
         }
-        #endregion
+        
 
-        #region Click event
+        //Click event
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
@@ -26,9 +26,9 @@ namespace app.Component
         {
             this.DialogResult = DialogResult.Cancel;
         }
-        #endregion
+        
 
-        #region Key event
+        //Key event
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -36,6 +36,6 @@ namespace app.Component
                 this.DialogResult = DialogResult.OK;
             }
         }
-        #endregion
+        
     }
 }

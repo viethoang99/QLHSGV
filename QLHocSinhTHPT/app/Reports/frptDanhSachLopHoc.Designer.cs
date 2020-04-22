@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        //Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -151,7 +151,7 @@
 
         }
 
-        #endregion
+        
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewerDSLop;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanelDS;

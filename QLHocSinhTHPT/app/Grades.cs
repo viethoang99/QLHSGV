@@ -10,26 +10,26 @@ namespace app
 {
     public partial class Grades : Office2007Form
     {
-        #region Field
+        //Field
         KhoiLopCtrl m_KhoiLopCtrl   = new KhoiLopCtrl();
-        #endregion
+        
 
-        #region constructor
+        //constructor
         public Grades()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void Grades_Load(object sender, EventArgs e)
         {
             m_KhoiLopCtrl.HienThi(dGVKhoiLop, bindingNavigatorKhoiLop);
         }
-        #endregion
+        
 
-        #region BindingNavigatorItems
+        //BindingNavigatorItems
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             if (dGVKhoiLop.RowCount == 0)
@@ -84,13 +84,13 @@ namespace app
                 m_KhoiLopCtrl.LuuKhoiLop();
             }
         }
-        #endregion
+        
 
-        #region DataError event
+        //DataError event
         private void dGVKhoiLop_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
-        #endregion
+        
     }
 }

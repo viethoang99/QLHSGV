@@ -11,23 +11,23 @@ namespace app
 {
     public partial class Assigning : Office2007Form
     {
-        #region Fields
+        //Fields
         PhanCongCtrl    m_PhanCongCtrl  = new PhanCongCtrl();
         NamHocCtrl      m_NamHocCtrl    = new NamHocCtrl();
         LopCtrl         m_LopCtrl       = new LopCtrl();
         MonHocCtrl      m_MonHocCtrl    = new MonHocCtrl();
         GiaoVienCtrl    m_GiaoVienCtrl  = new GiaoVienCtrl();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public Assigning()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void Assigning_Load(object sender, EventArgs e)
         {
             m_NamHocCtrl.HienThiComboBox(cmbNamHoc);
@@ -42,9 +42,9 @@ namespace app
 
             m_PhanCongCtrl.HienThi(dGVPhanCong, bindingNavigatorPhanCong, txtSTT, cmbNamHoc, cmbLop, cmbMonHoc, cmbGiaoVien);
         }
-        #endregion
+        
 
-        #region BindingNavigatorItems
+        //BindingNavigatorItems
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             if (dGVPhanCong.RowCount == 0)
@@ -109,16 +109,16 @@ namespace app
                 m_PhanCongCtrl.LuuPhanCong();
             }
         }
-        #endregion
+        
 
-        #region DataError Event
+        //DataError Event
         private void dGVPhanCong_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
-        #endregion
+        
 
-        #region Tìm kiếm giáo viên trong bảng phân công
+        //Tìm kiếm giáo viên trong bảng phân công
         private void txtTimKiem_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -145,9 +145,9 @@ namespace app
                 m_PhanCongCtrl.TimTheoTenGV(txtTimKiem.Text);
             }
         }
-        #endregion
+        
 
-        #region Click event
+        //Click event
         private void btnThemNamHoc_Click(object sender, EventArgs e)
         {
             ThamSo.ShowFormNamHoc();
@@ -190,15 +190,15 @@ namespace app
             else
                 MessageBoxEx.Show("Giá trị của các ô không được rỗng!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        #endregion
+        
 
-        #region SelectedIndexChanged event
+        //SelectedIndexChanged event
         private void cmbNamHoc_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbNamHoc.SelectedValue != null)
                 m_LopCtrl.HienThiComboBox(cmbNamHoc.SelectedValue.ToString(), cmbLop);
             cmbLop.DataBindings.Clear();
         }
-        #endregion
+        
     }
 }

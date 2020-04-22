@@ -10,26 +10,26 @@ namespace app
 {
     public partial class SchoolYear : Office2007Form
     {
-        #region Field
+        //Field
         NamHocCtrl m_NamHocCtrl = new NamHocCtrl();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public SchoolYear()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void SchoolYear_Load(object sender, EventArgs e)
         {
             m_NamHocCtrl.HienThi(dGVNamHoc, bindingNavigatorNamHoc);
         }
-        #endregion
+        
 
-        #region BindingNavigatorItems
+        //BindingNavigatorItems
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             if (dGVNamHoc.RowCount == 0)
@@ -84,13 +84,13 @@ namespace app
                 m_NamHocCtrl.LuuNamHoc();
             }
         }
-        #endregion
+        
 
-        #region DataError event
+        //DataError event
         private void dGVNamHoc_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
-        #endregion
+        
     }
 }

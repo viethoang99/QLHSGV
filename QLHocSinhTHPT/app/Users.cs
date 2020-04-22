@@ -11,29 +11,29 @@ namespace app
 {
     public partial class Users : Office2007Form
     {
-        #region Fields
+        //Fields
         NguoiDungCtrl       m_NguoiDungCtrl     = new NguoiDungCtrl();
         LoaiNguoiDungCtrl   m_LoaiNguoiDungCtrl = new LoaiNguoiDungCtrl();
         QuyDinh             quyDinh             = new QuyDinh();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public Users()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void Users_Load(object sender, EventArgs e)
         {
             m_LoaiNguoiDungCtrl.HienThiDataGridViewComboBoxColumn(colMaLoai);
             m_NguoiDungCtrl.HienThi(dGVNguoiDung, bindingNavigatorNguoiDung);
         }
-        #endregion
+        
 
-        #region BindingNavigatorItems
+        //BindingNavigatorItems
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             if (dGVNguoiDung.RowCount == 0)
@@ -94,21 +94,21 @@ namespace app
                 m_NguoiDungCtrl.LuuNguoiDung();
             }
         }
-        #endregion
+        
 
-        #region DataError event
+        //DataError event
         private void dGVNguoiDung_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
-        #endregion
+        
 
-        #region Click event
+        //Click event
         private void btnThemLoaiND_Click(object sender, EventArgs e)
         {
             ThamSo.ShowFormLoaiNguoiDung();
             m_LoaiNguoiDungCtrl.HienThiDataGridViewComboBoxColumn(colMaLoai);
         }
-        #endregion
+        
     }
 }

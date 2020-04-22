@@ -11,16 +11,16 @@ namespace app.Controller
     {
         KhoiLopData m_KhoiLopData = new KhoiLopData();
 
-        #region Hien thi ComboBox
+        //Hien thi ComboBox
         public void HienThiComboBox(ComboBoxEx comboBox)
         {
             comboBox.DataSource = m_KhoiLopData.LayDsKhoiLop();
             comboBox.DisplayMember = "TenKhoiLop";
             comboBox.ValueMember = "MaKhoiLop";
         }
-        #endregion
+        
 
-        #region Hien thi ComboBox khoi lop, phu thuoc vao khoi lop cu
+        //Hien thi ComboBox khoi lop, phu thuoc vao khoi lop cu
         public void HienThiComboBox(String khoiLopCu, ComboBoxEx cmbKhoiLopMoi)
         {
             KhoiLopData m_KLData = new KhoiLopData();
@@ -28,9 +28,9 @@ namespace app.Controller
             cmbKhoiLopMoi.DisplayMember = "TenKhoiLop";
             cmbKhoiLopMoi.ValueMember = "MaKhoiLop";
         }
-        #endregion
+        
 
-        #region Hien thi ComboBox trong DataGridView
+        //Hien thi ComboBox trong DataGridView
         public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
         {
             cmbColumn.DataSource = m_KhoiLopData.LayDsKhoiLop();
@@ -39,9 +39,9 @@ namespace app.Controller
             cmbColumn.DataPropertyName = "MaKhoiLop";
             cmbColumn.HeaderText = "Khối lớp";
         }
-        #endregion
+        
 
-        #region Do du lieu vao DataGridView
+        //Do du lieu vao DataGridView
         public void HienThi(DataGridViewX dGV, BindingNavigator bN)
         {
             BindingSource bS = new BindingSource();
@@ -50,9 +50,9 @@ namespace app.Controller
             bN.BindingSource = bS;
             dGV.DataSource = bS;
         }
-        #endregion
+        
 
-        #region Them moi
+        //Them moi
         public DataRow ThemDongMoi()
         {
             return m_KhoiLopData.ThemDongMoi();
@@ -62,13 +62,13 @@ namespace app.Controller
         {
             m_KhoiLopData.ThemKhoiLop(m_Row);
         }
-        #endregion
+        
 
-        #region Luu du lieu
+        //Luu du lieu
         public bool LuuKhoiLop()
         {
             return m_KhoiLopData.LuuKhoiLop();
         }
-        #endregion
+        
     }
 }

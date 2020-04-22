@@ -11,27 +11,27 @@ namespace app
 {
     public partial class Subjects : Office2007Form
     {
-        #region Fields
+        //Fields
         MonHocCtrl  m_MonHocCtrl    = new MonHocCtrl();
         QuyDinh     quyDinh         = new QuyDinh();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public Subjects()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void Subjects_Load(object sender, EventArgs e)
         {
             m_MonHocCtrl.HienThi(dGVMonHoc, bindingNavigatorMonHoc);
         }
-        #endregion
+        
 
-        #region BindingNavigatorItems
+        //BindingNavigatorItems
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             if (dGVMonHoc.RowCount == 0)
@@ -90,13 +90,13 @@ namespace app
                 m_MonHocCtrl.LuuMonHoc();
             }
         }
-        #endregion
+        
 
-        #region DataError event
+        //DataError event
         private void dGVMonHoc_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
-        #endregion
+        
     }
 }

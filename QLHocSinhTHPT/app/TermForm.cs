@@ -10,26 +10,26 @@ namespace app
 {
     public partial class TermForm : Office2007Form
     {
-        #region Field
+        //Field
         HocKyCtrl   m_HocKyCtrl   = new HocKyCtrl();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public TermForm()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void TermForm_Load(object sender, EventArgs e)
         {
             m_HocKyCtrl.HienThi(dGVHocKy, bindingNavigatorHocKy);
         }
-        #endregion
+        
 
-        #region BindingNavigatorItems
+        //BindingNavigatorItems
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             if (dGVHocKy.RowCount == 0)
@@ -86,13 +86,13 @@ namespace app
                 m_HocKyCtrl.LuuHocKy();
             }
         }
-        #endregion
+        
 
-        #region DataError event
+        //DataError event
         private void dGVHocKy_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
-        #endregion
+        
     }
 }

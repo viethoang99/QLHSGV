@@ -9,21 +9,21 @@ namespace app
 {
     partial class DataService : DataTable
     {
-        #region Fields
+        //Fields
         private static  SqlConnection   m_Connection;
         public static   String          m_ConnectString = "";
         private         SqlCommand      m_Command;
         private         SqlDataAdapter  m_DataAdapter;
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public DataService()
         {
 
         }
-        #endregion
+        
 
-        #region Hàm lấy lệnh connection
+        //Hàm lấy lệnh connection
         public static void ConnectionString()
         {
             XmlDocument xmlDoc = XML.XMLReader("Connection.xml");
@@ -47,9 +47,9 @@ namespace app
                 MessageBoxEx.Show("Lỗi kết nối đến cơ sở dữ liệu! Xin vui lòng thiết lập lại kết nối...", "ERROR", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
             }
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         public void Load(SqlCommand m_Sql)
         {
             m_Command = m_Sql;
@@ -68,9 +68,9 @@ namespace app
                 MessageBoxEx.Show("Không thể thực thi câu lệnh SQL này!\nLỗi: " + e.Message, "ERROR", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
             }
         }
-        #endregion
+        
 
-        #region OpenConnection
+        //OpenConnection
         public static bool OpenConnection()
         {
             if (m_ConnectString == "")
@@ -89,16 +89,16 @@ namespace app
                 return false;
             }
         }
-        #endregion
+        
 
-        #region CloseConnection
+        //CloseConnection
         public void CloseConnection()
         {
             m_Connection.Close();
         }
-        #endregion
+        
 
-        #region Update DataTable
+        //Update DataTable
         public int ExecuteNoneQuery()
         {
             int result = 0;
@@ -126,9 +126,9 @@ namespace app
             }
             return result;
         }
-        #endregion
+        
 
-        #region Thực thi câu lệnh SQL
+        //Thực thi câu lệnh SQL
         public int ExecuteNoneQuery(SqlCommand m_Sql)
         {
             int result = 0;
@@ -152,9 +152,9 @@ namespace app
             }
             return result;
         }
-        #endregion
+        
 
-        #region ExecuteScalar
+        //ExecuteScalar
         public object ExecuteScalar(SqlCommand m_Sql)
         {
             object result = null;
@@ -181,9 +181,9 @@ namespace app
             }
             return result;
         }
-        #endregion
+        
 
-        #region Đổi mật khẩu, thiết lập lại kết nối
+        //Đổi mật khẩu, thiết lập lại kết nối
         public void ChangePassword(String userName, String newPassword)
         {
             m_DataAdapter = new SqlDataAdapter();
@@ -223,6 +223,6 @@ namespace app
                 MessageBoxEx.Show("Không thể thực thi câu lệnh SQL này!\nLỗi: " + e.Message, "ERROR", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
             }
         }
-        #endregion
+        
     }
 }

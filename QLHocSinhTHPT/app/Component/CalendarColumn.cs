@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace app.Component
 {
-    #region CalendarColumn
+    //CalendarColumn
     public class CalendarColumn : DataGridViewColumn
     {
         public CalendarColumn() : base(new CalendarCell()) { }
@@ -25,9 +25,9 @@ namespace app.Component
             }
         }
     }
-    #endregion
+    
 
-    #region CalendarCell
+    //CalendarCell
     public class CalendarCell : DataGridViewTextBoxCell
     {
         public CalendarCell() : base()
@@ -57,9 +57,9 @@ namespace app.Component
             get { return DateTime.Now; }
         }
     }
-    #endregion
+    
 
-    #region CalendarEditingControl
+    //CalendarEditingControl
     public class CalendarEditingControl : DateTimePicker, IDataGridViewEditingControl
     {
         DataGridView dataGridView;
@@ -156,5 +156,5 @@ namespace app.Component
             base.OnValueChanged(eventargs);
         }
     }
-    #endregion
+    
 }

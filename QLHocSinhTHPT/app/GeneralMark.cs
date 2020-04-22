@@ -12,7 +12,7 @@ namespace app
 {
     public partial class GeneralMark : Office2007Form
     {
-        #region Fields
+        //Fields
         NamHocCtrl          m_NamHocCtrl            = new NamHocCtrl();
         LopCtrl             m_LopCtrl               = new LopCtrl();
         HocKyCtrl           m_HocKyCtrl             = new HocKyCtrl();
@@ -23,20 +23,20 @@ namespace app
         DiemData            m_DiemData              = new DiemData();
         QuyDinh             quyDinh                 = new QuyDinh();
         int[,] STT = null;
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public GeneralMark()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void GeneralMark_Load(object sender, EventArgs e)
         {
-            #region Nhập điểm
+            //Nhập điểm
             m_NamHocCtrl.HienThiComboBox(cmbNamHoc);
             m_HocKyCtrl.HienThiComboBox(cmbHocKy);
             if (cmbNamHoc.SelectedValue != null)
@@ -44,9 +44,9 @@ namespace app
 
             if (cmbNamHoc.SelectedValue != null && cmbLop.SelectedValue != null)
                 m_MonHocCtrl.HienThiComboBox(cmbNamHoc.SelectedValue.ToString(), cmbLop.SelectedValue.ToString(), cmbMonHoc);
-            #endregion
+            
 
-            #region Sửa điểm
+            //Sửa điểm
             m_NamHocCtrl.HienThiComboBox(cmbNamHocSD);
             m_HocKyCtrl.HienThiComboBox(cmbHocKySD);
             if (cmbNamHocSD.SelectedValue != null)
@@ -54,12 +54,12 @@ namespace app
 
             if (cmbNamHocSD.SelectedValue != null && cmbLopSD.SelectedValue != null)
                 m_MonHocCtrl.HienThiComboBox(cmbNamHocSD.SelectedValue.ToString(), cmbLopSD.SelectedValue.ToString(), cmbMonHocSD);
-            #endregion
+            
         }
-        #endregion
+        
 
-        #region BindingNavigatorItems
-        #region Kiểm tra điểm số trước khi lưu
+        //BindingNavigatorItems
+        //Kiểm tra điểm số trước khi lưu
         public Boolean KiemTraDiemTruocKhiLuu(String loaiDiem)
         {
             foreach (DataGridViewRow row in dGVDiem.Rows)
@@ -98,9 +98,9 @@ namespace app
             }
             return true;
         }
-        #endregion
+        
 
-        #region Lưu điểm
+        //Lưu điểm
         private void btnLuuDiem_Click(object sender, EventArgs e)
         {
             if (KiemTraDiemTruocKhiLuu("colDiemMieng")  == true &&
@@ -108,7 +108,7 @@ namespace app
                 KiemTraDiemTruocKhiLuu("colDiem45Phut") == true &&
                 KiemTraDiemTruocKhiLuu("colDiemThi")    == true)
             {
-                #region Nếu nhập điểm
+                //Nếu nhập điểm
                 if (buttonItemNhapDuLieu.Checked == true )
                 {
                     int rowcount = 0;
@@ -117,7 +117,7 @@ namespace app
                     {
                         rowcount++;
 
-                        #region Kiểm tra miệng
+                        //Kiểm tra miệng
                         if (row.Cells["colDiemMieng"].Value != null)
                         {
                             String chuoiDiemChuaXuLy = row.Cells["colDiemMieng"].Value.ToString();
@@ -152,9 +152,9 @@ namespace app
                                 }
                             }
                         }
-                        #endregion
+                        
 
-                        #region Kiểm tra 15 phút
+                        //Kiểm tra 15 phút
                         if (row.Cells["colDiem15Phut"].Value != null)
                         {
                             String chuoiDiemChuaXuLy = row.Cells["colDiem15Phut"].Value.ToString();
@@ -189,9 +189,9 @@ namespace app
                                 }
                             }
                         }
-                        #endregion
+                        
 
-                        #region Kiểm tra 45 phút
+                        //Kiểm tra 45 phút
                         if (row.Cells["colDiem45Phut"].Value != null)
                         {
                             String chuoiDiemChuaXuLy = row.Cells["colDiem45Phut"].Value.ToString();
@@ -226,9 +226,9 @@ namespace app
                                 }
                             }
                         }
-                        #endregion
+                        
 
-                        #region Thi học kỳ
+                        //Thi học kỳ
                         if (row.Cells["colDiemThi"].Value != null)
                         {
                             String diemThi = row.Cells["colDiemThi"].Value.ToString();
@@ -241,13 +241,13 @@ namespace app
                                                            "LD0004",
                                                            float.Parse(diemThi.ToString()));
                         }
-                        #endregion
+                        
                     }
                     MessageBoxEx.Show("Đã lưu thành công vào bảng điểm!", "COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                #endregion
+                
 
-                #region Nếu sửa điểm
+                //Nếu sửa điểm
                 if (buttonItemCapNhatDuLieu.Checked == true )
                 {
                     int rowcount = 0;
@@ -256,7 +256,7 @@ namespace app
                     {
                         rowcount++;
 
-                        #region Kiểm tra miệng
+                        //Kiểm tra miệng
                         if (row.Cells["colDiemMieng"].Value != null)
                         {
                             String chuoiDiemChuaXuLy = row.Cells["colDiemMieng"].Value.ToString();
@@ -291,9 +291,9 @@ namespace app
                                 }
                             }
                         }
-                        #endregion
+                        
 
-                        #region Kiểm tra 15 phút
+                        //Kiểm tra 15 phút
                         if (row.Cells["colDiem15Phut"].Value != null)
                         {
                             String chuoiDiemChuaXuLy = row.Cells["colDiem15Phut"].Value.ToString();
@@ -328,9 +328,9 @@ namespace app
                                 }
                             }
                         }
-                        #endregion
+                        
 
-                        #region Kiểm tra 45 phút
+                        //Kiểm tra 45 phút
                         if (row.Cells["colDiem45Phut"].Value != null)
                         {
                             String chuoiDiemChuaXuLy = row.Cells["colDiem45Phut"].Value.ToString();
@@ -365,9 +365,9 @@ namespace app
                                 }
                             }
                         }
-                        #endregion
+                        
 
-                        #region Thi học kỳ
+                        //Thi học kỳ
                         if (row.Cells["colDiemThi"].Value != null)
                         {
                             String diemThi = row.Cells["colDiemThi"].Value.ToString();
@@ -380,9 +380,9 @@ namespace app
                                                            "LD0004",
                                                            float.Parse(diemThi.ToString()));
                         }
-                        #endregion
+                        
 
-                        #region Xóa các kết quả cũ
+                        //Xóa các kết quả cũ
                         if (STT != null)
                         {
                             for (int i = 1; i < 60; i++)
@@ -395,38 +395,38 @@ namespace app
                                         break;
                                 }
                         }
-                        #endregion
+                        
                     }
                     MessageBoxEx.Show("Cập nhật thành công!", "COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                #endregion
+                
             }
         }
-        #endregion
+        
 
-        #region Xem điểm
+        //Xem điểm
         private void btnXemDiem_Click(object sender, EventArgs e)
         {
             ThamSo.ShowFormXemDiem();
         }
-        #endregion
+        
 
-        #region Thoát khỏi form nhập điểm
+        //Thoát khỏi form nhập điểm
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        #endregion
-        #endregion
+        
+        
 
-        #region DataError event
+        //DataError event
         private void dGVNhapDiemChung_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
-        #endregion
+        
 
-        #region Click event nhập điểm
+        //Click event nhập điểm
         private void btnThemNamHoc_Click(object sender, EventArgs e)
         {
             ThamSo.ShowFormNamHoc();
@@ -456,9 +456,9 @@ namespace app
             if (cmbNamHoc.SelectedValue != null && cmbLop.SelectedValue != null && cmbHocKy.SelectedValue != null && cmbMonHoc.SelectedValue != null)
                 m_HocSinhCtrl.HienThiDsHocSinhTheoLop(dGVDiem, bindingNavigatorDiem, cmbNamHoc.SelectedValue.ToString(), cmbLop.SelectedValue.ToString());
         }
-        #endregion
+        
 
-        #region Click event sửa điểm
+        //Click event sửa điểm
         private void btnHienThiDanhSachSD_Click(object sender, EventArgs e)
         {
             STT = new int[60, 20];
@@ -512,9 +512,9 @@ namespace app
                 rowHocSinh.Cells["colDiemThi"].Value = diemThi;
             }
         }
-        #endregion
+        
 
-        #region SelectedIndexChanged event nhập điểm
+        //SelectedIndexChanged event nhập điểm
         //Lấy thông tin lớp theo từng năm học
         private void cmbNamHoc_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -530,9 +530,9 @@ namespace app
                 m_MonHocCtrl.HienThiComboBox(cmbNamHoc.SelectedValue.ToString(), cmbLop.SelectedValue.ToString(), cmbMonHoc);
             cmbMonHoc.DataBindings.Clear();
         }
-        #endregion
+        
 
-        #region SelectedIndexChanged event sửa điểm
+        //SelectedIndexChanged event sửa điểm
         //Lấy thông tin lớp theo từng năm học
         private void cmbNamHocSD_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -548,7 +548,7 @@ namespace app
                 m_MonHocCtrl.HienThiComboBox(cmbNamHocSD.SelectedValue.ToString(), cmbLopSD.SelectedValue.ToString(), cmbMonHocSD);
             cmbMonHocSD.DataBindings.Clear();
         }
-        #endregion
+        
 
         private void NavPaneLeft_Load(object sender, EventArgs e)
         {

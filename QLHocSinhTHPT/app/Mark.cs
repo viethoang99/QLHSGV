@@ -13,24 +13,24 @@ namespace app
 {
     public partial class Mark : Office2007Form
     {
-        #region Fields
+        //Fields
         NamHocCtrl      m_NamHocCtrl    = new NamHocCtrl();
         HocKyCtrl       m_HocKyCtrl     = new HocKyCtrl();
         LopCtrl         m_LopCtrl       = new LopCtrl();
         HocSinhCtrl     m_HocSinhCtrl   = new HocSinhCtrl();
         MonHocCtrl      m_MonHocCtrl    = new MonHocCtrl();
         DiemCtrl        m_DiemCtrl      = new DiemCtrl();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public Mark()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void Mark_Load(object sender, EventArgs e)
         {
             m_NamHocCtrl.HienThiComboBox(cmbNamHoc);
@@ -43,9 +43,9 @@ namespace app
                 m_HocSinhCtrl.HienThiComboBox(cmbNamHoc.SelectedValue.ToString(), cmbLop.SelectedValue.ToString(), cmbHocSinh);
             }
         }
-        #endregion
+        
 
-        #region Click event
+        //Click event
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             if (MessageBoxEx.Show("Bạn có muốn xóa dòng này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -75,9 +75,9 @@ namespace app
                                               cmbNamHoc.SelectedValue.ToString(),
                                               cmbLop.SelectedValue.ToString());
         }
-        #endregion
+        
 
-        #region SelectedIndexChanged event
+        //SelectedIndexChanged event
         private void cmbNamHoc_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbNamHoc.SelectedValue != null)
@@ -96,6 +96,6 @@ namespace app
             cmbMonHoc.DataBindings.Clear();
             cmbHocSinh.DataBindings.Clear();
         }
-        #endregion
+        
     }
 }

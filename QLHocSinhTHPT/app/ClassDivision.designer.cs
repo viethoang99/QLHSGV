@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        //Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -463,9 +463,9 @@
 
         }
 
-        #endregion
+        
 
-        #region Components
+        //Components
         private System.Windows.Forms.SplitContainer splitContainerPhanLop;
         private System.Windows.Forms.Panel panelChaTrai;
         private System.Windows.Forms.Panel panelConPhai;
@@ -495,7 +495,7 @@
         private System.Windows.Forms.ColumnHeader colMaHSMoi;
         private System.Windows.Forms.ColumnHeader colHoTenMoi;
         private System.Windows.Forms.ImageList imageListPhanLop;
-        #endregion
+        
 
         private DevComponents.Editors.ComboItem comboItem1;
     }

@@ -11,23 +11,23 @@ namespace app
 {
     public partial class Classes : Office2007Form
     {
-        #region Fields
+        //Fields
         LopCtrl         m_LopCtrl       = new LopCtrl();
         KhoiLopCtrl     m_KhoiLopCtrl   = new KhoiLopCtrl();
         NamHocCtrl      m_NamHocCtrl    = new NamHocCtrl();
         GiaoVienCtrl    m_GiaoVienCtrl  = new GiaoVienCtrl();
         QuyDinh         quyDinh         = new QuyDinh();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public Classes()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void Classes_Load(object sender, EventArgs e)
         {
             m_KhoiLopCtrl.HienThiComboBox(cmbKhoiLop);
@@ -39,9 +39,9 @@ namespace app
 
             m_LopCtrl.HienThi(dGVLop, bindingNavigatorLop, txtMaLop, txtTenLop, cmbKhoiLop, cmbNamHoc, iniSiSo, cmbGiaoVien);
         }
-        #endregion
+        
 
-        #region BindingNavigatorItems
+        //BindingNavigatorItems
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             if (dGVLop.RowCount == 0)
@@ -135,16 +135,16 @@ namespace app
                 m_LopCtrl.LuuLop();
             }
         }
-        #endregion
+        
 
-        #region DataError event
+        //DataError event
         private void dGVLop_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
-        #endregion
+        
 
-        #region Tìm kiếm lớp
+        //Tìm kiếm lớp
         private void txtTimKiem_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -169,9 +169,9 @@ namespace app
                 m_LopCtrl.TimTheoTen(txtTimKiem.Text);
             }
         }
-        #endregion
+        
 
-        #region Click event
+        //Click event
         private void btnThemKhoiLop_Click(object sender, EventArgs e)
         {
             ThamSo.ShowFormKhoiLop();
@@ -207,6 +207,6 @@ namespace app
             else
                 MessageBoxEx.Show("Giá trị của các ô không được rỗng và sỉ số phải theo quy định!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        #endregion
+        
     }
 }

@@ -11,21 +11,21 @@ namespace app
 {
     public partial class TeachersFrom : Office2007Form
     {
-        #region Fields
+        //Fields
         GiaoVienCtrl    m_GiaoVienCtrl  = new GiaoVienCtrl();
         MonHocCtrl      m_MonHocCtrl    = new MonHocCtrl();
         QuyDinh         quyDinh         = new QuyDinh();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public TeachersFrom()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void TeachersFrom_Load(object sender, EventArgs e)
         {
             m_MonHocCtrl.HienThiComboBox(cmbMonHoc);
@@ -33,9 +33,9 @@ namespace app
             
             m_GiaoVienCtrl.HienThi(dGVGiaoVien, bindingNavigatorGiaoVien, txtMaGiaoVien, txtTenGiaoVien, txtDiaChi, txtDienThoai, cmbMonHoc);
         }
-        #endregion
+        
 
-        #region BindingNavigatorItems
+        //BindingNavigatorItems
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             if (dGVGiaoVien.RowCount == 0)
@@ -101,16 +101,16 @@ namespace app
                 m_GiaoVienCtrl.LuuGiaoVien();
             }
         }
-        #endregion
+        
 
-        #region DataError event
+        //DataError event
         private void dGVGiaoVien_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
-        #endregion
+        
 
-        #region Tìm kiếm giáo viên
+        //Tìm kiếm giáo viên
         private void txtTimKiem_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -135,9 +135,9 @@ namespace app
                 m_GiaoVienCtrl.TimTheoTen(txtTimKiem.Text);
             }
         }
-        #endregion
+        
 
-        #region Click event
+        //Click event
         private void btnThemMonHoc_Click(object sender, EventArgs e)
         {
             ThamSo.ShowFormMonHoc();
@@ -159,6 +159,6 @@ namespace app
             else
                 MessageBoxEx.Show("Giá trị của các ô không được rỗng!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        #endregion
+        
     }
 }

@@ -11,22 +11,22 @@ namespace app
 {
     public partial class MainForm : Office2007RibbonForm
     {
-        #region Fields
+        //Fields
         NguoiDungCtrl   m_NguoiDungCtrl = new NguoiDungCtrl();
         frmDangNhap     m_FrmLogin      = null;
         Users    m_Users  = null;
         frmConnection   m_Connection    = null;
-        #endregion
+        
 
-        #region MainForm
-        #region Constructor
+        //MainForm
+        //Constructor
         public MainForm()
         {
             InitializeComponent();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void MainForm_Load(object sender, System.EventArgs e)
         {
             if (DataService.OpenConnection())
@@ -66,9 +66,9 @@ namespace app
                 ReConnection();
             }
         }
-        #endregion
+        
 
-        #region Kết nối lại CSDL
+        //Kết nối lại CSDL
         public void ReConnection()
         {
             MessageBoxEx.Show("Lỗi kết nối đến cơ sở dữ liệu! Xin vui lòng thiết lập lại kết nối...", "ERROR", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
@@ -84,9 +84,9 @@ namespace app
             else
                 return;
         }
-        #endregion
+        
 
-        #region Lưu lại trạng thái khi thoát chương trình
+        //Lưu lại trạng thái khi thoát chương trình
         private void MainForm_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             // Save Quick Access Toolbar layout if it has changed...
@@ -103,11 +103,11 @@ namespace app
                 }
             }
         }
-        #endregion
-        #endregion
+        
+        
 
-        #region Form show
-        #region Menu start
+        //Form show
+        //Menu start
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             if (m_FrmLogin == null || m_FrmLogin.IsDisposed)
@@ -171,9 +171,9 @@ namespace app
         {
             this.Close();
         }
-        #endregion
+        
 
-        #region Menu quan ly
+        //Menu quan ly
         private void btnLopHoc_Click(object sender, EventArgs e)
         {
             ThamSo.ShowFormLopHoc();
@@ -245,9 +245,9 @@ namespace app
         {
             ThamSo.ShowFormPhanCong();
         }
-        #endregion
+        
 
-        #region Menu thong ke
+        //Menu thong ke
         private void btnKQHKTheoLop_Click(object sender, EventArgs e)
         {
             ThamSo.ShowFormKQHKTheoLop();
@@ -282,9 +282,9 @@ namespace app
         {
             ThamSo.ShowFormDanhSachLopHoc();
         }
-        #endregion
+        
 
-        #region Tra cuu
+        //Tra cuu
         private void btnTimKiemHS_Click(object sender, EventArgs e)
         {
             ThamSo.ShowFormTimKiemHS();
@@ -294,9 +294,9 @@ namespace app
         {
             ThamSo.ShowFormTimKiemGV();
         }
-        #endregion
+        
 
-        #region Menu quy dinh
+        //Menu quy dinh
         frmQuyDinh m_FrmQD = new frmQuyDinh();
         private void btnSiSo_Click(object sender, EventArgs e)
         {
@@ -318,9 +318,9 @@ namespace app
             ThamSo.ShowFormQuyDinh();
             m_FrmQD.tabControlPanelTruong.Select();
         }
-        #endregion
+        
 
-        #region Menu giup do
+        //Menu giup do
         private void btnHuongDan_Click(object sender, EventArgs e)
         {
             Help.ShowHelp(this, helpProvider.HelpNamespace, HelpNavigator.TableOfContents);
@@ -330,11 +330,11 @@ namespace app
         {
             ThamSo.ShowFormThongTin();
         }
-        #endregion
-        #endregion
+        
+        
 
-        #region Permissions
-        #region DangNhap
+        //Permissions
+        //DangNhap
         public void DangNhap()
         {
             Cont:
@@ -378,9 +378,9 @@ namespace app
             else
                 return;
         }
-        #endregion
+        
 
-        #region Phân quyền
+        //Phân quyền
         public void Permissions(String m_Per)
         {
             switch (m_Per)
@@ -391,9 +391,9 @@ namespace app
                 default:        Default();      break;
             }
         }
-        #endregion
+        
 
-        #region Giao diện mặc định
+        //Giao diện mặc định
         public void Default()
         {
             //True
@@ -447,9 +447,9 @@ namespace app
             btnDoTuoi.Enabled           = false;
             btnTruong.Enabled           = false;
         }
-        #endregion
+        
 
-        #region Giao diện khi đăng nhập với quyền BGH
+        //Giao diện khi đăng nhập với quyền BGH
         public void IsBGH()
         {
             //False
@@ -504,9 +504,9 @@ namespace app
             btnHuongDan.Enabled         = true;
             btnThongTin.Enabled         = true;
         }
-        #endregion
+        
 
-        #region Giao diện khi đăng nhập với quyền Giáo viên
+        //Giao diện khi đăng nhập với quyền Giáo viên
         public void IsGiaoVien()
         {
             //True
@@ -562,9 +562,9 @@ namespace app
             btnDoTuoi.Enabled           = false;
             btnTruong.Enabled           = false;
         }
-        #endregion
+        
 
-        #region Giao diện khi đăng nhập với quyền Giáo vụ
+        //Giao diện khi đăng nhập với quyền Giáo vụ
         public void IsGiaoVu()
         {
             //True
@@ -620,9 +620,9 @@ namespace app
             btnDoTuoi.Enabled           = false;
             btnTruong.Enabled           = false;
         }
-        #endregion
+        
 
-        #endregion
+        
 
     }
 }

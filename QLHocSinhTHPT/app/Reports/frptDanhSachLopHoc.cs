@@ -12,26 +12,26 @@ namespace app.Reports
 {
     public partial class frptDanhSachLopHoc : Office2007Form
     {
-        #region Field
+        //Field
         NamHocCtrl m_NamHocCtrl = new NamHocCtrl();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public frptDanhSachLopHoc()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void frptDanhSachLopHoc_Load(object sender, EventArgs e)
         {
             m_NamHocCtrl.HienThiComboBox(cmbNamHoc);
         }
-        #endregion
+        
 
-        #region Click event
+        //Click event
         private void btnXem_Click(object sender, EventArgs e)
         {
             IList<LopInfo> lop = LopCtrl.LayDsLop(cmbNamHoc.SelectedValue.ToString());
@@ -63,6 +63,6 @@ namespace app.Reports
             this.bSDSLop.DataSource = lop;
             this.reportViewerDSLop.RefreshReport();
         }
-        #endregion
+        
     }
 }

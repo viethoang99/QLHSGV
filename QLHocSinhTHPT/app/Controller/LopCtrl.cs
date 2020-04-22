@@ -14,7 +14,7 @@ namespace app.Controller
     {
         LopData m_LopData = new LopData();
 
-        #region Hien thi ComboBox
+        //Hien thi ComboBox
         public void HienThiComboBox(ComboBox comboBox)
         {
             comboBox.DataSource = m_LopData.LayDsLop();
@@ -39,9 +39,9 @@ namespace app.Controller
             comboBox.DisplayMember = "TenLop";
             comboBox.ValueMember = "MaLop";
         }
-        #endregion
+        
 
-        #region Hien thi ComboBox trong DataGridView
+        //Hien thi ComboBox trong DataGridView
         public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
         {
             cmbColumn.DataSource = m_LopData.LayDsLop();
@@ -59,9 +59,9 @@ namespace app.Controller
             cmbColumn.DataPropertyName = "MaLop";
             cmbColumn.HeaderText = "Lớp";
         }
-        #endregion
+        
 
-        #region Do du lieu vao DataGridView
+        //Do du lieu vao DataGridView
         public void HienThi(DataGridView dGV, BindingNavigator bN)
         {
             BindingSource bS = new BindingSource();
@@ -104,9 +104,9 @@ namespace app.Controller
             cmbGiaoVien.DataBindings.Clear();
             cmbGiaoVien.DataBindings.Add("SelectedValue", bS, "MaGiaoVien");
         }
-        #endregion
+        
 
-        #region Lay danh sach lop do vao report
+        //Lay danh sach lop do vao report
         public static IList<LopInfo> LayDsLop()
         {
             LopData m_LData = new LopData();
@@ -176,9 +176,9 @@ namespace app.Controller
             }
             return dS;
         }
-        #endregion
+        
 
-        #region Them moi
+        //Them moi
         public DataRow ThemDongMoi()
         {
             return m_LopData.ThemDongMoi();
@@ -188,9 +188,9 @@ namespace app.Controller
         {
             m_LopData.ThemLop(m_Row);
         }
-        #endregion
+        
 
-        #region Luu du lieu
+        //Luu du lieu
         public bool LuuLop()
         {
             return m_LopData.LuuLop();
@@ -200,9 +200,9 @@ namespace app.Controller
         {
             m_LopData.LuuLop(maLop, tenLop, maKhoiLop, maNamHoc, siSo, maGiaoVien);
         }
-        #endregion
+        
 
-        #region Tim kiem
+        //Tim kiem
         public void TimTheoMa(String m_MaLop)
         {
             m_LopData.TimTheoMa(m_MaLop);
@@ -212,6 +212,6 @@ namespace app.Controller
         {
             m_LopData.TimTheoTen(m_TenLop);
         }
-        #endregion
+        
     }
 }

@@ -13,16 +13,16 @@ namespace app.Controller
     {
         GiaoVienData m_GiaoVienData = new GiaoVienData();
 
-        #region Hien thi ComboBox
+        //Hien thi ComboBox
         public void HienThiComboBox(ComboBox comboBox)
         {
             comboBox.DataSource = m_GiaoVienData.LayDsGiaoVien();
             comboBox.DisplayMember = "TenGiaoVien";
             comboBox.ValueMember = "MaGiaoVien";
         }
-        #endregion
+        
 
-        #region Hien thi ComboBox trong DataGridView
+        //Hien thi ComboBox trong DataGridView
         public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
         {
             cmbColumn.DataSource = m_GiaoVienData.LayDsGiaoVien();
@@ -31,9 +31,9 @@ namespace app.Controller
             cmbColumn.DataPropertyName = "MaGiaoVien";
             cmbColumn.HeaderText = "Giáo viên";
         }
-        #endregion
+        
 
-        #region Do du lieu vao DataGridView
+        //Do du lieu vao DataGridView
         public void HienThi(DataGridView dGV, BindingNavigator bN)
         {
             BindingSource bS = new BindingSource();
@@ -72,9 +72,9 @@ namespace app.Controller
             bN.BindingSource = bS;
             dGV.DataSource = bS;
         }
-        #endregion
+        
 
-        #region Lay danh sach giao vien do vao report
+        //Lay danh sach giao vien do vao report
         public static IList<GiaoVienInfo> LayDsGiaoVien()
         {
             GiaoVienData m_GVData = new GiaoVienData();
@@ -95,9 +95,9 @@ namespace app.Controller
             }
             return dS;
         }
-        #endregion
+        
 
-        #region Them moi
+        //Them moi
         public DataRow ThemDongMoi()
         {
             return m_GiaoVienData.ThemDongMoi();
@@ -108,9 +108,9 @@ namespace app.Controller
         {
             m_GiaoVienData.ThemGiaoVien(m_Row);
         }
-        #endregion
+        
 
-        #region Luu du lieu
+        //Luu du lieu
         public bool LuuGiaoVien()
         {
             return m_GiaoVienData.LuuGiaoVien();
@@ -120,9 +120,9 @@ namespace app.Controller
         {
             m_GiaoVienData.LuuGiaoVien(maGiaoVien, tenGiaoVien, diaChi, dienThoai, chuyenMon);
         }
-        #endregion
+        
 
-        #region Tìm kiem
+        //Tìm kiem
         public void TimKiemGiaoVien(TextBoxX txtHoTen,                                   
                                     DataGridViewX dGV,
                                     BindingNavigator bN)
@@ -143,6 +143,6 @@ namespace app.Controller
         {
             m_GiaoVienData.TimTheoTen(m_TenGiaoVien);
         }
-        #endregion
+        
     }
 }

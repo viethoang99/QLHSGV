@@ -11,7 +11,7 @@ namespace app.Controller
     {
         MonHocData m_MonHocData = new MonHocData();
 
-        #region Hien thi ComboBox
+        //Hien thi ComboBox
         public void HienThiComboBox(ComboBoxEx comboBox)
         {
             comboBox.DataSource = m_MonHocData.LayDsMonHoc();
@@ -27,9 +27,9 @@ namespace app.Controller
             comboBox.DisplayMember = "TenMonHoc";
             comboBox.ValueMember = "MaMonHoc";
         }
-        #endregion
+        
 
-        #region Hien thi ComboBox trong DataGridView
+        //Hien thi ComboBox trong DataGridView
         public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
         {
             cmbColumn.DataSource = m_MonHocData.LayDsMonHoc();
@@ -47,9 +47,9 @@ namespace app.Controller
             cmbColumn.DataPropertyName = "MaMonHoc";
             cmbColumn.HeaderText = "Chuyên môn";
         }
-        #endregion
+        
 
-        #region Do du lieu vao DataGridView
+        //Do du lieu vao DataGridView
         public void HienThi(DataGridViewX dGV, BindingNavigator bN)
         {
             BindingSource bS = new BindingSource();
@@ -58,9 +58,9 @@ namespace app.Controller
             bN.BindingSource = bS;
             dGV.DataSource = bS;
         }
-        #endregion
+        
 
-        #region Them moi
+        //Them moi
         public DataRow ThemDongMoi()
         {
             return m_MonHocData.ThemDongMoi();
@@ -70,13 +70,13 @@ namespace app.Controller
         {
             m_MonHocData.ThemMonHoc(m_Row);
         }
-        #endregion
+        
 
-        #region Luu du lieu
+        //Luu du lieu
         public bool LuuMonHoc()
         {
             return m_MonHocData.LuuMonHoc();
         }
-        #endregion
+        
     }
 }

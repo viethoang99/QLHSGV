@@ -12,21 +12,21 @@ namespace app.Reports
 {
     public partial class frptKetQuaHocKy_Lop : Office2007Form
     {
-        #region Fields
+        //Fields
         NamHocCtrl  m_NamHocCtrl    = new NamHocCtrl();
         HocKyCtrl   m_HocKyCtrl     = new HocKyCtrl();
         LopCtrl     m_LopCtrl       = new LopCtrl();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public frptKetQuaHocKy_Lop()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void frptKetQuaHocKy_Lop_Load(object sender, EventArgs e)
         {
             m_NamHocCtrl.HienThiComboBox(cmbNamHoc);
@@ -34,18 +34,18 @@ namespace app.Reports
             if (cmbNamHoc.SelectedValue != null)
                 m_LopCtrl.HienThiComboBox(cmbNamHoc.SelectedValue.ToString(), cmbLop);
         }
-        #endregion
+        
 
-        #region SelectedIndexChanged event
+        //SelectedIndexChanged event
         private void cmbNamHoc_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbNamHoc.SelectedValue != null)
                 m_LopCtrl.HienThiComboBox(cmbNamHoc.SelectedValue.ToString(), cmbLop);
             cmbLop.DataBindings.Clear();
         }
-        #endregion
+        
 
-        #region Click event
+        //Click event
         private void btnXem_Click(object sender, EventArgs e)
         {
             IList<ReportParameter> param = new List<ReportParameter>();
@@ -63,6 +63,6 @@ namespace app.Reports
             this.reportViewerKQHKTH.RefreshReport();
 
         }
-        #endregion
+        
     }
 }

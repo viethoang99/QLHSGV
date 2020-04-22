@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        //Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -177,7 +177,7 @@
 
         }
 
-        #endregion
+        
 
         private DevComponents.DotNetBar.ButtonX btnClose;
         private DevComponents.DotNetBar.LabelX lblTitle;

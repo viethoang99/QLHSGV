@@ -10,7 +10,7 @@ namespace app.Component
         [System.Runtime.InteropServices.DllImport("User32.dll")]
         private static extern IntPtr LoadCursorFromFile(String str);
 
-        #region Tạo con trỏ chuột
+        //Tạo con trỏ chuột
         public static Cursor Create(string filename)
         {
             IntPtr hCursor = LoadCursorFromFile(filename);
@@ -25,6 +25,6 @@ namespace app.Component
                 return Cursors.Default;
             }
         }
-        #endregion
+        
     }
 }

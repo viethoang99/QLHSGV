@@ -13,7 +13,7 @@ namespace app
 {
     public partial class PrivateMark : Office2007Form
     {
-        #region Fields
+        //Fields
         NamHocCtrl      m_NamHocCtrl    = new NamHocCtrl();
         HocKyCtrl       m_HocKyCtrl     = new HocKyCtrl();
         LopCtrl         m_LopCtrl       = new LopCtrl();
@@ -22,17 +22,17 @@ namespace app
         LoaiDiemCtrl    m_LoaiDiemCtrl  = new LoaiDiemCtrl();
         DiemCtrl        m_DiemCtrl      = new DiemCtrl();
         QuyDinh         quyDinh         = new QuyDinh();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public PrivateMark()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void PrivateMark_Load(object sender, EventArgs e)
         {
             m_NamHocCtrl.HienThiComboBox(cmbNamHoc);
@@ -46,9 +46,9 @@ namespace app
                 m_HocSinhCtrl.HienThiComboBox(cmbNamHoc.SelectedValue.ToString(), cmbLop.SelectedValue.ToString(), cmbHocSinh);
             }
         }
-        #endregion
+        
 
-        #region BindingNavigatorItems
+        //BindingNavigatorItems
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (MessageBoxEx.Show("Bạn có muốn xóa dòng này không?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -87,9 +87,9 @@ namespace app
         {
             ThamSo.ShowFormXemDiem();
         }
-        #endregion
+        
 
-        #region Click event
+        //Click event
         private void btnLuuVaoDS_Click(object sender, EventArgs e)
         {
             if (quyDinh.KiemTraDiem(txtDiem.Text) == false || txtDiem.Text == "")
@@ -121,9 +121,9 @@ namespace app
                 lVDiem.Items.Add(item);
             }
         }
-        #endregion
+        
 
-        #region SelectedIndexChanged event
+        //SelectedIndexChanged event
         private void cmbNamHoc_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbNamHoc.SelectedValue != null)
@@ -142,9 +142,9 @@ namespace app
             cmbMonHoc.DataBindings.Clear();
             cmbHocSinh.DataBindings.Clear();
         }
-        #endregion
+        
 
-        #region Key event
+        //Key event
         private void txtDiem_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -187,6 +187,6 @@ namespace app
                 e.Handled = true;
             }
         }
-        #endregion
+        
     }
 }

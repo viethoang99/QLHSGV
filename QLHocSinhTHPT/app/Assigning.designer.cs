@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        //Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -747,9 +747,9 @@
 
         }
 
-        #endregion
+        
 
-        #region Components
+        //Components
         private System.Windows.Forms.GroupBox groupBoxDanhSach;
         private DevComponents.DotNetBar.ContextMenuBar ctxMenu;
         private DevComponents.DotNetBar.ButtonItem btnMenu;
@@ -804,6 +804,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn colMaLop;
         private System.Windows.Forms.DataGridViewComboBoxColumn colMaMonHoc;
         private System.Windows.Forms.DataGridViewComboBoxColumn colMaGiaoVien;
-        #endregion
+        
     }
 }

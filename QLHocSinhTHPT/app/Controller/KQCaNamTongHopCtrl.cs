@@ -12,13 +12,13 @@ namespace app.Controller
 {
     public class KQCaNamTongHopCtrl
     {
-        #region Fields
+        //Fields
         DiemCtrl            m_DiemCtrl           = new DiemCtrl();
         HocLucCtrl          m_HocLucCtrl         = new HocLucCtrl();
         KQCaNamTongHopData  m_KQCaNamTongHopData = new KQCaNamTongHopData();
-        #endregion
+        
 
-        #region Luu ket qua
+        //Luu ket qua
         public void LuuKetQua(String maHocSinh, String maLop, String maNamHoc)
         {
             float diemTBChungCacMonCN = (float)Math.Round(m_DiemCtrl.DiemTrungBinhChungCacMonCaNam(maHocSinh, maLop, maNamHoc), 2);
@@ -28,9 +28,9 @@ namespace app.Controller
             m_KQCaNamTongHopData.XoaKetQua(maHocSinh, maLop, maNamHoc);
             m_KQCaNamTongHopData.LuuKetQua(maHocSinh, maLop, maNamHoc, hocLuc, "HK0001", diemTBChungCacMonCN, ketQua);
         }
-        #endregion
+        
 
-        #region Lay danh sach ket qua ca nam tong hop do vao report
+        //Lay danh sach ket qua ca nam tong hop do vao report
         public static IList<KQCaNamTongHopInfo> LayDsKQCaNamTongHop(String maLop, String maNamHoc)
         {
             KQCaNamTongHopData m_KQCNTHData = new KQCaNamTongHopData();
@@ -78,6 +78,6 @@ namespace app.Controller
             }
             return dS;
         }
-        #endregion
+        
     }
 }

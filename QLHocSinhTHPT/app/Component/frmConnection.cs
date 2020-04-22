@@ -9,21 +9,21 @@ namespace app.Component
 {
     public partial class frmConnection : Office2007Form
     {
-        #region Constructor
+        //Constructor
         public frmConnection()
         {
             InitializeComponent();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void frmConnection_Load(object sender, EventArgs e)
         {
             cmbAuthentication.SelectedIndex = 0;
         }
-        #endregion
+        
 
-        #region Click event
+        //Click event
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -111,9 +111,9 @@ namespace app.Component
                 }
             }
         }
-        #endregion
+        
 
-        #region SelectedIndexChanged event
+        //SelectedIndexChanged event
         private void cmbAuthentication_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbAuthentication.SelectedIndex == 0)
@@ -127,6 +127,6 @@ namespace app.Component
                 txtPassword.Enabled = true;
             }
         }
-        #endregion
+        
     }
 }

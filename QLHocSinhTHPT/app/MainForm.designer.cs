@@ -21,7 +21,7 @@
                 components.Dispose();
         }
 
-        #region Windows Form Designer generated code
+        //Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -1068,9 +1068,9 @@
 
         }
 
-        #endregion
+        
 
-        #region Components
+        //Components
         private System.Windows.Forms.MdiClient mdiClient;
         private System.Windows.Forms.SaveFileDialog backupDialog;
         private System.Windows.Forms.OpenFileDialog restoreDialog;
@@ -1145,6 +1145,6 @@
         private DevComponents.DotNetBar.ButtonItem btnThoatContext;
         private DevComponents.DotNetBar.ButtonItem btnKQCNTheoLop;
         private DevComponents.DotNetBar.ButtonItem btnKQCNTheoMon;
-        #endregion
+        
     }
 }

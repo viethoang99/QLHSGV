@@ -15,16 +15,16 @@ namespace app.Controller
         NguoiDungInfo m_NguoiDungInfo = new NguoiDungInfo();
         LoaiNguoiDungInfo m_LoaiNguoiDungInfo = new LoaiNguoiDungInfo();
 
-        #region Hien thi ComboBox
+        //Hien thi ComboBox
         public void HienThiComboBox(ComboBoxEx comboBox)
         {
             comboBox.DataSource = m_NguoiDungData.LayDsNguoiDung();
             comboBox.DisplayMember = "TenND";
             comboBox.ValueMember = "MaND";
         }
-        #endregion
+        
 
-        #region Hien thi ComboBox trong DataGridView
+        //Hien thi ComboBox trong DataGridView
         public void HienThiDataGridViewComboBoxColumn(DataGridViewComboBoxColumn cmbColumn)
         {
             cmbColumn.DataSource = m_NguoiDungData.LayDsNguoiDung();
@@ -33,9 +33,9 @@ namespace app.Controller
             cmbColumn.DataPropertyName = "MaND";
             cmbColumn.HeaderText = "Người dùng";
         }
-        #endregion
+        
 
-        #region Do du lieu vao DataGridView
+        //Do du lieu vao DataGridView
         public void HienThi(DataGridViewX dGV, BindingNavigator bN)
         {
             BindingSource bS = new BindingSource();
@@ -44,9 +44,9 @@ namespace app.Controller
             bN.BindingSource = bS;
             dGV.DataSource = bS;
         }
-        #endregion
+        
 
-        #region Them moi
+        //Them moi
         public DataRow ThemDongMoi()
         {
             return m_NguoiDungData.ThemDongMoi();
@@ -56,16 +56,16 @@ namespace app.Controller
         {
             m_NguoiDungData.ThemNguoiDung(m_Row);
         }
-        #endregion
+        
 
-        #region Luu du lieu
+        //Luu du lieu
         public bool LuuNguoiDung()
         {
             return m_NguoiDungData.LuuNguoiDung();
         }
-        #endregion
+        
 
-        #region Dang nhap
+        //Dang nhap
         public int DangNhap(string m_Username, string m_Password)
         {
             DataTable m_DT = m_NguoiDungData.LayDsNguoiDung(m_Username);
@@ -88,13 +88,13 @@ namespace app.Controller
                 return 2;
             }
         }
-        #endregion
+        
 
-        #region Doi mat khau
+        //Doi mat khau
         public void ChangePassword(String userName, String newPassword)
         {
             m_NguoiDungData.ChangePassword(userName, newPassword);
         }
-        #endregion
+        
     }
 }

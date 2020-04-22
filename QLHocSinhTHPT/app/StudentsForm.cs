@@ -20,28 +20,28 @@ namespace app
         public static String noiSinh;
         public static String temp;
         DataTable data = new DataTable();
-        #region Fields
+        //Fields
         HocSinhCtrl m_HocSinhCtrl = new HocSinhCtrl();
         QuyDinh quyDinh = new QuyDinh();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public StudentsForm()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void StudentsForm_Load(object sender, EventArgs e)
         {
             m_HocSinhCtrl.HienThi(dGVHocSinh, bindingNavigatorHocSinh, txtMaHocSinh, txtTenHocSinh, txtGioiTinh, dtpNgaySinh, txtNoiSinh);
             countRowsPre = dGVHocSinh.RowCount;
         }
-        #endregion
+        
 
-        #region BindingNavigatorItems
+        //BindingNavigatorItems
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             if (dGVHocSinh.RowCount == 0)
@@ -145,16 +145,16 @@ namespace app
                 }
             }
         }
-        #endregion
+        
 
-        #region DataError event
+        //DataError event
         private void dGVHocSinh_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
-        #endregion
+        
 
-        #region Tìm kiếm học sinh
+        //Tìm kiếm học sinh
         private void txtTimKiem_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -179,9 +179,9 @@ namespace app
                 m_HocSinhCtrl.TimTheoTen(txtTimKiem.Text);
             }
         }
-        #endregion
+        
 
-        #region Click event
+        //Click event
         private void dGVHocSinh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (txtGioiTinh.Text == "True")
@@ -216,7 +216,7 @@ namespace app
             else
                 MessageBoxEx.Show("Giá trị của các ô không được rỗng!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        #endregion
+        
 
         private void DGVHocSinh_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

@@ -11,27 +11,27 @@ namespace app
 {
     public partial class ConductForm : Office2007Form
     {
-        #region Fields
+        //Fields
         HanhKiemCtrl m_HanhKiemCtrl = new HanhKiemCtrl();
         QuyDinh      quyDinh        = new QuyDinh();
-        #endregion
+        
 
-        #region Constructor
+        //Constructor
         public ConductForm()
         {
             InitializeComponent();
             DataService.OpenConnection();
         }
-        #endregion
+        
 
-        #region Load
+        //Load
         private void ConductForm_Load(object sender, EventArgs e)
         {
             m_HanhKiemCtrl.HienThi(dGVHanhKiem, bindingNavigatorHanhKiem);
         }
-        #endregion
+        
 
-        #region BindingNavigatorItems
+        //BindingNavigatorItems
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
             if (dGVHanhKiem.RowCount == 0)
@@ -86,13 +86,13 @@ namespace app
                 m_HanhKiemCtrl.LuuHanhKiem();
             }
         }
-        #endregion
+        
 
-        #region DataError event
+        //DataError event
         private void dGVHanhKiem_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
         }
-        #endregion
+        
     }
 }
