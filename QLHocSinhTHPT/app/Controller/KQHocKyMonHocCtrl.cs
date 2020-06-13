@@ -60,14 +60,14 @@ namespace app.Controller
                 nh.MaNamHoc         = Convert.ToString(Row["MaNamHoc"]);
                 nh.TenNamHoc        = Convert.ToString(Row["TenNamHoc"]);
 
-                ketqua.HocSinh      = hs;
+                ketqua.TenHocSinh = hs.HoTen;
+                ketqua.MaHocSinh = hs.MaHocSinh;
                 ketqua.Lop          = l;
                 ketqua.MonHoc       = mh;
                 ketqua.HocKy        = hk;
                 ketqua.NamHoc       = nh;
                 ketqua.DTBKiemTra   = Convert.ToSingle(Row["DTBKiemTra"]);
                 ketqua.DTBMonHocKy  = Convert.ToSingle(Row["DTBMonHocKy"]);
-
                 dS.Add(ketqua);
             }
             return dS;

@@ -141,31 +141,7 @@ namespace app
                 m_Users.Activate();
         }
 
-        private void btnSaoLuu_Click(object sender, EventArgs e)
-        {
-            if (backupDialog.ShowDialog() == DialogResult.OK)
-            {
-                System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand("BACKUP DATABASE " + Utilities.DatabaseName + " TO DISK = '" + backupDialog.FileName.ToString() + "'");
-                DataService data = new DataService();
-                data.Load(cmd);
-                MessageBoxEx.Show("Sao lưu dữ liệu thành công!", "BACKUP COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-                return;
-        }
-
-        private void btnPhucHoi_Click(object sender, EventArgs e)
-        {
-            if (restoreDialog.ShowDialog() == DialogResult.OK)
-            {
-                System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand("USE master RESTORE DATABASE " + Utilities.DatabaseName + " FROM DISK = '" + restoreDialog.FileName.ToString() + "'");
-                DataService data = new DataService();
-                data.Load(cmd);
-                MessageBoxEx.Show("Phục hồi dữ liệu thành công!", "RESTORE COMPLETED", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-                return;
-        }
+       
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -620,9 +596,10 @@ namespace app
             btnDoTuoi.Enabled           = false;
             btnTruong.Enabled           = false;
         }
-        
 
-        
+        private void RibbonTabQuyDinh_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

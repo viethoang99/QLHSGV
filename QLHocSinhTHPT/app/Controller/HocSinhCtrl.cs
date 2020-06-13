@@ -65,28 +65,15 @@ namespace app.Controller
             BindingSource bS = new BindingSource();
             bS.DataSource = m_HocSinhData.LayDsHocSinh();
 
-            //DataTable dT = m_HocSinhData.LayDsHocSinh();
-            //bool gioiTinh = Convert.ToBoolean(dT.Rows[0]["GioiTinh"]);
-
-            //if (gioiTinh)
-            //    ckbGTinhNu.Checked = true;
-            //else
-            //    ckbGTinhNam.Checked = true;
-
             txtMaHocSinh.DataBindings.Clear();
-            //txtMaHocSinh.DataBindings.Add("Text", bS, "MaHocSinh");
 
             txtTenHocSinh.DataBindings.Clear();
-            // txtTenHocSinh.DataBindings.Add("Text", bS, "HoTen");
 
             txtGioiTinh.DataBindings.Clear();
-            // txtGioiTinh.DataBindings.Add("Text", bS, "GioiTinh");
 
             dtpNgaySinh.DataBindings.Clear();
-            //dtpNgaySinh.DataBindings.Add("Value", bS, "NgaySinh");
 
             txtNoiSinh.DataBindings.Clear();
-            //txtNoiSinh.DataBindings.Add("Text", bS, "NoiSinh");
 
             bN.BindingSource = bS;
             dGV.DataSource = bS;
@@ -182,7 +169,7 @@ namespace app.Controller
             return m_HocSinhData.LuuHocSinh();
         }
 
-        public void LuuHocSinh(String maHocSinh, String hoTen, bool gioiTinh, DateTime ngaySinh, String noiSinh)
+        public void LuuHocSinh(String maHocSinh, String hoTen, string gioiTinh, DateTime ngaySinh, String noiSinh)
         {
             m_HocSinhData.LuuHocSinh(maHocSinh, hoTen, gioiTinh, ngaySinh, noiSinh);
         }

@@ -10,12 +10,30 @@ namespace app.DataLayer
 
         public void LuuKetQua(String maHocSinh, String maLop, String maNamHoc, String maHocLuc, String maHanhKiem, float diemTBChungCacMonCN, String maKetQua)
         {
-            
+            DataService m_KQCNTHData = new DataService();
+
+            SqlCommand cmd = new SqlCommand("INSERT INTO KQ_CA_NAM_TONG_HOP VALUES(@maHocSinh, @maLop, @maNamHoc, @maHocLuc, @maHanhKiem, @diemTBChungCacMonCN, @maKetQua)");
+            cmd.Parameters.Add("maHocSinh", SqlDbType.VarChar).Value = maHocSinh;
+            cmd.Parameters.Add("maLop", SqlDbType.VarChar).Value = maLop;
+            cmd.Parameters.Add("maNamHoc", SqlDbType.VarChar).Value = maNamHoc;
+            cmd.Parameters.Add("maHocLuc", SqlDbType.VarChar).Value = maHocLuc;
+            cmd.Parameters.Add("maHanhKiem", SqlDbType.VarChar).Value = maHanhKiem;
+            cmd.Parameters.Add("diemTBChungCacMonCN", SqlDbType.Float).Value = Math.Round(diemTBChungCacMonCN, 2);
+            cmd.Parameters.Add("maKetQua", SqlDbType.VarChar).Value = maKetQua;
+
+            m_KQCNTHData.Load(cmd);
         }
 
         public void XoaKetQua(String maHocSinh, String maLop, String maNamHoc)
         {
+            DataService m_KQCNTHData = new DataService();
 
+            SqlCommand cmd = new SqlCommand("DELETE FROM KQ_CA_NAM_TONG_HOP WHERE MaHocSinh = @maHocSinh AND MaLop = @maLop AND MaNamHoc = @maNamHoc");
+            cmd.Parameters.Add("maHocSinh", SqlDbType.VarChar).Value = maHocSinh;
+            cmd.Parameters.Add("maLop", SqlDbType.VarChar).Value = maLop;
+            cmd.Parameters.Add("maNamHoc", SqlDbType.VarChar).Value = maNamHoc;
+
+            m_KQCNTHData.Load(cmd);
         }
 
         public DataTable LayDsKQCaNamTongHopForReport(String maLop, String maNamHoc)

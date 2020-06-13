@@ -84,15 +84,14 @@ namespace app.DataLayer
             return m_HocSinhData.ExecuteNoneQuery() > 0;
         }
 
-        public void LuuHocSinh(String maHocSinh, String hoTen, bool gioiTinh, DateTime ngaySinh, String noiSinh)
+        public void LuuHocSinh(String maHocSinh, String hoTen, string gioiTinh, DateTime ngaySinh, String noiSinh)
         {
             DataService.OpenConnection();
 
-            String query = "insert HOCSINH values('" + maHocSinh + "', '" + hoTen + "'," +
-                " '" + gioiTinh + "', '" + ngaySinh + "', '" + noiSinh + "')";
-            SqlCommand command = new SqlCommand();
-            command.Connection = connection;
-            command.CommandType = CommandType.Text;
+            String query = "insert HOCSINH values('" + maHocSinh + "', N'" + hoTen + "'," +
+                " N'" + gioiTinh + "', '" + ngaySinh + "', N'" + noiSinh + "')";
+            SqlCommand command = new SqlCommand(query);
+            m_HocSinhData.Load(command);
         }
 
         public DataTable TimTheoMa(String id)

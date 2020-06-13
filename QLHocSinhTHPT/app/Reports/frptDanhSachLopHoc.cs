@@ -51,7 +51,7 @@ namespace app.Reports
         private void btnXemTatCa_Click(object sender, EventArgs e)
         {
             IList<LopInfo> lop = LopCtrl.LayDsLop();
-
+       
             IList<ReportParameter> param = new List<ReportParameter>();
             QuyDinhInfo m_ThongTinTruong = QuyDinh.LayThongTinTruong();
             param.Add(new ReportParameter("TenTruong", m_ThongTinTruong.TenTruong));

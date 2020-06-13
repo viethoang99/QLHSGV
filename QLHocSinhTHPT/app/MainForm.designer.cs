@@ -118,11 +118,11 @@
             // 
             this.ribbonControl.BackColor = System.Drawing.SystemColors.Control;
             this.ribbonControl.CaptionVisible = true;
-            this.ribbonControl.Controls.Add(this.ribbonPanelQuanLy);
             this.ribbonControl.Controls.Add(this.ribbonPanelQuyDinh);
-            this.ribbonControl.Controls.Add(this.ribbonPanelThongKe);
+            this.ribbonControl.Controls.Add(this.ribbonPanelQuanLy);
             this.ribbonControl.Controls.Add(this.ribbonPanelGiupDo);
             this.ribbonControl.Controls.Add(this.ribbonPanelTraCuu);
+            this.ribbonControl.Controls.Add(this.ribbonPanelThongKe);
             this.ribbonControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.ribbonControl.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -178,6 +178,7 @@
             this.ribbonPanelQuanLy.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.ribbonPanelQuanLy.Size = new System.Drawing.Size(792, 91);
             this.ribbonPanelQuanLy.TabIndex = 1;
+            this.ribbonPanelQuanLy.Visible = false;
             // 
             // ribbonBarGiaoVien
             // 
@@ -422,7 +423,6 @@
             this.ribbonPanelQuyDinh.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.ribbonPanelQuyDinh.Size = new System.Drawing.Size(792, 91);
             this.ribbonPanelQuyDinh.TabIndex = 3;
-            this.ribbonPanelQuyDinh.Visible = false;
             // 
             // ribbonBarQuyDinh
             // 
@@ -720,7 +720,6 @@
             // 
             // ribbonTabQuanLy
             // 
-            this.ribbonTabQuanLy.Checked = true;
             this.ribbonTabQuanLy.ImagePaddingHorizontal = 8;
             this.ribbonTabQuanLy.Name = "ribbonTabQuanLy";
             this.ribbonTabQuanLy.Panel = this.ribbonPanelQuanLy;
@@ -748,12 +747,14 @@
             // 
             // ribbonTabQuyDinh
             // 
+            this.ribbonTabQuyDinh.Checked = true;
             this.ribbonTabQuyDinh.ImagePaddingHorizontal = 8;
             this.ribbonTabQuyDinh.Name = "ribbonTabQuyDinh";
             this.ribbonTabQuyDinh.Panel = this.ribbonPanelQuyDinh;
             this.ribbonTabQuyDinh.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F5);
             this.ribbonTabQuyDinh.Text = "&Quy định";
             this.ribbonTabQuyDinh.Tooltip = "Quy định (F5)";
+            this.ribbonTabQuyDinh.Click += new System.EventHandler(this.RibbonTabQuyDinh_Click);
             // 
             // ribbonTabGiupDo
             // 

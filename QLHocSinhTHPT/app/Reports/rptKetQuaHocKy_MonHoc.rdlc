@@ -88,7 +88,7 @@
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="HocSinh">
+                    <Textbox Name="MaHocSinh">
                       <rd:DefaultName>HocSinh</rd:DefaultName>
                       <ZIndex>3</ZIndex>
                       <Style>
@@ -103,13 +103,13 @@
                         <PaddingTop>2pt</PaddingTop>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!HocSinh.Value.MaHocSinh</Value>
+                      <Value>=Fields!MaHocSinh.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="HoTen">
+                    <Textbox Name="TenHocSinh">
                       <ZIndex>2</ZIndex>
                       <Style>
                         <BorderStyle>
@@ -123,7 +123,7 @@
                         <PaddingTop>2pt</PaddingTop>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!HocSinh.Value.HoTen</Value>
+                      <Value>=Fields!TenHocSinh.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -473,23 +473,27 @@
           <DataField>DTBMonHocKy</DataField>
         </Field>
         <Field Name="HocKy">
-          <rd:TypeName>app.init.HocKyInfo</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
           <DataField>HocKy</DataField>
         </Field>
-        <Field Name="HocSinh">
-          <rd:TypeName>app.init.HocSinhInfo</rd:TypeName>
-          <DataField>HocSinh</DataField>
+        <Field Name="MaHocSinh">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>MaHocSinh</DataField>
+        </Field>
+        <Field Name="TenHocSinh">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>TenHocSinh</DataField>
         </Field>
         <Field Name="Lop">
-          <rd:TypeName>app.init.LopInfo</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
           <DataField>Lop</DataField>
         </Field>
         <Field Name="MonHoc">
-          <rd:TypeName>app.init.MonHocInfo</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
           <DataField>MonHoc</DataField>
         </Field>
         <Field Name="NamHoc">
-          <rd:TypeName>app.init.NamHocInfo</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
           <DataField>NamHoc</DataField>
         </Field>
       </Fields>

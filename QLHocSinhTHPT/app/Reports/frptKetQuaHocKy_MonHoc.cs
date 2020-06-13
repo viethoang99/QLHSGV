@@ -58,6 +58,7 @@ namespace app.Reports
         //Click event
         private void btnXem_Click(object sender, EventArgs e)
         {
+            IList<KQHocKyMonHocInfo> KQHKMH = KQHocKyMonHocCtrl.LayDsKQHocKyMonHoc(cmbLop.SelectedValue.ToString(), cmbMonHoc.SelectedValue.ToString(), cmbHocKy.SelectedValue.ToString(), cmbNamHoc.SelectedValue.ToString());
             IList<ReportParameter> param = new List<ReportParameter>();
             QuyDinhInfo m_ThongTinTruong = QuyDinh.LayThongTinTruong();
             param.Add(new ReportParameter("TenTruong", m_ThongTinTruong.TenTruong));
@@ -67,10 +68,7 @@ namespace app.Reports
             param.Add(new ReportParameter("MonHoc", cmbMonHoc.SelectedValue.ToString()));
             param.Add(new ReportParameter("HocKy", cmbHocKy.SelectedValue.ToString()));
             param.Add(new ReportParameter("NgayLap", DateTime.Today.Day + "/" + DateTime.Today.Month + "/" + DateTime.Today.Year));
-            this.reportViewerKQHKMH.LocalReport.SetParameters(param);
-
-            IList<KQHocKyMonHocInfo> KQHKMH =
-      KQHocKyMonHocCtrl.LayDsKQHocKyMonHoc(cmbLop.SelectedValue.ToString(), cmbMonHoc.SelectedValue.ToString(),cmbHocKy.SelectedValue.ToString(),cmbNamHoc.SelectedValue.ToString());
+            this.reportViewerKQHKMH.LocalReport.SetParameters(param);           
             this.bSKQHKMH.DataSource = KQHKMH;
             this.reportViewerKQHKMH.RefreshReport();
         }

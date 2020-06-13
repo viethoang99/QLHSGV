@@ -132,10 +132,10 @@ namespace app.Controller
 
                 lop.MaLop       = Convert.ToString(Row["MaLop"]);
                 lop.TenLop      = Convert.ToString(Row["TenLop"]);
-                lop.KhoiLop     = kl;
+                lop.KhoiLop     = kl.TenKhoiLop;
                 lop.NamHoc      = nh;
                 lop.SiSo        = Convert.ToInt32(Row["SiSo"]);
-                lop.GiaoVien    = gv;
+                lop.GiaoVien    = gv.TenGiaoVien;
 
                 dS.Add(lop);
             }
@@ -167,11 +167,11 @@ namespace app.Controller
 
                 lop.MaLop = Convert.ToString(Row["MaLop"]);
                 lop.TenLop = Convert.ToString(Row["TenLop"]);
-                lop.KhoiLop = kl;
+                lop.KhoiLop = kl.TenKhoiLop;
                 lop.NamHoc = nh;
                 lop.SiSo = Convert.ToInt32(Row["SiSo"]);
-                lop.GiaoVien = gv;
-
+                lop.GiaoVien = gv.TenGiaoVien;
+                
                 dS.Add(lop);
             }
             return dS;

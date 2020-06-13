@@ -61,7 +61,6 @@ namespace app.Reports
             KQHocKyTongHopCtrl.LayDsKQHocKyTongHop(cmbLop.SelectedValue.ToString(),cmbHocKy.SelectedValue.ToString(),cmbNamHoc.SelectedValue.ToString());
             this.bSKQHKTH.DataSource = KQHKTH;
             this.reportViewerKQHKTH.RefreshReport();
-
         }
         
     }

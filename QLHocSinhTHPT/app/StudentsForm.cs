@@ -15,7 +15,7 @@ namespace app
         public static int countRowsNext;
         public static String maHS;
         public static String hoTen;
-        public static bool gioiTinh;
+        public static String gioiTinh;
         public static DateTime nSinh;
         public static String noiSinh;
         public static String temp;
@@ -120,12 +120,6 @@ namespace app
             if (KiemTraTruocKhiLuu("colMaHocSinh").Equals("") != true &&
                 KiemTraTruocKhiLuu("colHoTen").Equals("") != true &&
                 KiemTraTruocKhiLuu("colNoiSinh").Equals("") != true)
-            //KiemTraTruocKhiLuu("colMaDanToc") == true &&
-            //KiemTraTruocKhiLuu("colMaTonGiao") == true &&
-            //KiemTraTruocKhiLuu("colHoTenCha") == true &&
-            //KiemTraTruocKhiLuu("colMaNNghiepCha") == true &&
-            //KiemTraTruocKhiLuu("colHoTenMe") == true &&
-            //KiemTraTruocKhiLuu("colMaNNghiepMe") == true)
             {
                 if (KiemTraDoTuoiTruocKhiLuu("colNgaySinh").Equals("") != true)
                 {
@@ -138,8 +132,8 @@ namespace app
                         noiSinh = KiemTraTruocKhiLuu("colNoiSinh");
                         nSinh = Convert.ToDateTime(KiemTraDoTuoiTruocKhiLuu("colNgaySinh").ToString());
                         if (KiemTraTruocKhiLuu("colGioiTinh").Equals("Nam"))
-                            gioiTinh = true;
-                        else gioiTinh = false;
+                            gioiTinh = "Nam";
+                        else gioiTinh = "Nữ";
                         m_HocSinhCtrl.LuuHocSinh(maHS, hoTen, gioiTinh, nSinh, noiSinh);
                     }
                 }
@@ -193,10 +187,11 @@ namespace app
 
         private void btnLuuVaoDS_Click(object sender, EventArgs e)
         {
-            bool gioiTinh = false;
+            string gioiTinh;
             if (ckbGTinhNu.Checked == true)
-                gioiTinh = true;
-
+                gioiTinh = "Nữ";
+            else
+                gioiTinh = "Nam";
             if (txtMaHocSinh.Text != "" &&
                 txtTenHocSinh.Text != "" &&
                 txtNoiSinh.Text != "" &&

@@ -128,7 +128,7 @@
                         <PaddingTop>2pt</PaddingTop>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!KhoiLop.Value.TenKhoiLop</Value>
+                      <Value>=Fields!KhoiLop.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -167,7 +167,7 @@
                         <PaddingTop>2pt</PaddingTop>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!GiaoVien.Value.TenGiaoVien</Value>
+                      <Value>=Fields!GiaoVien.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>

@@ -45,9 +45,9 @@ namespace app.DataLayer
         public void LuuGiaoVien(String maGiaoVien, String tenGiaoVien, String diaChi, String dienThoai, String chuyenMon)
         {
             string sql = "INSERT INTO GIAOVIEN VALUES ('" + maGiaoVien + "',N'"
-                + tenGiaoVien + "',N'" + diaChi + "','" + dienThoai + "','" + chuyenMon + "')";
+                + tenGiaoVien + "',N'" + diaChi + "','" + dienThoai + "',N'" + chuyenMon + "')";
             SqlCommand com = new SqlCommand(sql);
-            m_GiaoVienData.ExecuteNoneQuery(com);
+            m_GiaoVienData.Load(com);
 
         }
 

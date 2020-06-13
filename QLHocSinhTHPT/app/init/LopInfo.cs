@@ -26,8 +26,8 @@ namespace app.init
             set { m_TenLop = value; }
         }
 
-        private KhoiLopInfo m_KhoiLop;
-        public KhoiLopInfo KhoiLop
+        private String m_KhoiLop;
+        public String KhoiLop
         {
             get { return m_KhoiLop; }
             set { m_KhoiLop = value; }
@@ -46,9 +46,8 @@ namespace app.init
             get { return m_SiSo; }
             set { m_SiSo = value; }
         }
-
-        private GiaoVienInfo m_GiaoVien;
-        public GiaoVienInfo GiaoVien
+        private String m_GiaoVien;
+        public String GiaoVien
         {
             get { return m_GiaoVien; }
             set { m_GiaoVien = value; }
