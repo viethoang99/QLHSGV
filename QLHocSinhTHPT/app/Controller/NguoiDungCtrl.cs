@@ -3,7 +3,7 @@ using System.Text;
 using System.Data;
 using System.Windows.Forms;
 using DevComponents.DotNetBar.Controls;
-using app.DataLayer;
+using app.DataAccessLayer;
 using app.Component;
 using app.init;
 

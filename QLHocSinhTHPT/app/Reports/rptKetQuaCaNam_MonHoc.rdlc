@@ -83,7 +83,7 @@
                 </TableCell>
                 <TableCell>
                   <ReportItems>
-                    <Textbox Name="HocSinh">
+                    <Textbox Name="MaHocSinh">
                       <rd:DefaultName>HocSinh</rd:DefaultName>
                       <ZIndex>3</ZIndex>
                       <Style>
@@ -98,7 +98,7 @@
                         <PaddingTop>2pt</PaddingTop>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!HocSinh.Value.MaHocSinh</Value>
+                      <Value>=Fields!MaHocSinh.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -118,7 +118,7 @@
                         <PaddingTop>2pt</PaddingTop>
                       </Style>
                       <CanGrow>true</CanGrow>
-                      <Value>=Fields!HocSinh.Value.HoTen</Value>
+                      <Value>=Fields!HocSinh.Value</Value>
                     </Textbox>
                   </ReportItems>
                 </TableCell>
@@ -453,19 +453,23 @@
           <DataField>DTBCaNam</DataField>
         </Field>
         <Field Name="HocSinh">
-          <rd:TypeName>app.init.HocSinhInfo</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
           <DataField>HocSinh</DataField>
         </Field>
+        <Field Name="MaHocSinh">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>MaHocSinh</DataField>
+        </Field>
         <Field Name="Lop">
-          <rd:TypeName>app.init.LopInfo</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
           <DataField>Lop</DataField>
         </Field>
         <Field Name="MonHoc">
-          <rd:TypeName>app.init.MonHocInfo</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
           <DataField>MonHoc</DataField>
         </Field>
         <Field Name="NamHoc">
-          <rd:TypeName>app.init.NamHocInfo</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
           <DataField>NamHoc</DataField>
         </Field>
       </Fields>

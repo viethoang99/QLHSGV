@@ -6,7 +6,7 @@ using DevComponents.DotNetBar.Controls;
 using System.Collections.Generic;
 using DevComponents.Editors;
 using app.init;
-using app.DataLayer;
+using app.DataAccessLayer;
 
 namespace app.Controller
 {
@@ -59,13 +59,12 @@ namespace app.Controller
                 NamHocInfo nh       = new NamHocInfo();
                 nh.MaNamHoc         = Convert.ToString(Row["MaNamHoc"]);
                 nh.TenNamHoc        = Convert.ToString(Row["TenNamHoc"]);
-
-                ketqua.TenHocSinh = hs.HoTen;
                 ketqua.MaHocSinh = hs.MaHocSinh;
-                ketqua.Lop          = l;
-                ketqua.MonHoc       = mh;
-                ketqua.HocKy        = hk;
-                ketqua.NamHoc       = nh;
+                ketqua.TenHocSinh = hs.HoTen;
+                ketqua.Lop          = l.TenLop;
+                ketqua.MonHoc       = mh.TenMonHoc;
+                ketqua.HocKy        = hk.TenHocKy;
+                ketqua.NamHoc       = nh.TenNamHoc;
                 ketqua.DTBKiemTra   = Convert.ToSingle(Row["DTBKiemTra"]);
                 ketqua.DTBMonHocKy  = Convert.ToSingle(Row["DTBMonHocKy"]);
                 dS.Add(ketqua);

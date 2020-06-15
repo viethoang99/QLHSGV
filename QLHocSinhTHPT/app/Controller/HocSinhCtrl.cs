@@ -5,7 +5,7 @@ using System.Data;
 using System.Windows.Forms;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.Editors.DateTimeAdv;
-using app.DataLayer;
+using app.DataAccessLayer;
 using app.init;
 
 namespace app.Controller

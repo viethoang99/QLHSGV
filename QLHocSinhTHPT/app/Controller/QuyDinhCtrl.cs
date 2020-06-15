@@ -4,7 +4,7 @@ using System.Data;
 using System.Windows.Forms;
 using DevComponents.DotNetBar.Controls;
 using DevComponents.Editors;
-using app.DataLayer;
+using app.DataAccessLayer;
 
 namespace app.Controller
 {

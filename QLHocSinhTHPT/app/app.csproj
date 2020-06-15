@@ -155,10 +155,10 @@
     <Compile Include="Controller\HocKyCtrl.cs" />
     <Compile Include="Controller\NamHocCtrl.cs" />
     <Compile Include="Controller\MonHocCtrl.cs" />
-    <Compile Include="DataLayer\KQCaNamMonHocData.cs" />
-    <Compile Include="DataLayer\KQCaNamTongHopData.cs" />
-    <Compile Include="DataLayer\KQHocKyMonHocData.cs" />
-    <Compile Include="DataLayer\KQHocKyTongHopData.cs" />
+    <Compile Include="DataAccessLayer\KQCaNamMonHocData.cs" />
+    <Compile Include="DataAccessLayer\KQCaNamTongHopData.cs" />
+    <Compile Include="DataAccessLayer\KQHocKyMonHocData.cs" />
+    <Compile Include="DataAccessLayer\KQHocKyTongHopData.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,8 +183,8 @@
     <Compile Include="GeneralMark.designer.cs">
       <DependentUpon>GeneralMark.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\DiemData.cs" />
-    <Compile Include="DataLayer\QuyDinhData.cs" />
+    <Compile Include="DataAccessLayer\DiemData.cs" />
+    <Compile Include="DataAccessLayer\QuyDinhData.cs" />
     <Compile Include="searchStudents.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,36 +203,36 @@
     <Compile Include="ClassDivision.designer.cs">
       <DependentUpon>ClassDivision.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\PhanCongData.cs" />
+    <Compile Include="DataAccessLayer\PhanCongData.cs" />
     <Compile Include="Assigning.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Assigning.designer.cs">
       <DependentUpon>Assigning.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\LopData.cs" />
+    <Compile Include="DataAccessLayer\LopData.cs" />
     <Compile Include="Classes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classes.designer.cs">
       <DependentUpon>Classes.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\HocSinhData.cs" />
+    <Compile Include="DataAccessLayer\HocSinhData.cs" />
     <Compile Include="StudentsForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StudentsForm.designer.cs">
       <DependentUpon>StudentsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\GiaoVienData.cs" />
+    <Compile Include="DataAccessLayer\GiaoVienData.cs" />
     <Compile Include="TeachersFrom.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TeachersFrom.designer.cs">
       <DependentUpon>TeachersFrom.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\NguoiDungData.cs" />
-    <Compile Include="DataLayer\LoaiNguoiDungData.cs" />
+    <Compile Include="DataAccessLayer\NguoiDungData.cs" />
+    <Compile Include="DataAccessLayer\LoaiNguoiDungData.cs" />
     <Compile Include="UsersType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,56 +245,56 @@
     <Compile Include="Users.designer.cs">
       <DependentUpon>Users.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\LoaiDiemData.cs" />
+    <Compile Include="DataAccessLayer\LoaiDiemData.cs" />
     <Compile Include="MarkTypes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MarkTypes.designer.cs">
       <DependentUpon>MarkTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\KetQuaData.cs" />
+    <Compile Include="DataAccessLayer\KetQuaData.cs" />
     <Compile Include="Results.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Results.designer.cs">
       <DependentUpon>Results.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\HanhKiemData.cs" />
+    <Compile Include="DataAccessLayer\HanhKiemData.cs" />
     <Compile Include="ConductForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConductForm.designer.cs">
       <DependentUpon>ConductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\HocLucData.cs" />
+    <Compile Include="DataAccessLayer\HocLucData.cs" />
     <Compile Include="PerformanceForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PerformanceForm.designer.cs">
       <DependentUpon>PerformanceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\KhoiLopData.cs" />
+    <Compile Include="DataAccessLayer\KhoiLopData.cs" />
     <Compile Include="Grades.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Grades.designer.cs">
       <DependentUpon>Grades.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\HocKyData.cs" />
+    <Compile Include="DataAccessLayer\HocKyData.cs" />
     <Compile Include="TermForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TermForm.designer.cs">
       <DependentUpon>TermForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\NamHocData.cs" />
+    <Compile Include="DataAccessLayer\NamHocData.cs" />
     <Compile Include="SchoolYear.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SchoolYear.designer.cs">
       <DependentUpon>SchoolYear.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataLayer\MonHocData.cs" />
+    <Compile Include="DataAccessLayer\MonHocData.cs" />
     <Compile Include="Subjects.cs">
       <SubType>Form</SubType>
     </Compile>

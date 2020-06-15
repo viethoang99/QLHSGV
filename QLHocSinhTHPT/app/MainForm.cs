@@ -377,8 +377,7 @@ namespace app
             btnDangNhapContext.Enabled  = true;
             btnThoat.Enabled            = true;
             btnThoatContext.Enabled     = true;
-            btnHuongDan.Enabled         = true;
-            btnThongTin.Enabled         = true;
+           
 
             //False
             btnDangXuat.Enabled         = false;
@@ -477,8 +476,7 @@ namespace app
             btnDoTuoi.Enabled           = true;
             btnTruong.Enabled           = true;
 
-            btnHuongDan.Enabled         = true;
-            btnThongTin.Enabled         = true;
+          
         }
         
 
@@ -507,9 +505,6 @@ namespace app
 
             btnTimKiemHS.Enabled        = true;
             btnTimKiemGV.Enabled        = true;
-
-            btnHuongDan.Enabled         = true;
-            btnThongTin.Enabled         = true;
 
             //False
             btnDangNhap.Enabled         = false;
@@ -577,9 +572,6 @@ namespace app
 
             btnTimKiemHS.Enabled        = true;
             btnTimKiemGV.Enabled        = true;
-
-            btnHuongDan.Enabled         = true;
-            btnThongTin.Enabled         = true;
 
             //False
             btnDangNhap.Enabled         = false;

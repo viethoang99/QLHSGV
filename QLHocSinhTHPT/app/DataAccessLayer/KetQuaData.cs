@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace app.DataLayer
+namespace app.DataAccessLayer
 {
     public class KetQuaData
     {
