@@ -362,8 +362,8 @@
   <DataSets>
     <DataSet Name="app_init_GiaoVienInfo">
       <rd:DataSetInfo>
-        <rd:DataSetName>app.init</rd:DataSetName>
-        <rd:ObjectDataSourceType>app.init.GiaoVienInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>app.DataTranferObject</rd:DataSetName>
+        <rd:ObjectDataSourceType>app.DataTranferObject.GiaoVienInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
         <rd:TableName>GiaoVienInfo</rd:TableName>
       </rd:DataSetInfo>
       <Query>

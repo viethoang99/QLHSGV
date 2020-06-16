@@ -1,9 +1,9 @@
 using System;
 using System.Text;
 using System.Drawing;
-using app.init;
+using app.DataTranferObject;
 using app.Component;
-using app.Controller;
+using app.BusinessLayer;
 using DevComponents.DotNetBar;
 using System.Collections.Generic;
 using Microsoft.Reporting.WinForms;

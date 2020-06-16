@@ -43,7 +43,7 @@
             // 
             // bSDSLop
             // 
-            this.bSDSLop.DataSource = typeof(app.init.LopInfo);
+            this.bSDSLop.DataSource = typeof(app.DataTranferObject.LopInfo);
             // 
             // reportViewerDSLop
             // 

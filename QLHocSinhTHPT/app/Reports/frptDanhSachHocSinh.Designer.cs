@@ -37,7 +37,7 @@
             // 
             // bSDSHocSinh
             // 
-            this.bSDSHocSinh.DataSource = typeof(app.init.HocSinhInfo);
+            this.bSDSHocSinh.DataSource = typeof(app.DataTranferObject.HocSinhInfo);
             // 
             // reportViewerDSHS
             // 

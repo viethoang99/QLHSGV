@@ -4,9 +4,9 @@ using System.Text;
 using System.Drawing;
 using System.Collections;
 using System.Windows.Forms;
-using app.Controller;
+using app.BusinessLayer;
 using app.Component;
-using app.init;
+using app.DataTranferObject;
 using DevComponents.DotNetBar;
 
 namespace app

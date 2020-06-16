@@ -37,7 +37,7 @@ namespace app.Reports
             // 
             // bSDSGiaoVien
             // 
-            this.bSDSGiaoVien.DataSource = typeof(app.init.GiaoVienInfo);
+            this.bSDSGiaoVien.DataSource = typeof(app.DataTranferObject.GiaoVienInfo);
             // 
             // reportViewerDSGV
             // 

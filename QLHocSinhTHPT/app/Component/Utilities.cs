@@ -4,9 +4,9 @@ using System.Data;
 using System.Xml;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using app.init;
+using app.DataTranferObject;
 using app.Reports;
-using app.Controller;
+using app.BusinessLayer;
 using DevComponents.DotNetBar;
 using System.Collections.Generic;
 

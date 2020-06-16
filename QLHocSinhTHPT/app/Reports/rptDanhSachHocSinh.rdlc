@@ -359,8 +359,8 @@
   <DataSets>
     <DataSet Name="app_init_HocSinhInfo">
       <rd:DataSetInfo>
-        <rd:DataSetName>app.init</rd:DataSetName>
-        <rd:ObjectDataSourceType>app.init.HocSinhInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>app.DataTranferObject</rd:DataSetName>
+        <rd:ObjectDataSourceType>app.DataTranferObject.HocSinhInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
         <rd:TableName>HocSinhInfo</rd:TableName>
       </rd:DataSetInfo>
       <Query>
@@ -370,7 +370,7 @@
       </Query>
       <Fields>
         <Field Name="DanToc">
-          <rd:TypeName>app.init.DanTocInfo</rd:TypeName>
+          <rd:TypeName>app.DataTranferObject.DanTocInfo</rd:TypeName>
           <DataField>DanToc</DataField>
         </Field>
         <Field Name="GioiTinh">

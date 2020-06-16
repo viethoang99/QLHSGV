@@ -3,7 +3,7 @@ using System.Data;
 using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
-using app.Controller;
+using app.BusinessLayer;
 using DevComponents.DotNetBar;
 
 namespace app

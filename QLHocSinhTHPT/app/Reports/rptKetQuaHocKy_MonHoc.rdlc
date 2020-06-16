@@ -454,8 +454,8 @@
   <DataSets>
     <DataSet Name="app_init_KQHocKyMonHocInfo">
       <rd:DataSetInfo>
-        <rd:DataSetName>app.init</rd:DataSetName>
-        <rd:ObjectDataSourceType>app.init.KQHocKyMonHocInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>app.DataTranferObject</rd:DataSetName>
+        <rd:ObjectDataSourceType>app.DataTranferObject.KQHocKyMonHocInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
         <rd:TableName>KQHocKyMonHocInfo</rd:TableName>
       </rd:DataSetInfo>
       <Query>

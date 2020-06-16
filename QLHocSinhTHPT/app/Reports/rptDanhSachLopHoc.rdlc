@@ -432,8 +432,8 @@
   <DataSets>
     <DataSet Name="app_init_LopInfo">
       <rd:DataSetInfo>
-        <rd:DataSetName>app.init</rd:DataSetName>
-        <rd:ObjectDataSourceType>app.init.LopInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>app.DataTranferObject</rd:DataSetName>
+        <rd:ObjectDataSourceType>app.DataTranferObject.LopInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
         <rd:TableName>LopInfo</rd:TableName>
       </rd:DataSetInfo>
       <Query>
@@ -443,11 +443,11 @@
       </Query>
       <Fields>
         <Field Name="GiaoVien">
-          <rd:TypeName>app.init.GiaoVienInfo</rd:TypeName>
+          <rd:TypeName>app.DataTranferObject.GiaoVienInfo</rd:TypeName>
           <DataField>GiaoVien</DataField>
         </Field>
         <Field Name="KhoiLop">
-          <rd:TypeName>app.init.KhoiLopInfo</rd:TypeName>
+          <rd:TypeName>app.DataTranferObject.KhoiLopInfo</rd:TypeName>
           <DataField>KhoiLop</DataField>
         </Field>
         <Field Name="MaLop">
@@ -455,7 +455,7 @@
           <DataField>MaLop</DataField>
         </Field>
         <Field Name="NamHoc">
-          <rd:TypeName>app.init.NamHocInfo</rd:TypeName>
+          <rd:TypeName>app.DataTranferObject.NamHocInfo</rd:TypeName>
           <DataField>NamHoc</DataField>
         </Field>
         <Field Name="SiSo">

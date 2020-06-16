@@ -494,8 +494,8 @@
   <DataSets>
     <DataSet Name="app_init_KQCaNamTongHopInfo">
       <rd:DataSetInfo>
-        <rd:DataSetName>app.init</rd:DataSetName>
-        <rd:ObjectDataSourceType>app.init.KQCaNamTongHopInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:DataSetName>app.DataTranferObject</rd:DataSetName>
+        <rd:ObjectDataSourceType>app.DataTranferObject.KQCaNamTongHopInfo, app, Version=3.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
         <rd:TableName>KQCaNamTongHopInfo</rd:TableName>
       </rd:DataSetInfo>
       <Query>
